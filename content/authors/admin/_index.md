@@ -27,7 +27,7 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: Hi, I’m Haleshot, a third-year student studying B Tech Artificial Intelligence. I like projects relating to ML, AI, DL, CV, NLP, Image Processing, etc.
 
-Currently exploring Python, Flask, projects involving AI and platforms such as HuggingFace and Kaggle..
+Currently exploring Python, Flask, projects involving AI and platforms such as HuggingFace and Kaggle.
 
 # Interests to show in About widget
 interests:
