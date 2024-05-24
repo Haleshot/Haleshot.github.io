@@ -52,7 +52,7 @@ education:
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
-  - name: Technical
+  - name: Technical (Core)
     items:
       - name: Python
         description: ''
@@ -78,10 +78,10 @@ skills:
         percent: 60
         icon: person-hiking
         icon_pack: fas
-      - name: Cats
+      - name: Dogs
         description: ''
         percent: 100
-        icon: cat
+        icon: dog
         icon_pack: fas
       - name: Photography
         description: ''
