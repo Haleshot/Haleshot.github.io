@@ -55,20 +55,90 @@ skills:
   - name: Technical (Core)
     items:
       - name: Python
-        description: ''
-        percent: 80
-        icon: python
-        icon_pack: fab
+        description: 'Intermediate'
+        percent: 75
+        icon: devicon/python-original.svg
+        icon_pack: devicon
       - name: Data Science
         description: ''
-        percent: 100
+        percent: 85
         icon: chart-line
         icon_pack: fas
-      - name: SQL
+      - name: MySql
+        description: 'Intermediate'
+        percent: 75
+        icon: devicon/mysql.svg
+        icon_pack: devicon
+      - name: C++
+        description: ''
+        percent: 50
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
         description: ''
         percent: 40
         icon: database
-        icon_pack: fas
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+          icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
+      - name: MySql
+        description: ''
+        percent: 40
+        icon: database
+        icon_pack: devicon/mysql.svg
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
