@@ -196,32 +196,38 @@ skills:
 social:
   - icon: envelope
     icon_pack: fas
-    link: '/#contact'
+    link: 'mailto:hari.leo03@gmail.com'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
-    label: Follow me on Twitter
+    link: https://twitter.com/hari_leo03
+    label: My Twitter
     display:
       header: true
-  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: fas
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  # - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
+  #   icon_pack: fas
+  #   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: github
     icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://github.com/Haleshot
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/srihari-thyagarajan/
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/resume.pdf
+    link: uploads/Latest_Resume.pdf
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a tech-enthusiast who loves programming and gaming; a senior - pursuing a bachelor's degree in Artificial Intelligence at NMIMS Mukesh Patel School of Technology Management & Engineering, where I learn about the theory and practice of machine learning, computer vision, natural language processing and deep learning.
+
+Worked as a Customer Service Technical Support at Gif Your Game, a platform that allows users to create and share high-quality game clips. I use my communication, problem-solving and technical skills to provide excellent customer service, identify and address customer needs, research information using available resources and perform quality testing and bug reporting for the app. I enjoy contributing to the improvement of the product and the satisfaction of the customers.
+
+Some of the projects that I have developed during the last 12 months include text summarization using LSTM, image processing operations and improving neural network classifiers. I have proficiency in Python and Java and ML/DL libraries as well. I have also gained collaborative coding insights and hands-on testing exposure from my internship at Engagely.ai, where I worked with testing, GitLab, Python-Flask, Docker and docker-compose.
+
+My goal is to become a machine learning engineer who can create innovative and impactful solutions for real-world problems. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world. I also like to express my creativity and personality through streaming, content creation and video editing. I believe that technology and gaming can bring joy and value to people's lives, and I want to be part of that.
 {style="text-align: justify;"}
