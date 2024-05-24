@@ -72,73 +72,103 @@ skills:
       - name: C++
         description: ''
         percent: 50
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/plusplus-original.svg
+        icon_pack: devicon
+      - name: FastAPI
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/fastapi-original.svg
+        icon_pack: devicon
+      - name: Flask
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/flask-original.svg
+        icon_pack: devicon
+      - name: Git
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/git-original.svg
+        icon_pack: devicon
+      - name: GitHub
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/github-original.svg
+        icon_pack: devicon
+      - name: GitLab
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/gitlab-original.svg
+        icon_pack: devicon
+      - name: Jupyter
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/jupyter-original.svg
+        icon_pack: devicon
+      - name: keras
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/keras-original.svg
+        icon_pack: devicon
+      - name: Markdown
         description: ''
         percent: 40
-        icon: database
-          icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/markdown-original.svg
+        icon_pack: devicon
+      - name: Matplotlib
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/matplotlib-original.svg
+        icon_pack: devicon
+      - name: MongoDB
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/mongodb-original.svg
+        icon_pack: devicon
+      - name: NumPy
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/numpy-original-workmark.svg
+        icon_pack: devicon
+      - name: OpenCV
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
-      - name: MySql
+        icon: devicon/opencv-original.svg
+        icon_pack: devicon
+      - name: Pandas
         description: ''
         percent: 40
-        icon: database
-        icon_pack: devicon/mysql.svg
+        icon: devicon/pandas-original.svg
+        icon_pack: devicon
+      - name: Qt
+        description: ''
+        percent: 40
+        icon: devicon/qt-original.svg
+        icon_pack: devicon
+      - name: Scikit-learn
+        description: ''
+        percent: 40
+        icon: devicon/scikitlearn-original.svg
+        icon_pack: devicon
+      - name: SQLite
+        description: ''
+        percent: 40
+        icon: devicon/sqlite-original.svg
+        icon_pack: devicon
+      - name: Streamlit
+        description: ''
+        percent: 40
+        icon: devicon/streamlit-original.svg
+        icon_pack: devicon
+      - name: Ubuntu
+        description: ''
+        percent: 40
+        icon: devicon/ubuntu-original.svg
+        icon_pack: devicon
+      - name: VSCode
+        description: ''
+        percent: 40
+        icon: devicon/vscode-original.svg
+        icon_pack: devicon
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
