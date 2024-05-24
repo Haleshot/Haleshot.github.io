@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: B Tech AI Junior Student
+role: B Tech AI Senior Student
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -212,6 +212,9 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/srihari-thyagarajan/
+  - icon: youtube
+    icon_pack: fab
+    link: https://www.youtube.com/Haleshot
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
