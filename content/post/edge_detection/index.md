@@ -1,7 +1,27 @@
 ---
 title: Edge Detection
-date: '2023-03-08'
+subtitle: Exploring Image Processing with Sobel Operator and Averaging Filter
 summary: Image Edge Detection using Sobel Operator and Averaging Filter!
+date: '2023-03-08T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Image Processing
+ - Edge Detection
+ - Sobel Operator
+ - Averaging Filter
+categories:
+ - Programming
+ - Computer Vision
+ - Academic
 ---
 
 # Image Edge Detection using Sobel Operator and Averaging Filter
