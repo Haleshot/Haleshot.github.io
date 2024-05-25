@@ -2,8 +2,8 @@
 title: Data Visualization Techniques Plots
 subtitle: Exploring Data Storytelling with Visualizations
 summary: Mastering data visualization techniques using Python 
-date: '2024-05-25T00:00:00Z'
-lastmod: '2023-07-03T00:00:00Z'
+date: '2023-07-03T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
 draft: false
 featured: true
 image:
