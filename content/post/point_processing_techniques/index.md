@@ -72,6 +72,7 @@ To understand and work with this project, you should be familiar with the follow
 After successful completion of this experiment, students will be able to comprehend:
 
 - The concept of image enhancement in the spatial domain using point processing and neighborhood processing methods.
+- Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Point_Processing_Techniques/Point_Processing_Techniques.ipynb).
 
 ## Theory
 
