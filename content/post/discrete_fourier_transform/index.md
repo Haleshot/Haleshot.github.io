@@ -1,7 +1,27 @@
 ---
 title: Discrete Fourier Transform
-date: '2023-03-07'
+subtitle: Experimenting with DFT, IDFT and matrices!
 summary: Experimenting with DFT, IDFT and matrices!
+projects: [Signal_Image_Processing/Discrete_Fourier_Transform/Discrete_Fourier_Transform.ipynb]
+date: '2023-03-07'
+lastmod: '2024-05-25'
+draft: false
+featured: true
+image:
+  caption: 'Program output'
+  focal_point: ''
+  placement: 2
+  preview_only: false
+authors:
+  - admin
+tags:
+  - Signal Processing
+  - Fourier Transform
+  - Matrices
+categories:
+  - Programming
+  - Mathematics
+  - Academic
 ---
 
 # Discrete Fourier Transform (DFT) in Python
