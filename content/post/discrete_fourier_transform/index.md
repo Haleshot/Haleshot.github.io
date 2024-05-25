@@ -76,8 +76,7 @@ The algorithm for performing the DFT using the twiddle factor matrix is as follo
 9. Plot the DFT (absolute value) when the DFT formula is used.
 10. Display the output.
 
-[!NOTE] 
-The code implementation is not provided in this README file.
+Note: The code implementation is not provided in this README file.
 
 ## Formulae used to implement in user defined functions
 
