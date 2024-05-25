@@ -446,4 +446,3 @@ From the experiment performed above, I learnt the following:
 
 1.   Concept of image enhancement in spatial domain using point processing  and neighbourhood processing methods
 2.   Performing various operations using given images (obtaining negatives of images, gray level slicing with and without background, etc.)
-
