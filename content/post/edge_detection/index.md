@@ -1,6 +1,7 @@
 ---
 title: Edge Detection
 date: '2024-05-25'
+summary: Image Edge Detection using Sobel Operator and Averaging Filter!
 ---
 ```python
 # import libraries
