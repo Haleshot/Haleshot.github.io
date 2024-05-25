@@ -54,7 +54,7 @@ A ⊖ B = { Z | (B ⊖ Z) ∈ A }
 
 In the above equation, A represents the image, and B is the structuring element. The symbol ⊖ denotes erosion. The operation involves taking the reflection of B about its origin and shifting it by Z. Erosion of A by B yields a set of all points where B, translated (shifted by Z), is entirely contained within A. Erosion reduces the number of pixels from the object boundary.
 
-Note: The code implementation is provided in the ipynb file.
+Note: The code implementation is provided in the [ipynb](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Erosion_Dilation/Erosion_Dilation.ipynb) file.
 
 
 ```python
