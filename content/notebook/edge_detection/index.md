@@ -1,7 +1,9 @@
 ---
 title: Edge Detection
 date: '2024-05-25'
+summary: Experimenting with DFT, IDFT and matrices!
 ---
+
 ```python
 # import libraries
 import numpy as np
