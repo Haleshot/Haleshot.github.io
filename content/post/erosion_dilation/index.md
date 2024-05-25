@@ -1,6 +1,7 @@
 ---
 title: Erosion Dilation
-date: '2024-05-25'
+date: '2023-03-15'
+summary: Image Morphological Operations
 ---
 ```python
 # import libraries
