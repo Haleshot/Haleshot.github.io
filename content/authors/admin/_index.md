@@ -35,7 +35,8 @@ interests:
   - Computer Vision
   - Image Processing
   - LLMs
-  - Open Source Enthusiast
+  - Open Source
+  - GenAI
 
 # Education to show in About widget
 education:
@@ -43,9 +44,6 @@ education:
     - course: B Tech in Artificial Intelligence
       institution: NMIMS University
       year: 2025
-    - course: High School in CS
-      institution: Massachusetts Institute of Technology
-      year: 2021
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
