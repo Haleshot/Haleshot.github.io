@@ -1,6 +1,6 @@
 ---
 title: Discrete Fourier Transform
-date: '2024-05-24'
+date: '2023-03-07'
 summary: Experimenting with DFT, IDFT and matrices!
 ---
 
