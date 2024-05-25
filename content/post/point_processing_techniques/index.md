@@ -91,9 +91,6 @@ Spatial domain filtering involves modifying pixels by considering the values of 
 
 - **Low Pass Filtering (Blurring):** It removes high-frequency content from the image, resulting in a smoother image. A common mask used for low pass filtering is the averaging filter, which replaces each pixel value with the average of its surrounding pixels.
 
-Note: The code implementation is provided in the ipynb file.
-
-
 ```python
 # import libraries
 import pandas as pd
