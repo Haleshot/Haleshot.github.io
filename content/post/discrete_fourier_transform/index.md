@@ -3,15 +3,6 @@ title: Discrete Fourier Transform
 date: '2024-05-24'
 summary: Easily blog from Jupyter notebooks!
 ---
-```python
-# import libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import cv2 # You can also use PIL as alternative.
-from google.colab.patches import cv2_imshow
-import math
-```
 
 # Experiment:
 
@@ -89,12 +80,6 @@ The algorithm for performing the DFT using the twiddle factor matrix is as follo
 
 > [!NOTE] 
 > The code implementation is not provided in this README file.
-
-
-```python
-# Defining an array:
-x = np.array([1, 2, 1, 2])
-```
 
 ## Formulae used to implement in user defined functions
 
