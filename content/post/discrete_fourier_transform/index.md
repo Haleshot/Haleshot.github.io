@@ -3,8 +3,8 @@ title: Discrete Fourier Transform
 subtitle: Experimenting with DFT, IDFT and matrices!
 summary: Experimenting with DFT, IDFT and matrices!
 projects: [Signal_Image_Processing/Discrete_Fourier_Transform/Discrete_Fourier_Transform.ipynb]
-date: '2023-03-07'
-lastmod: '2024-05-25'
+date: '2023-03-07T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
 draft: false
 featured: true
 image:
