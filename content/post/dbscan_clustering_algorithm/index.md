@@ -32,6 +32,7 @@ categories:
 This README file provides information on the DBSCAN (Density-Based Spatial Clustering of Applications with Noise) algorithm and its implementation. DBSCAN is a density-based clustering algorithm that groups together data points that are close to each other in dense regions and identifies outliers as points in low-density regions. Below is a breakdown of the content covered in this README.
 
 ## Table of Contents
+
 1. [Part A: DBSCAN Clustering Algorithm](#part-a)
 2. [Part B: Implementing DBSCAN](#part-b)
 3. [Part C: Handling Outliers](#part-c)
