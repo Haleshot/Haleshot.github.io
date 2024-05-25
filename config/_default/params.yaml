@@ -108,6 +108,8 @@ extensions:
     local_backend: false
   academicons:
     enable: true
+  devicons:
+    enable: true
 
 # Security
 
