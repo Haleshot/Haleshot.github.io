@@ -2,13 +2,12 @@
 title: Discrete Fourier Transform
 subtitle: Experimenting with DFT, IDFT and matrices!
 summary: Experimenting with DFT, IDFT and matrices!
-projects: [Signal_Image_Processing/Discrete_Fourier_Transform/Discrete_Fourier_Transform.ipynb]
 date: '2023-03-07T00:00:00Z'
 lastmod: '2024-05-25T00:00:00Z'
 draft: false
 featured: true
 image:
-  caption: 'Program output'
+  caption: 'Formula used'
   focal_point: ''
   placement: 2
   preview_only: false
@@ -18,6 +17,7 @@ tags:
   - Signal Processing
   - Fourier Transform
   - Matrices
+  - Image Processing
 categories:
   - Programming
   - Mathematics
@@ -61,6 +61,7 @@ To understand and work with this project, you should be familiar with the follow
 After successful completion of this experiment, students will be able to:
 
 - Implement inverse and forward DFT on the given sequence.
+- Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Discrete_Fourier_Transform/Discrete_Fourier_Transform.ipynb).
 
 ## Theory
 

@@ -35,6 +35,7 @@ After successfully completing this experiment, students will be able to:
 
 - Implement dilation and erosion operations on images.
 - Analyze the effects of changing the size and shape of the structuring element on the eroded image.
+- Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Erosion_Dilation/Erosion_Dilation.ipynb).
 
 ## Theory
 

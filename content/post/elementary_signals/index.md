@@ -39,6 +39,7 @@ After successful completion of this experiment, students will be able to:
 
 - Identify and generate various types of elementary signals.
 - Perform simple operations on the signals.
+- Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Elementary_Signals/Elementary_Signals.ipynb).
 
 ## Theory
 

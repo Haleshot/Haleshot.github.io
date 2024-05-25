@@ -39,6 +39,7 @@ After successful completion of this experiment, students will be able to:
 - Apply Sobel's mask to obtain the components of the gradient.
 - Apply an averaging filter to the test image and observe the effects.
 - Compare the results obtained from step a and b and summarize the observations.
+- Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Edge_Detection/Edge_Detection.ipynb).
 
 ## Theory
 
