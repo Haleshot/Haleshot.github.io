@@ -1,7 +1,7 @@
 ---
 title: Discrete Fourier Transform
 date: '2024-05-24'
-summary: Easily blog from Jupyter notebooks!
+summary: Experimenting with DFT, IDFT and matrices!
 ---
 
 # Discrete Fourier Transform (DFT) in Python
