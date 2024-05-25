@@ -1,8 +1,30 @@
 ---
 title: Erosion Dilation
-date: '2023-03-15'
+subtitle: Exploring Morphological Image Transformations
 summary: Image Morphological Operations
+date: '2023-03-15T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Image Processing
+ - Morphological Operations
+ - Erosion
+ - Dilation
+ - Structuring Elements
+categories:
+ - Programming
+ - Computer Vision
+ - Academic
 ---
+
 # Image Morphological Operations
 
 ## Aim
