@@ -1,5 +1,5 @@
 ---
-title: Point Processing Techniques
+title: Image Processing Techniques
 subtitle: Exploring Image Transformations and Spatial Filtering
 summary: Implementing point operations and spatial domain filters on images
 date: '2024-07-03T00:00:00Z'
