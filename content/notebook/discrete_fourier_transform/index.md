@@ -3,9 +3,6 @@ title: Discrete Fourier Transform
 date: '2024-05-24'
 summary: Easily blog from Jupyter notebooks!
 ---
-
-# Experiment:
-
 # Discrete Fourier Transform (DFT) in Python
 
 ## Aim
@@ -79,7 +76,7 @@ The algorithm for performing the DFT using the twiddle factor matrix is as follo
 10. Display the output.
 
 > [!NOTE] 
-> The code implementation is not provided in this README file.
+>  The code implementation is not provided in this README file.
 
 ## Formulae used to implement in user defined functions
 
