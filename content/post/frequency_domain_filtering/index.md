@@ -1,8 +1,30 @@
 ---
 title: Frequency Domain Filtering
-date: '2023-07-03'
+subtitle: Exploring Butterworth Filters in Image Processing
 summary: Frequency Domain Filtering with Butterworth Filter
+date: '2023-07-03T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Image Processing
+ - Frequency Domain Filtering
+ - Butterworth Filter
+ - Fourier Transform
+categories:
+ - Programming
+ - Computer Vision
+ - Signal Processing
+ - Academic
 ---
+
 # Frequency Domain Filtering with Butterworth Filter
 
 ## Aim
