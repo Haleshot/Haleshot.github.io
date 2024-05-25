@@ -76,7 +76,6 @@ The algorithm for performing the DFT using the twiddle factor matrix is as follo
 9. Plot the DFT (absolute value) when the DFT formula is used.
 10. Display the output.
 
-Note: The code implementation is not provided in this README file.
 
 ## Formulae used to implement in user defined functions
 
@@ -160,17 +159,6 @@ print(Q)
 
     [ 1.5+0.j  0. +0.j -0.5+0.j  0. +0.j]
 
-# Hence from the given cell references, we see that the built in function answer and the one defined in Numpy match
-
-## User Defined answers in cells
-
-1. [Forward Fourier Transform](#scrollTo=HR667Q06jNSu&line=1&uniqifier=1)
-2. [Inverse Fourier Transform](#scrollTo=dU9hJQ5LkOti&line=2&uniqifier=1)
-
-## Built in functions answers cells
-
-1. [Forward Fourier Transform](#scrollTo=OtdVaoAak0Me&line=3&uniqifier=1)
-2. [Inverse Fourier Transform](#scrollTo=kb9QVQXwmkCb&line=1&uniqifier=1)
 
 # Conclusion:
 
