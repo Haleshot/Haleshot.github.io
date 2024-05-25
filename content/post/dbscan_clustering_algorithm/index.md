@@ -1,5 +1,5 @@
 ---
-title: Dbscan Clustering Algorithm
+title: DBScan Clustering Algorithm
 subtitle: Exploring Density-Based Spatial Clustering with DBSCAN
 summary: Implementing the DBSCAN algorithm for clustering and outlier detection
 date: '2023-07-03T00:00:00Z'
