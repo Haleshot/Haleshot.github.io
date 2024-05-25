@@ -1,5 +1,5 @@
 # Hugo Blox GitHub Action to import Jupyter Notebooks as blog posts
-name: Import Jupyter Notebooks as Blog Posts
+name: Import Jupyter Notebooks as Notebook posts
 
 # Require permission to create a PR
 permissions:
