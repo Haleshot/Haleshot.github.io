@@ -69,6 +69,7 @@ After successful completion of this experiment, students will be able to:
 
 1. Understand the effect of varying spatial resolution.
 2. Understand the effect of varying grey level resolution.
+3. Can be found [here](https://github.com/Haleshot/Signal_Image_Processing/blob/main/Sampling_and_Greyscale_Resolution/Sampling_and_Greyscale_Resolution.ipynb).
 
 ## Theory
 
