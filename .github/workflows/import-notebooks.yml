@@ -31,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install academic==0.11.2
       - name: Run Academic Converter Tool
-        run: academic import 'notebooks/*.ipynb' content/notebok/ --verbose
+        run: academic import 'notebooks/*.ipynb' content/notebook/ --verbose
       - name: Create Pull Request
         # Set ID for `Check outputs` stage
         id: cpr
