@@ -1,6 +1,7 @@
 ---
 title: Frequency Domain Filtering
-date: '2024-05-25'
+date: '2023-07-03'
+summary: Frequency Domain Filtering with Butterworth Filter
 ---
 ```python
 # import libraries
