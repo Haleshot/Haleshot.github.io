@@ -1,6 +1,7 @@
 ---
 title: Discrete Fourier Transform
 date: '2024-05-24'
+summary: Easily blog from Jupyter notebooks!
 ---
 ```python
 # import libraries
@@ -19,10 +20,19 @@ import math
 x = np.array([1, 2, 1, 2])
 ```
 
-## Formulae used to implement in user defined functions:
-<Insert later>
+## Formulae used to implement in user defined functions
 
-### Obtaining Twiddle factor matrix for Forward DFT:
+### DFT
+
+![png](DFT.png)
+
+### Inverse DFT
+
+![png](IDFT.png)
+
+### Obtaining Twiddle factor matrix for Forward DFT
+
+![png](Twiddle_Factor_Matrix.png)
 
 ```python
 N = 4
@@ -40,7 +50,7 @@ print(l)
      [ 1.+0.j -1.+0.j  1.+0.j -1.+0.j]
      [ 1.+0.j  0.+1.j -1.+0.j  0.-1.j]]
 
-### Getting DFT for above DFT twiddle factor matrix:
+### Getting DFT for above DFT twiddle factor matrix
 
 ```python
 A = np.dot(l, np.transpose(x))
@@ -49,7 +59,7 @@ print(A)
 
     [ 6.+0.j  0.+0.j -2.+0.j  0.+0.j]
 
-### Obtaining Twiddle factor matrix for Inverse DFT:
+### Obtaining Twiddle factor matrix for Inverse DFT
 
 ```python
 N = 4
@@ -67,7 +77,7 @@ print(inv_l)
      [ 1.+0.j -1.+0.j  1.+0.j -1.+0.j]
      [ 1.+0.j  0.-1.j -1.+0.j  0.+1.j]]
 
-### Getting Invserse DFT for above Inverse DFT twiddle factor matrix:
+### Getting Invserse DFT for above Inverse DFT twiddle factor matrix
 
 ```python
 B = np.dot(inv_l, A)/N
@@ -92,18 +102,21 @@ print(Q)
 
     [ 1.5+0.j  0. +0.j -0.5+0.j  0. +0.j]
 
-# Hence from the given cell references, we see that the built in function answer and the one defined in Numpy match.
-## User Defined answers in cells:
+# Hence from the given cell references, we see that the built in function answer and the one defined in Numpy match
 
-1.   [Forward Fourier Transform](#scrollTo=HR667Q06jNSu&line=1&uniqifier=1)
-2.   [Inverse Fourier Transform](#scrollTo=dU9hJQ5LkOti&line=2&uniqifier=1)
+## User Defined answers in cells
+
+1. [Forward Fourier Transform](#scrollTo=HR667Q06jNSu&line=1&uniqifier=1)
+2. [Inverse Fourier Transform](#scrollTo=dU9hJQ5LkOti&line=2&uniqifier=1)
 
 ## Built in functions answers cells
-1.   [Forward Fourier Transform](#scrollTo=OtdVaoAak0Me&line=3&uniqifier=1)
-2.   [Inverse Fourier Transform](#scrollTo=kb9QVQXwmkCb&line=1&uniqifier=1)
 
-# From the above experiment, I learnt the following:
-1.	Obtaining the twiddle factor matrix .
-2.	To find the DFT and IDFT of a given sequence using twiddle factor matrix.  
-3.	To compute the DFT and IDFT using matrix method/user defined and built in fft and ifft function.
+1. [Forward Fourier Transform](#scrollTo=OtdVaoAak0Me&line=3&uniqifier=1)
+2. [Inverse Fourier Transform](#scrollTo=kb9QVQXwmkCb&line=1&uniqifier=1)
+
+# Conclusion:
+
+1. Obtaining the twiddle factor matrix .
+2. To find the DFT and IDFT of a given sequence using twiddle factor matrix.  
+3. To compute the DFT and IDFT using matrix method/user defined and built in fft and ifft function.
 4. Implement Forward and inverse DFT on the given sequence.
