@@ -1,8 +1,29 @@
 ---
 title: Elementary Signals
-date: '2023-03-07'
+subtitle: Exploring Fundamental Signals and Operations
 summary: Elementary Signals and Operations in Python!
+date: '2023-03-07T00:00:00Z'
+lastmod: '2024-05-25T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Signal Processing
+ - Elementary Signals
+ - Discrete-Time Signals
+ - Python
+categories:
+ - Programming
+ - Mathematics
+ - Academic
 ---
+
 # Elementary Signals and Operations in Python
 
 ## Aim
