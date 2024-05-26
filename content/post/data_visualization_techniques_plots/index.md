@@ -53,7 +53,7 @@ After successfully completing this experiment, you will be able to:
 - Read different types of data files (csv, excel, text file, etc.).
 - Understand the usage of different Python libraries for plotting data.
 - Plot data using different types of plots.
-- Can be found [here](https://github.com/Haleshot/AI-ML/blob/master/EDA_One_Hot_Label_Encoding/EDA_One_Hot_Label_Encoding.ipynb).
+- Can be found [here](https://github.com/Haleshot/AI-ML/blob/master/Data_Visualization_Techniques_Plots/Data_Visualization_Techniques_Plots.ipynb).
 
 <a name="theory"></a>
 ## Theory
