@@ -56,6 +56,7 @@ After successfully completing this experiment, you will be able to:
 - Understand finding null values and replacing them.
 - Understand and implement class label encoding.
 - Understand and implement one hot encoding.
+- Can be found [here](https://github.com/Haleshot/AI-ML/blob/master/EDA_One_Hot_Label_Encoding/EDA_One_Hot_Label_Encoding.ipynb).
 
 <a name="theory"></a>
 ## Theory
