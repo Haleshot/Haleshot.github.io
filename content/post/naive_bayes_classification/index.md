@@ -2,7 +2,7 @@
 title: Naive Bayes Classification
 subtitle: Exploring the Naïve Bayes Algorithm for Classification Tasks
 summary: Implementing the Naïve Bayes algorithm for classification using Python
-date: '2024-05-26T00:00:00Z'
+date: '2023-03-09T00:00:00Z'
 lastmod: '2024-05-26T00:00:00Z'
 draft: false
 featured: true
