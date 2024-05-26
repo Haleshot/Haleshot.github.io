@@ -1,6 +1,33 @@
 ---
 title: Naive Bayes Classification
-date: '2024-05-26'
+subtitle: Exploring the Naïve Bayes Algorithm for Classification Tasks
+summary: Implementing the Naïve Bayes algorithm for classification using Python
+date: '2024-05-26T00:00:00Z'
+lastmod: '2024-05-26T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Machine Learning
+ - Classification
+ - Naïve Bayes
+ - Probabilistic Modeling
+ - Python
+ - Pandas
+ - NumPy
+ - Matplotlib
+ - Seaborn
+categories:
+ - Programming
+ - Data Science
+ - Algorithms
+ - Academic
 ---
 
 # Naïve Bayes Algorithm for Classification
