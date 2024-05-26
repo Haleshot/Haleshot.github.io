@@ -55,6 +55,7 @@ To successfully complete this experiment, you should have knowledge of Python pr
 ## Outcome
 After successfully completing this experiment, you will be able to:
 1. Implement the KNN technique for classification.
+2. Can be found [here](https://github.com/Haleshot/AI-ML/blob/master/KNN_Classification/KNN_Classification.ipynb).
 
 <a name="theory"></a>
 ## Theory
