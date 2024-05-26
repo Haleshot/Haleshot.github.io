@@ -3,7 +3,7 @@
 title: Srihari Thyagarajan
 
 # Name pronunciation (optional)
-name_pronunciation: 🔊 ShreeHurry 🔊 Thyaguhrajan
+name_pronunciation: 
 
 # Full name (for SEO)
 first_name: Srihari
