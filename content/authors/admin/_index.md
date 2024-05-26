@@ -63,7 +63,7 @@ skills:
       - name: MySql
         description: 'Intermediate'
         percent: 75
-        icon: devicon/mysql.svg
+        icon: mysql.svg
         icon_pack: devicon
       - name: C++
         description: ''
