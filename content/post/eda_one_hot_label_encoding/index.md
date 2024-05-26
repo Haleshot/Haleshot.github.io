@@ -2,7 +2,7 @@
 title: Eda One Hot Label Encoding
 subtitle: Exploring Data with Pandas Techniques
 summary: Performing Exploratory Data Analysis and Feature Engineering
-date: '2024-05-26T00:00:00Z'
+date: '2022-12-22T00:00:00Z'
 lastmod: '2024-05-26T00:00:00Z'
 draft: false
 featured: true
