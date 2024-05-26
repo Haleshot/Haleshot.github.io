@@ -61,9 +61,9 @@ skills:
         icon: chart-line
         icon_pack: fas
       - name: MySql
-        description: 'Intermediate'
+        description: ''
         percent: 75
-        icon: mysql.svg
+        icon: mysql
         icon_pack: devicon
       - name: C++
         description: ''
