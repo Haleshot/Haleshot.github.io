@@ -7,7 +7,7 @@ lastmod: '2024-05-26T00:00:00Z'
 draft: false
 featured: true
 image:
- caption: 'Image credit [here](https://analyticsarora.com/exploratory-data-analysis-in-python-beginners-guide-for-2021/)'
+ caption: 'Image credit: [Analytics Arora](https://analyticsarora.com/exploratory-data-analysis-in-python-beginners-guide-for-2021/)'
  focal_point: ''
  placement: 2
  preview_only: false
