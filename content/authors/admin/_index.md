@@ -95,54 +95,6 @@ skills:
         percent: 50
         icon: statistics
         icon_pack: custom
-  - name: Developer Tools/Platforms
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Git
-        description: ''
-        percent: 75
-        icon: git-original
-        icon_pack: custom
-      - name: GitHub
-        description: ''
-        percent: 85
-        icon: github-original
-        icon_pack: custom
-      - name: GitLab
-        description: ''
-        percent: 65
-        icon: gitlab-original
-        icon_pack: custom
-      - name: Ubuntu
-        description: ''
-        percent: 65
-        icon: ubuntu-original
-        icon_pack: custom
-      - name: Windows
-        description: ''
-        percent: 78
-        icon: windows
-        icon_pack: custom
-      - name: VSCode
-        description: ''
-        percent: 89
-        icon: vscode-original
-        icon_pack: custom
-  - name: Databases
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: MySql
-        description: ''
-        percent: 75
-        icon: mysql
-        icon_pack: custom
-      - name: MongoDB
-        description: ''
-        percent: 43
-        icon: mongodb
-        icon_pack: custom
   - name: Libraries/Frameworks
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -206,6 +158,54 @@ skills:
         description: ''
         percent: 68
         icon: streamlit-original
+        icon_pack: custom
+  - name: Developer Tools/Platforms
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Git
+        description: ''
+        percent: 75
+        icon: git-original
+        icon_pack: custom
+      - name: GitHub
+        description: ''
+        percent: 85
+        icon: github-original
+        icon_pack: custom
+      - name: GitLab
+        description: ''
+        percent: 65
+        icon: gitlab-original
+        icon_pack: custom
+      - name: Ubuntu
+        description: ''
+        percent: 65
+        icon: ubuntu-original
+        icon_pack: custom
+      - name: Windows
+        description: ''
+        percent: 78
+        icon: windows
+        icon_pack: custom
+      - name: VSCode
+        description: ''
+        percent: 89
+        icon: vscode-original
+        icon_pack: custom
+  - name: Databases
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: MySql
+        description: ''
+        percent: 75
+        icon: mysql
+        icon_pack: custom
+      - name: MongoDB
+        description: ''
+        percent: 43
+        icon: mongodb
         icon_pack: custom
   - name: Hobbies
     color: '#eeac02'
