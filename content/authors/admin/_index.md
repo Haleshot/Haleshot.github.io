@@ -62,41 +62,41 @@ skills:
         icon_pack: custom
       - name: AI
         description: ''
-        percent: 75
+        percent: 80
         icon: chart-line
         icon_pack: fas
       - name: Machine Learning
         description: ''
-        percent: 50
+        percent: 68
         icon: machineLearning
         icon_pack: custom
       - name: Deep Learning
         description: ''
-        percent: 50
+        percent: 75
         icon: deepLearning
         icon_pack: custom
       - name: NLP
         description: ''
-        percent: 50
+        percent: 60
         icon: NLP
         icon_pack: custom
       - name: Signal and Image Processing
         description: ''
-        percent: 50
+        percent: 70
         icon: SIP
         icon_pack: custom
       - name: DSA
         description: ''
-        percent: 50
+        percent: 65
         icon: dsa
         icon_pack: custom
       - name: Statistics
         description: ''
-        percent: 50
+        percent: 60
         icon: statistics
         icon_pack: custom
   - name: Libraries/Frameworks
-    color: '#eeac02'
+    color: '#8ddd20'
     color_border: '#f0bf23'
     items:
       - name: FastAPI
@@ -160,7 +160,7 @@ skills:
         icon: streamlit-original
         icon_pack: custom
   - name: Developer Tools/Platforms
-    color: '#eeac02'
+    color: '#1ed780'
     color_border: '#f0bf23'
     items:
       - name: Git
@@ -208,7 +208,7 @@ skills:
         icon: mongodb
         icon_pack: custom
   - name: Hobbies
-    color: '#eeac02'
+    color: '#1e4ed7'
     color_border: '#f0bf23'
     items:
       - name: Hiking
