@@ -64,7 +64,7 @@ skills:
         description: ''
         percent: 75
         icon: mysql
-        icon_pack: custom
+        icon_pack: 
       - name: C++
         description: ''
         percent: 50
