@@ -55,117 +55,163 @@ skills:
         percent: 75
         icon: python
         icon_pack: fab
-      - name: Data Science
+      - name: Java
         description: ''
-        percent: 85
+        percent: 65
+        icon: java
+        icon_pack: custom
+      - name: AI
+        description: ''
+        percent: 75
         icon: chart-line
         icon_pack: fas
+      - name: Machine Learning
+        description: ''
+        percent: 50
+        icon: machineLearning.svg
+        icon_pack: custom
+      - name: Deep Learning
+        description: ''
+        percent: 50
+        icon: deepLearning.svg
+        icon_pack: custom
+      - name: NLP
+        description: ''
+        percent: 50
+        icon: NLP.svg
+        icon_pack: custom
+      - name: Signal and Image Processing
+        description: ''
+        percent: 50
+        icon: SIP.svg
+        icon_pack: custom
+      - name: DSA
+        description: ''
+        percent: 50
+        icon: deepLearning.svg
+        icon_pack: custom
+      - name: Statistics
+        description: ''
+        percent: 50
+        icon: statistics.svg
+        icon_pack: custom
+
+  - name: Databases
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
       - name: MySql
         description: ''
         percent: 75
         icon: mysql
         icon_pack: custom
-      - name: C++
-        description: ''
-        percent: 50
-        icon: devicon/plusplus-original.svg
-        icon_pack: devicon
-      - name: FastAPI
-        description: ''
-        percent: 40
-        icon: devicon/fastapi-original.svg
-        icon_pack: devicon
-      - name: Flask
-        description: ''
-        percent: 40
-        icon: devicon/flask-original.svg
-        icon_pack: devicon
-      - name: Git
-        description: ''
-        percent: 40
-        icon: devicon/git-original.svg
-        icon_pack: devicon
-      - name: GitHub
-        description: ''
-        percent: 40
-        icon: devicon/github-original.svg
-        icon_pack: devicon
-      - name: GitLab
-        description: ''
-        percent: 40
-        icon: devicon/gitlab-original.svg
-        icon_pack: devicon
-      - name: Jupyter
-        description: ''
-        percent: 40
-        icon: devicon/jupyter-original.svg
-        icon_pack: devicon
-      - name: keras
-        description: ''
-        percent: 40
-        icon: devicon/keras-original.svg
-        icon_pack: devicon
-      - name: Markdown
-        description: ''
-        percent: 40
-        icon: devicon/markdown-original.svg
-        icon_pack: devicon
-      - name: Matplotlib
-        description: ''
-        percent: 40
-        icon: devicon/matplotlib-original.svg
-        icon_pack: devicon
       - name: MongoDB
         description: ''
-        percent: 40
-        icon: devicon/mongodb-original.svg
-        icon_pack: devicon
+        percent: 43
+        icon: mongodb
+        icon_pack: custom
+  - name: Libraries/Frameworks
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: FastAPI
+        description: ''
+        percent: 68
+        icon: fastapi-original.svg
+        icon_pack: custom
+
+      - name: Flask
+        description: ''
+        percent: 60
+        icon: flask-original.svg
+        icon_pack: custom
+
+      - name: Jupyter
+        description: ''
+        percent: 80
+        icon: jupyter-original.svg
+        icon_pack: custom
+      - name: keras
+        description: ''
+        percent: 60
+        icon: keras-original.svg
+        icon_pack: custom
+      - name: Markdown
+        description: ''
+        percent: 65
+        icon: markdown-original.svg
+        icon_pack: custom
+      - name: Matplotlib
+        description: ''
+        percent: 68
+        icon: matplotlib-original.svg
+        icon_pack: custom
+
       - name: NumPy
         description: ''
-        percent: 40
-        icon: devicon/numpy-original-workmark.svg
-        icon_pack: devicon
+        percent: 70
+        icon: numpy-original-workmark.svg
+        icon_pack: custom
       - name: OpenCV
         description: ''
-        percent: 40
-        icon: devicon/opencv-original.svg
-        icon_pack: devicon
+        percent: 65
+        icon: opencv-original.svg
+        icon_pack: custom
       - name: Pandas
         description: ''
-        percent: 40
-        icon: devicon/pandas-original.svg
-        icon_pack: devicon
+        percent: 70
+        icon: pandas-original.svg
+        icon_pack: custom
       - name: Qt
         description: ''
-        percent: 40
-        icon: devicon/qt-original.svg
-        icon_pack: devicon
+        percent: 62
+        icon: qt-original.svg
+        icon_pack: custom
       - name: Scikit-learn
         description: ''
-        percent: 40
-        icon: devicon/scikitlearn-original.svg
-        icon_pack: devicon
-      - name: SQLite
-        description: ''
-        percent: 40
-        icon: devicon/sqlite-original.svg
-        icon_pack: devicon
+        percent: 71
+        icon: scikitlearn-original.svg
+        icon_pack: custom
       - name: Streamlit
         description: ''
-        percent: 40
-        icon: devicon/streamlit-original.svg
-        icon_pack: devicon
+        percent: 68
+        icon: streamlit-original.svg
+        icon_pack: custom
+  - name: Developer Tools/Platforms
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Git
+        description: ''
+        percent: 75
+        icon: git-original.svg
+        icon_pack: custom
+      - name: GitHub
+        description: ''
+        percent: 85
+        icon: github-original.svg
+        icon_pack: custom
+      - name: GitLab
+        description: ''
+        percent: 65
+        icon: gitlab-original.svg
+        icon_pack: custom
       - name: Ubuntu
         description: ''
-        percent: 40
-        icon: devicon/ubuntu-original.svg
-        icon_pack: devicon
+        percent: 65
+        icon: ubuntu-original.svg
+        icon_pack: custom
+      - name: Windows
+        description: ''
+        percent: 78
+        icon: windows.svg
+        icon_pack: custom
       - name: VSCode
         description: ''
-        percent: 40
-        icon: devicon/vscode-original.svg
-        icon_pack: devicon
-  - name: Hobbies
+        percent: 89
+        icon: vscode-original.svg
+        icon_pack: custom
+    - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
@@ -184,6 +230,11 @@ skills:
         percent: 80
         icon: camera-retro
         icon_pack: fas
+      - name: Gaming
+        description: ''
+        percent: 80
+        icon: gaming
+        icon_pack: custom
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
