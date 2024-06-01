@@ -68,32 +68,66 @@ skills:
       - name: Machine Learning
         description: ''
         percent: 50
-        icon: machineLearning.svg
+        icon: machineLearning
         icon_pack: custom
       - name: Deep Learning
         description: ''
         percent: 50
-        icon: deepLearning.svg
+        icon: deepLearning
         icon_pack: custom
       - name: NLP
         description: ''
         percent: 50
-        icon: NLP.svg
+        icon: NLP
         icon_pack: custom
       - name: Signal and Image Processing
         description: ''
         percent: 50
-        icon: SIP.svg
+        icon: SIP
         icon_pack: custom
       - name: DSA
         description: ''
         percent: 50
-        icon: deepLearning.svg
+        icon: deepLearning
         icon_pack: custom
       - name: Statistics
         description: ''
         percent: 50
-        icon: statistics.svg
+        icon: statistics
+        icon_pack: custom
+  - name: Developer Tools/Platforms
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: Git
+        description: ''
+        percent: 75
+        icon: git-original
+        icon_pack: custom
+      - name: GitHub
+        description: ''
+        percent: 85
+        icon: github-original
+        icon_pack: custom
+      - name: GitLab
+        description: ''
+        percent: 65
+        icon: gitlab-original
+        icon_pack: custom
+      - name: Ubuntu
+        description: ''
+        percent: 65
+        icon: ubuntu-original
+        icon_pack: custom
+      - name: Windows
+        description: ''
+        percent: 78
+        icon: windows
+        icon_pack: custom
+      - name: VSCode
+        description: ''
+        percent: 89
+        icon: vscode-original
         icon_pack: custom
   - name: Databases
     color: '#eeac02'
@@ -116,99 +150,62 @@ skills:
       - name: FastAPI
         description: ''
         percent: 68
-        icon: fastapi-original.svg
+        icon: fastapi-original
         icon_pack: custom
-
       - name: Flask
         description: ''
         percent: 60
-        icon: flask-original.svg
+        icon: flask-original
         icon_pack: custom
-
       - name: Jupyter
         description: ''
         percent: 80
-        icon: jupyter-original.svg
+        icon: jupyter-original
         icon_pack: custom
       - name: keras
         description: ''
         percent: 60
-        icon: keras-original.svg
+        icon: keras-original
         icon_pack: custom
       - name: Markdown
         description: ''
         percent: 65
-        icon: markdown-original.svg
+        icon: markdown-original
         icon_pack: custom
       - name: Matplotlib
         description: ''
         percent: 68
-        icon: matplotlib-original.svg
+        icon: matplotlib-original
         icon_pack: custom
-
       - name: NumPy
         description: ''
         percent: 70
-        icon: numpy-original-workmark.svg
+        icon: numpy-original-workmark
         icon_pack: custom
       - name: OpenCV
         description: ''
         percent: 65
-        icon: opencv-original.svg
+        icon: opencv-original
         icon_pack: custom
       - name: Pandas
         description: ''
         percent: 70
-        icon: pandas-original.svg
+        icon: pandas-original
         icon_pack: custom
       - name: Qt
         description: ''
         percent: 62
-        icon: qt-original.svg
+        icon: qt-original
         icon_pack: custom
       - name: Scikit-learn
         description: ''
         percent: 71
-        icon: scikitlearn-original.svg
+        icon: scikitlearn-original
         icon_pack: custom
       - name: Streamlit
         description: ''
         percent: 68
-        icon: streamlit-original.svg
-        icon_pack: custom
-  - name: Developer Tools/Platforms
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Git
-        description: ''
-        percent: 75
-        icon: git-original.svg
-        icon_pack: custom
-      - name: GitHub
-        description: ''
-        percent: 85
-        icon: github-original.svg
-        icon_pack: custom
-      - name: GitLab
-        description: ''
-        percent: 65
-        icon: gitlab-original.svg
-        icon_pack: custom
-      - name: Ubuntu
-        description: ''
-        percent: 65
-        icon: ubuntu-original.svg
-        icon_pack: custom
-      - name: Windows
-        description: ''
-        percent: 78
-        icon: windows.svg
-        icon_pack: custom
-      - name: VSCode
-        description: ''
-        percent: 89
-        icon: vscode-original.svg
+        icon: streamlit-original
         icon_pack: custom
   - name: Hobbies
     color: '#eeac02'
