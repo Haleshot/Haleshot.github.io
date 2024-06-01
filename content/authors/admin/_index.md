@@ -95,7 +95,6 @@ skills:
         percent: 50
         icon: statistics.svg
         icon_pack: custom
-
   - name: Databases
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -211,7 +210,7 @@ skills:
         percent: 89
         icon: vscode-original.svg
         icon_pack: custom
-    - name: Hobbies
+  - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
