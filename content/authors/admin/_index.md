@@ -88,7 +88,7 @@ skills:
       - name: DSA
         description: ''
         percent: 50
-        icon: deepLearning
+        icon: dsa
         icon_pack: custom
       - name: Statistics
         description: ''
@@ -137,7 +137,7 @@ skills:
         description: ''
         percent: 75
         icon: mysql
-        icon_pack: custom
+        icon_pack: 
       - name: MongoDB
         description: ''
         percent: 43
