@@ -137,7 +137,7 @@ skills:
         description: ''
         percent: 75
         icon: mysql
-        icon_pack: 
+        icon_pack: custom
       - name: MongoDB
         description: ''
         percent: 43
