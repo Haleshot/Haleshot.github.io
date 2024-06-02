@@ -62,19 +62,26 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
+        - title: Customer Service (Technical Support + QA) - Freelance
+          company: [Gif Your Game](https://gifyourgame.com/)
           company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
-          date_end: ''
+          company_logo: gyg
+          location: Remote, Santa Monica, California
+          date_start: '2020-09-01'
+          date_end: '2024-04-01'
           description: |2-
-              Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
+              - Identify and address customer needs with a goal of complete satisfaction.
+              - Follow company communications guidelines and procedures under minimal supervision.
+              - Research information using available resources to satisfy customer inquiries.
+              - Build rapport with customers by engaging with them in an inviting, friendly, and professional manner, 
+              to deliver exceptional experiences nurture lasting relationships.
+              - Maintaining user logs about issues/feedback.
+              - Ensure products meet customer expectations and demand.
+              - Create reports documenting errors and issues for fixing.
+              - Perform Quality testing for the app and documenting respective errors/ bugs for the development team.
+              - Assist with moderation of content the Discord Server (with over 120,000+ members).
+            - title: Intern
+    
         - title: Professor of Semiconductor Physics
           company: University X
           company_url: ''
@@ -83,6 +90,24 @@ sections:
           date_start: '2016-01-01'
           date_end: '2020-12-31'
           description: Taught electronic engineering and researched semiconductor physics.
+        - title: Customer Service (Technical Support) - Freelance 
+          company: [Engagely.ai](https://engagely.ai)
+          company_url: ''
+          company_logo: engagely
+          location: Remote, Mumbai.
+          date_start: '2023-05-01'
+          date_end: '27-06-01'
+          description:  |2-
+              𝐇𝐚𝐧𝐝𝐬-𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐄𝐱𝐩𝐨𝐬𝐮𝐫𝐞:
+                - Contributed to RCM testing.
+                - Learned bug detection, QA collaboration, and documentation.
+              𝐏𝐫𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐂𝐨𝐝𝐞𝐛𝐚𝐬𝐞 𝐅𝐚𝐦𝐢𝐥𝐢𝐚𝐫𝐢𝐭𝐲:
+                - Access to GitLab repository.
+                - Explored Python-Flask, Docker, docker-compose.
+              𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬:
+                - Introduction to Git participation.
+                - Grasped pull requests, issue management.
+                - Engagely.ai internship provided real-world testing insights, coding exposure, and collaborative skills enhancement.          
     design:
       columns: '2'
   - block: accomplishments
