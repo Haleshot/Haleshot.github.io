@@ -46,7 +46,7 @@ Through this project, you will gain insights into advanced machine learning tech
 
 This ongoing project demonstrates expertise in implementing cutting-edge machine learning techniques, exploring novel approaches to enhance neural network performance, and developing interactive visualizations to facilitate understanding and analysis.
 
-﻿# TO DO:
+# TO DO:
 
  - [ ] Create a README file for explaining the project.
 
