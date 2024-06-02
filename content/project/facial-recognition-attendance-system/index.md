@@ -45,7 +45,7 @@ Through this project, you will gain hands-on experience in developing facial rec
 
 This project demonstrates proficiency in computer vision, image processing, and facial recognition techniques, while also showcasing the ability to develop practical and efficient attendance management solutions.
 
-﻿# Automated Attendance System with Facial Recognition
+# Automated Attendance System with Facial Recognition
 
 ## Table of Contents
 1. [Introduction](#introduction)
