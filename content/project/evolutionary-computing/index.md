@@ -18,7 +18,7 @@ links:
  - icon: github
    icon_pack: fab
    name: GitHub
-   url: ''  # add your GitHub repository URL here
+   url: 'https://github.com/Haleshot/Evolutionary_Computing'  # add your GitHub repository URL here
 
 slides: ''  # leave blank if not applicable
 
