@@ -82,8 +82,6 @@ sections:
                 * Streamlined API development and deployment using open-source technologies
                 * Demonstrated problem-solving, optimization, and open-source advocacy skills
 
-              * Technologies:
-              
                 * Python, FastAPI, HuggingFace Models (`Salesforce/blip-image-captioning-large`, Ollama/Groq Llama3, Whisper), API Development, Ubuntu Server Deployment
 
         - title: Customer Service, Technical Support, QA (Freelance)
