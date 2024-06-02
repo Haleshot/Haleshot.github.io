@@ -62,7 +62,33 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Customer Serivce, Technical Support, QA (Freelance)
+        - title: Software Engineering Internship
+          company: Digital India Corporation (DIC)
+          company_url: 'https://dic.gov.in/'
+          company_logo: dic
+          location: Remote, New Delhi, India.
+          date_start: '2020-05-01'
+          date_end: ''
+          description: |2-
+              * Project: [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/) (DIC)**
+
+              * Roles and Responsibilities:
+                * Analyzed product listing workflow and proposed AI solutions for streamlining
+                * Integrated image captioning and language models for automated product descriptions
+                * Implemented audio transcription model to enable multilingual product descriptions
+                * Developed APIs using FastAPI for seamless integration with the existing platform
+                * Collaborated with the team for deployment on Ubuntu server, resolving dependencies
+
+              * Key Contributions:
+                * Automated product listing process, enhancing vendor experience
+                * Enabled multilingual product descriptions through audio transcription
+                * Streamlined API development and deployment using open-source technologies
+                * Demonstrated problem-solving, optimization, and open-source advocacy skills
+
+              * Technologies:
+                * Python, FastAPI, HuggingFace Models (`Salesforce/blip-image-captioning-large`, Ollama/Groq Llama3, Whisper), API Development, Ubuntu Server Deployment
+
+        - title: Customer Service, Technical Support, QA (Freelance)
           company: Gif Your Game
           company_url: 'https://gifyourgame.com/'
           company_logo: gyg
