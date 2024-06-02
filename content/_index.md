@@ -70,9 +70,7 @@ sections:
           date_start: '2020-05-01'
           date_end: ''
           description: |2-
-              * Project: [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/) (DIC)
-
-              * Roles and Responsibilities:
+              * Roles and Responsibilities for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/):
                 * Analyzed product listing workflow and proposed AI solutions for streamlining
                 * Integrated image captioning and language models for automated product descriptions
                 * Implemented audio transcription model to enable multilingual product descriptions
