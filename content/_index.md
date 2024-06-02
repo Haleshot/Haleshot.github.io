@@ -79,8 +79,8 @@ sections:
           company_url: 'https://engagely.ai'
           company_logo: engagely
           location: Remote, Mumbai.
-          date_start: May 2023
-          date_end: June 2023
+          date_start: '2023-05-01'
+          date_end: '2023-06-01'
           description:  |2-
               * Hands-on Testing Exposure:
                 * Contributed to RCM testing.
