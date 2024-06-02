@@ -71,17 +71,16 @@ sections:
           date_end: ''
           description: |2-
               * Roles and Responsibilities:
-                * Analyzed product listing workflow and proposed AI solutions for  for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/)
-                * Integrated image captioning and language models for automated product descriptions
-                * Implemented audio transcription model to enable multilingual product descriptions
-                * Developed APIs using FastAPI for seamless integration with the existing platform
-                * Collaborated with the team for deployment on Ubuntu server, resolving dependencies
-                * Automated product listing process, enhancing vendor experience
-                * Enabled multilingual product descriptions through audio transcription
-                * Streamlined API development and deployment using open-source technologies
-                * Demonstrated problem-solving, optimization, and open-source advocacy skills
-
-                * Python, FastAPI, HuggingFace Models (`Salesforce/blip-image-captioning-large`, Ollama/Groq Llama3, Whisper), API Development, Ubuntu Server Deployment
+                * Analyzed product listing workflow and proposed AI solutions for  for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/).
+                * Integrated image captioning and language models for automated product descriptions.
+                * Implemented audio transcription model to enable multilingual product descriptions.
+                * Developed APIs using FastAPI for seamless integration with the existing platform.
+                * Collaborated with the team for deployment on Ubuntu server, resolving dependencies.
+                * Automated product listing process, enhancing vendor experience.
+                * Enabled multilingual product descriptions through audio transcription.
+                * Streamlined API development and deployment using open-source technologies.
+                * Demonstrated problem-solving, optimization, and open-source advocacy skills.
+                * Python, FastAPI, HuggingFace Models (`Salesforce/blip-image-captioning-large`, Ollama/Groq Llama3, Whisper), API Development, Ubuntu Server Deployment.
 
         - title: Customer Service, Technical Support, QA (Freelance)
           company: Gif Your Game
@@ -139,33 +138,34 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://drive.google.com/file/d/1rbOJu0YSHAM7zEe2Dnp95vMAslhRY1qa/view?usp=sharing
           date_end: ''
-          date_start: '2021-01-25'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          date_start: '2023-07-14'
+          description: 'Introduction to Java Programming'
+          icon: nmims
+          icon_pack: custom
+          organization: NMIMS
+          organization_url: https://www.nmims.edu
+          title: Java Programming
           url: ''
-        - certificate_url: https://www.edx.org
-          date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
+        # - certificate_url: https://www.edx.org
+        #   date_end: ''
+        #   date_start: '2021-01-01'
+        #   description: Formulated informed blockchain models, hypotheses, and use cases.
+        #   icon: edx
+        #   organization: edX
+        #   organization_url: https://www.edx.org
+        #   title: Blockchain Fundamentals
+        #   url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+        # - certificate_url: https://www.datacamp.com
+        #   date_end: '2020-12-21'
+        #   date_start: '2020-07-01'
+        #   description: ''
+        #   icon: datacamp
+        #   organization: DataCamp
+        #   organization_url: https://www.datacamp.com
+        #   title: 'Object-Oriented Programming in R'
+        #   url: ''
     design:
       columns: '2'
   - block: collection
