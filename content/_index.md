@@ -62,9 +62,9 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Customer Service (Technical Support + QA) - Freelance
-          company: [Gif Your Game](https://gifyourgame.com/)
-          company_url: ''
+        - title: Customer Service (Technical Support + QA); Freelance
+          company: Gif Your Game
+          company_url: 'https://gifyourgame.com/'
           company_logo: gyg
           location: Remote, Santa Monica, California
           date_start: '2020-09-01'
@@ -91,20 +91,20 @@ sections:
           date_end: '2020-12-31'
           description: Taught electronic engineering and researched semiconductor physics.
         - title: Customer Service (Technical Support) - Freelance 
-          company: [Engagely.ai](https://engagely.ai)
-          company_url: ''
+          company: Engagely.ai
+          company_url: 'https://engagely.ai'
           company_logo: engagely
           location: Remote, Mumbai.
           date_start: '2023-05-01'
           date_end: '27-06-01'
           description:  |2-
-              𝐇𝐚𝐧𝐝𝐬-𝐨𝐧 𝐓𝐞𝐬𝐭𝐢𝐧𝐠 𝐄𝐱𝐩𝐨𝐬𝐮𝐫𝐞:
+              Hands-on Testing Exposure:
                 - Contributed to RCM testing.
                 - Learned bug detection, QA collaboration, and documentation.
-              𝐏𝐫𝐚𝐜𝐭𝐢𝐜𝐚𝐥 𝐂𝐨𝐝𝐞𝐛𝐚𝐬𝐞 𝐅𝐚𝐦𝐢𝐥𝐢𝐚𝐫𝐢𝐭𝐲:
+              Practical Codebase Familiarity:
                 - Access to GitLab repository.
                 - Explored Python-Flask, Docker, docker-compose.
-              𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐝𝐢𝐧𝐠 𝐈𝐧𝐬𝐢𝐠𝐡𝐭𝐬:
+              Collaborative Coding Insights:
                 - Introduction to Git participation.
                 - Grasped pull requests, issue management.
                 - Engagely.ai internship provided real-world testing insights, coding exposure, and collaborative skills enhancement.          
