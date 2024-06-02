@@ -78,8 +78,6 @@ sections:
                 * Implemented audio transcription model to enable multilingual product descriptions
                 * Developed APIs using FastAPI for seamless integration with the existing platform
                 * Collaborated with the team for deployment on Ubuntu server, resolving dependencies
-
-              * Key Contributions:
                 * Automated product listing process, enhancing vendor experience
                 * Enabled multilingual product descriptions through audio transcription
                 * Streamlined API development and deployment using open-source technologies
