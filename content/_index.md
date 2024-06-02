@@ -70,19 +70,19 @@ sections:
           date_start: '2020-09-01'
           date_end: '2024-04-01'
           description: |2-
-                * Maintaining user logs about issues/feedback.
-                * Ensure products meet customer expectations and demand.
-                * Create reports documenting errors and issues for fixing.
-                * Perform Quality testing for the app and documenting respective errors/ bugs for the development team.
-                * Identify and address customer needs with a goal of complete satisfaction.
-                * Follow company communications guidelines and procedures under minimal supervision.
-                * Research information using available resources to satisfy customer inquiries.
-                * Identify and address customer needs with a goal of complete satisfaction.
-                * Follow company communications guidelines and procedures under minimal supervision.
-                * Research information using available resources to satisfy customer inquiries.
-                * Build rapport with customers by engaging with them in an inviting, friendly, and professional manner, 
-                  to deliver exceptional experiences nurture lasting relationships.
-                * Assist with moderation of content the Discord Server (with over 120,000+ members).
+              * Maintaining user logs about issues/feedback.
+              * Ensure products meet customer expectations and demand.
+              * Create reports documenting errors and issues for fixing.
+              * Perform Quality testing for the app and documenting respective errors/ bugs for the development team.
+              * Identify and address customer needs with a goal of complete satisfaction.
+              * Follow company communications guidelines and procedures under minimal supervision.
+              * Research information using available resources to satisfy customer inquiries.
+              * Identify and address customer needs with a goal of complete satisfaction.
+              * Follow company communications guidelines and procedures under minimal supervision.
+              * Research information using available resources to satisfy customer inquiries.
+              * Build rapport with customers by engaging with them in an inviting, friendly, and professional manner, 
+                to deliver exceptional experiences nurture lasting relationships.
+              * Assist with moderation of content the Discord Server (with over 120,000+ members).
         - title: Intern 
           company: Engagely.ai
           company_url: 'https://engagely.ai'
