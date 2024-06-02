@@ -70,9 +70,8 @@ sections:
           date_start: '2020-05-01'
           date_end: ''
           description: |2-
-              * Roles and Responsibilities for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/)
-
-                * Analyzed product listing workflow and proposed AI solutions for streamlining
+              * Roles and Responsibilities:
+                * Analyzed product listing workflow and proposed AI solutions for  for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/
                 * Integrated image captioning and language models for automated product descriptions
                 * Implemented audio transcription model to enable multilingual product descriptions
                 * Developed APIs using FastAPI for seamless integration with the existing platform
