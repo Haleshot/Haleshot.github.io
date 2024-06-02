@@ -45,3 +45,10 @@ Through this project, you will gain insights into advanced machine learning tech
 - Interactive Web Applications
 
 This ongoing project demonstrates expertise in implementing cutting-edge machine learning techniques, exploring novel approaches to enhance neural network performance, and developing interactive visualizations to facilitate understanding and analysis.
+
+﻿# TO DO:
+
+ - [ ] Create a README file for explaining the project.
+
+
+<p align="center"> <img src="https://media.tenor.com/hB9OTbewrikAAAAi/work-work-in-progress.gif" width="200" height="300" /> </p>
