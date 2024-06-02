@@ -67,28 +67,20 @@ sections:
           company_url: 'https://gifyourgame.com/'
           company_logo: gyg
           location: Remote, Santa Monica, California
-          date_start: '2020-09-01'
-          date_end: '2024-04-01'
+          date_start: Sept 2020
+          date_end: Apr 2024
           description: |2-
               - Identify and address customer needs with a goal of complete satisfaction.
               - Follow company communications guidelines and procedures under minimal supervision.
               - Research information using available resources to satisfy customer inquiries.
     
-        - title: Professor of Semiconductor Physics
-          company: University X
-          company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
         - title: Customer Service (Technical Support) - Freelance 
           company: Engagely.ai
           company_url: 'https://engagely.ai'
           company_logo: engagely
           location: Remote, Mumbai.
-          date_start: '2023-05-01'
-          date_end: '27-06-01'
+          date_start: May 2023
+          date_end: June 2023
           description:  |2-
               Hands-on Testing Exposure:
                 - Contributed to RCM testing.
