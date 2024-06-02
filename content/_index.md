@@ -62,7 +62,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: QA Intern (Freelance)
+        - title: Customer Serivce, Technical Support, QA (Freelance)
           company: Gif Your Game
           company_url: 'https://gifyourgame.com/'
           company_logo: gyg
@@ -74,11 +74,6 @@ sections:
                 * Ensure products meet customer expectations and demand.
                 * Create reports documenting errors and issues for fixing.
                 * Perform Quality testing for the app and documenting respective errors/ bugs for the development team.
-          - title: Customer Service, Technical Support (Freelance)
-            location: Remote, Santa Monica, California
-            date_start: '2020-09-01'
-            date_end: '2023-08-01'
-            description: |2-
                 * Identify and address customer needs with a goal of complete satisfaction.
                 * Follow company communications guidelines and procedures under minimal supervision.
                 * Research information using available resources to satisfy customer inquiries.
@@ -88,8 +83,7 @@ sections:
                 * Build rapport with customers by engaging with them in an inviting, friendly, and professional manner, 
                   to deliver exceptional experiences nurture lasting relationships.
                 * Assist with moderation of content the Discord Server (with over 120,000+ members).
-    
-        - title: Customer Service (Technical Support) - Freelance 
+        - title: Intern 
           company: Engagely.ai
           company_url: 'https://engagely.ai'
           company_logo: engagely
