@@ -67,12 +67,12 @@ sections:
           company_url: 'https://gifyourgame.com/'
           company_logo: gyg
           location: Remote, Santa Monica, California
-          date_start: Sept 2020
-          date_end: Apr 2024
+          date_start: '2020-09-01'
+          date_end: '2024-04-01'
           description: |2-
-              - Identify and address customer needs with a goal of complete satisfaction.
-              - Follow company communications guidelines and procedures under minimal supervision.
-              - Research information using available resources to satisfy customer inquiries.
+              * Identify and address customer needs with a goal of complete satisfaction.
+              * Follow company communications guidelines and procedures under minimal supervision.
+              * Research information using available resources to satisfy customer inquiries.
     
         - title: Customer Service (Technical Support) - Freelance 
           company: Engagely.ai
@@ -82,16 +82,16 @@ sections:
           date_start: May 2023
           date_end: June 2023
           description:  |2-
-              Hands-on Testing Exposure:
-                - Contributed to RCM testing.
-                - Learned bug detection, QA collaboration, and documentation.
-              Practical Codebase Familiarity:
-                - Access to GitLab repository.
-                - Explored Python-Flask, Docker, docker-compose.
-              Collaborative Coding Insights:
-                - Introduction to Git participation.
-                - Grasped pull requests, issue management.
-                - Engagely.ai internship provided real-world testing insights, coding exposure, and collaborative skills enhancement.          
+              * Hands-on Testing Exposure:
+                * Contributed to RCM testing.
+                * Learned bug detection, QA collaboration, and documentation.
+              * Practical Codebase Familiarity:
+                * Access to GitLab repository.
+                * Explored Python-Flask, Docker, docker-compose.
+              * Collaborative Coding Insights:
+                * Introduction to Git participation.
+                * Grasped pull requests, issue management.
+                * Engagely.ai internship provided real-world testing insights, coding exposure, and collaborative skills enhancement.          
     design:
       columns: '2'
   - block: accomplishments
