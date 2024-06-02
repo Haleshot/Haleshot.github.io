@@ -71,6 +71,7 @@ sections:
           date_end: ''
           description: |2-
               * Roles and Responsibilities for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/)
+
                 * Analyzed product listing workflow and proposed AI solutions for streamlining
                 * Integrated image captioning and language models for automated product descriptions
                 * Implemented audio transcription model to enable multilingual product descriptions
@@ -82,6 +83,7 @@ sections:
                 * Demonstrated problem-solving, optimization, and open-source advocacy skills
 
               * Technologies:
+              
                 * Python, FastAPI, HuggingFace Models (`Salesforce/blip-image-captioning-large`, Ollama/Groq Llama3, Whisper), API Development, Ubuntu Server Deployment
 
         - title: Customer Service, Technical Support, QA (Freelance)
