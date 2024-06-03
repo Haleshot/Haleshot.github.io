@@ -271,9 +271,5 @@ highlight_name: true
 
 I am a tech-enthusiast who loves programming and gaming; a senior - pursuing a bachelor's degree in Artificial Intelligence at NMIMS Mukesh Patel School of Technology Management & Engineering, where I learn about the theory and practice of machine learning, computer vision, natural language processing and deep learning.
 
-Worked as a Customer Service Technical Support at Gif Your Game, a platform that allows users to create and share high-quality game clips. I use my communication, problem-solving and technical skills to provide excellent customer service, identify and address customer needs, research information using available resources and perform quality testing and bug reporting for the app. I enjoy contributing to the improvement of the product and the satisfaction of the customers.
-
-Some of the projects that I have developed during the last 12 months include text summarization using LSTM, image processing operations and improving neural network classifiers. I have proficiency in Python and ML/DL libraries as well. I have also gained collaborative coding insights and hands-on testing exposure from my internship at Engagely.ai, where I worked with testing, GitLab, Python-Flask, Docker and docker-compose.
-
 My goal is to become a machine learning engineer who can create innovative and impactful solutions for real-world problems. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world. I also like to express my creativity and personality through streaming, content creation and video editing. I believe that technology and gaming can bring joy and value to people's lives, and I want to be part of that.
 {style="text-align: justify;"}
