@@ -1,7 +1,66 @@
 ---
-title: Sentiment Analysis
-date: '2024-06-03'
+title: Implementing Sentiment Analysis in Natural Language Processing
+subtitle: Comprehensive Guide to Sentiment Analysis
+summary: Conducting sentiment analysis on a chosen dataset, including EDA, text preprocessing, and feature engineering to understand the results.
+date: '2023-08-05T00:00:00Z'
+lastmod: '2024-06-03T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Sentiment Analysis
+ - Natural Language Processing
+ - Text Preprocessing
+ - Feature Engineering
+categories:
+ - Programming
+ - Machine Learning
+ - Data Science
+ - Natural Language Processing
 ---
+
+# Natural Language Processing
+
+## Table of Contents
+- [Aim](#aim)
+- [Prerequisite](#prerequisite)
+- [Outcome](#outcome)
+- [Theory](#theory)
+- [Task to be completed in PART B](#task-to-be-completed-in-part-b)
+- [References](#references)
+
+## Aim
+### Sentiment Analysis
+- Select a dataset and identify the problem statement.
+- Perform EDA, text preprocessing, feature engineering.
+- Implement sentiment analysis on the given dataset in Natural Language Processing.
+- Analyze and comprehend the results obtained.
+
+## Prerequisite
+- Python
+
+## Outcome
+After successful completion of this experiment, students will be able to:
+1. Perform end-to-end implementation of sentiment analysis using various NLP concepts.
+
+## Theory
+Understand concepts such as EDA, text preprocessing, and feature engineering for the selected dataset.
+
+## Task to be completed in PART B
+### Task
+#### A.5.1. Task
+- Implement word embedding using Word2Vec.
+- Find similarity between two documents using Word2Vec.
+
+For further information and datasets, refer to:
+- [Data.World Sentiment Datasets](https://data.world/datasets/sentiment)
+
 ```python
 # import libraries used:
 import pandas as pd
