@@ -2,7 +2,7 @@
 title: Priority Scheduling
 subtitle: Implementing Priority-Based Process Scheduling
 summary: Implementation of the Priority Scheduling algorithm for process scheduling, with and without considering arrival times (preemptive), calculating turn around time, wait time, and their respective averages.
-date: '2024-06-03T00:00:00Z'
+date: '2022-08-27T00:00:00Z'
 lastmod: '2024-06-03T00:00:00Z'
 draft: false
 featured: true
