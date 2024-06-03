@@ -1,7 +1,30 @@
 ---
-title: I066 Srihari Thyagarajan DL Lab 7
-date: '2024-06-03'
+title: Image classification using NN
+subtitle: Performing Image Classification on Fashion MNIST Dataset
+summary: Implementing a neural network for image classification on the Fashion MNIST dataset to achieve accurate predictions.
+date: '2023-06-03T00:00:00Z'
+lastmod: '2024-06-03T00:00:00Z'  
+draft: false
+featured: true
+image:
+ caption: 'Program output'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Neural Networks
+ - Image Classification
+ - Fashion MNIST
+ - Deep Learning
+categories:
+ - Programming
+ - Machine Learning
+ - Data Science
+ - Computer Vision
 ---
+
 
 
 ```python
