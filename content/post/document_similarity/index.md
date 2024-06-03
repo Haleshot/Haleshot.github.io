@@ -1,7 +1,32 @@
 ---
 title: Document Similarity
-date: '2024-06-03'
+subtitle: Measuring Similarity between Documents using Word Embeddings
+summary: Implementing methods such as Word2Vec and GloVe for measuring document similarity.
+date: '2023-04-04T00:00:00Z'
+lastmod: '2024-06-03T00:00:00Z'
+draft: false
+featured: true
+image:
+ caption: 'Photo Credit : Geeks for Geeks'
+ focal_point: ''
+ placement: 2
+ preview_only: false
+authors:
+ - admin
+tags:
+ - Natural Language Processing
+ - Document Similarity
+ - Word Embeddings
+ - Word2Vec
+ - GloVe
+categories:
+ - Programming
+ - Text Analysis
+ - Data Science
+ - Academic
 ---
+
+
 ```python
 # import libraries used:
 import nltk
