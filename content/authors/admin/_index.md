@@ -269,7 +269,7 @@ social:
 highlight_name: true
 ---
 
-I am a tech-enthusiast who loves programming and gaming; a senior - pursuing a bachelor's degree in Artificial Intelligence at NMIMS Mukesh Patel School of Technology Management & Engineering, where I learn about the theory and practice of machine learning, computer vision, natural language processing and deep learning.
+I am a tech-enthusiast who loves programming and gaming; a senior - pursuing a bachelor's degree in Artificial Intelligence at NMIMS, where I learn about the theory and practice of machine learning, computer vision, natural language processing and deep learning.
 
 My goal is to become a machine learning engineer who can create innovative and impactful solutions for real-world problems. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world. I also like to express my creativity and personality through streaming, content creation and video editing. I believe that technology and gaming can bring joy and value to people's lives, and I want to be part of that.
 {style="text-align: justify;"}
