@@ -7,7 +7,7 @@ lastmod: '2024-06-03T00:00:00Z'
 draft: false
 featured: true
 image:
- caption: 'Program output'
+ caption: 'Photo Credit: LearnOpenCV'
  focal_point: ''
  placement: 2
  preview_only: false
