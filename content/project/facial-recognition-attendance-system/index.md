@@ -7,6 +7,8 @@ tags:
  - OpenCV
  - Image Processing
  - Computer Vision
+ - Machine Learning
+ 
 date: '2022-11-06T00:00:00Z'
 
 image:
