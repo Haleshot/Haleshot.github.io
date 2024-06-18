@@ -57,7 +57,7 @@ skills:
         icon_pack: fab
       - name: Java
         description: ''
-        percent: 65
+        percent: 45
         icon: java
         icon_pack: custom
       - name: AI
@@ -113,6 +113,11 @@ skills:
         description: ''
         percent: 80
         icon: jupyter-original
+        icon_pack: custom
+      - name: Marimo
+        description: ''
+        percent: 75
+        icon: mairmo
         icon_pack: custom
       - name: keras
         description: ''
