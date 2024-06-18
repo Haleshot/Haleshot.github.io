@@ -198,7 +198,7 @@ skills:
         percent: 89
         icon: vscode-original
         icon_pack: custom
-  - name: Databases
+  - name: Databases and Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
@@ -212,10 +212,6 @@ skills:
         percent: 43
         icon: mongodb
         icon_pack: custom
-  - name: Hobbies
-    color: '#1e4ed7'
-    color_border: '#f0bf23'
-    items:
       - name: Hiking
         description: ''
         percent: 60
