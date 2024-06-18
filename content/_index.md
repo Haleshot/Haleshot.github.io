@@ -212,10 +212,16 @@ sections:
       buttons:
         - name: All
           tag: '*'
+        - name: Machine Learning
+          tag: Machine Learning
         - name: Deep Learning
           tag: Deep Learning
-        - name: Other
-          tag: Demo
+        - name: Image Processing
+          tag: Image Processing
+        - name: Evolutionary Computing
+          tag: Evolutionary Computing
+        - name: Miscellaneous
+          tag: Misc
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
