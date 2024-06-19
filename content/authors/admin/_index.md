@@ -117,7 +117,7 @@ skills:
       - name: Marimo
         description: ''
         percent: 75
-        icon: mairmo
+        icon: marimo
         icon_pack: custom
       - name: keras
         description: ''
