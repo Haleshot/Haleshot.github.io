@@ -166,7 +166,7 @@ skills:
         icon_pack: custom
   - name: Developer Tools/Platforms
     color: '#1ed780'
-    color_border: '#f0bf23'
+    color_border: '#784DF4'
     items:
       - name: Git
         description: ''
@@ -200,7 +200,7 @@ skills:
         icon_pack: custom
   - name: Databases and Hobbies
     color: '#eeac02'
-    color_border: '#f0bf23'
+    color_border: '#4DF464'
     items:
       - name: MySql
         description: ''
