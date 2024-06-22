@@ -12,7 +12,7 @@ tags:
 date: '2022-11-06T00:00:00Z'
 
 image:
- caption: Photo caption: Vaibhab Hariramani
+ caption: 'Photo credit: Vaibhab Hariramani'
  focal_point: Smart
 
 links:
