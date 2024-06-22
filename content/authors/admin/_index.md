@@ -95,6 +95,16 @@ skills:
         percent: 60
         icon: statistics
         icon_pack: custom
+      - name: Pandas
+        description: ''
+        percent: 70
+        icon: pandas-original
+        icon_pack: custom
+      - name: Scikit-learn
+        description: ''
+        percent: 71
+        icon: scikitlearn-original
+        icon_pack: custom
   - name: Libraries/Frameworks
     color: '#8ddd20'
     color_border: '#f0bf23'
@@ -144,20 +154,10 @@ skills:
         percent: 65
         icon: opencv-original
         icon_pack: custom
-      - name: Pandas
-        description: ''
-        percent: 70
-        icon: pandas-original
-        icon_pack: custom
       - name: Qt
         description: ''
         percent: 62
         icon: qt-original
-        icon_pack: custom
-      - name: Scikit-learn
-        description: ''
-        percent: 71
-        icon: scikitlearn-original
         icon_pack: custom
       - name: Streamlit
         description: ''
