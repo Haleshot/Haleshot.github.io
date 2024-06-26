@@ -84,10 +84,10 @@ features:
     commento:
       url: ''
     giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
+      repo: 'Haleshot/Haleshot.github.io'
+      repo_id: 'R_kgDOLUQrqQ'
+      category: 'Announcements'
+      category_id: 'DIC_kwDOLUQrqc4CgZZI'
   search:
     provider: wowchemy
     algolia:
