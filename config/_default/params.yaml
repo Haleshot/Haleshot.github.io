@@ -79,7 +79,7 @@ features:
   comment:
     provider: ''
     disqus:
-      shortname: ''
+      shortname: 'http://disqus.com/by/sriharihaleshotthyagarajan'
       show_count: true
     commento:
       url: ''
