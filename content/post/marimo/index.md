@@ -25,11 +25,13 @@ tags:
   - Data Science
   - Reproducibility
   - Interactive Programming
+  - Featured Blogs
 categories:
   - Technology
   - Programming
   - Data Science
   - Software Development
+  - Featured Blogs
 projects:
   - data-science-tools
 ---
