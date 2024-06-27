@@ -6,6 +6,7 @@ date: '2024-06-27T00:00:00Z'
 lastmod: '2024-06-27T00:00:00Z'
 draft: false
 featured: true
+commentable: true
 image:
   caption: 'marimo interface'
   focal_point: 'Center'
