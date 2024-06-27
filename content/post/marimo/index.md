@@ -46,15 +46,25 @@ I came across marimo from a TL;DR newsletter (finally going through something re
 
 1. [What is marimo?](#what-is-marimo)
 2. [Key Features of marimo](#key-features-of-marimo)
+
    2.1. [Consistent State](#consistent-state)
+
    2.2. [Built-in Interactivity](#built-in-interactivity)
+
    2.3. [Pure Python Programs](#pure-python-programs)
+
 3. [Solving Common Notebook Problems](#solving-common-notebook-problems)
+
    3.1. [Reproducibility](#reproducibility)
+
    3.2. [Maintainability](#maintainability)
+
    3.3. [Interactivity](#interactivity)
+
    3.4. [Reusability](#reusability)
+
    3.5. [Shareability](#shareability)
+   
 4. [Comparison with Jupyter Notebooks](#comparison-with-jupyter-notebooks)
 5. [Getting Started with marimo](#getting-started-with-marimo)
 6. [Use Cases and Examples](#use-cases-and-examples)
