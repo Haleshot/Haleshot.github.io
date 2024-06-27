@@ -7,6 +7,9 @@ lastmod: '2024-06-27T00:00:00Z'
 draft: false
 featured: true
 commentable: true
+banner:
+  image: "header.png"
+  caption: "Image credit: [**Geo**](https://github.com/gcushen/)"
 image:
   caption: 'marimo interface'
   focal_point: 'Center'
