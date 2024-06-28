@@ -157,7 +157,6 @@ But wait, there's more:
 As I explored these features, I couldn't help but feel like I was glimpsing the future of Python notebooks. marimo isn't just solving problems; it's redefining what's possible in this space.
 
 ```markmap
-- Mindmaps
   - marimo
     - Consistent State
       - Guaranteed sync between code, outputs, and state
