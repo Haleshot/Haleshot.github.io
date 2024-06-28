@@ -81,6 +81,7 @@ After stumbling upon marimo in my daily newsletter dive (shout out to [TLDR](htt
 At its core, marimo models notebooks as **dataflow graphs**, creating a dynamic and interconnected environment for your code.
 {{% /callout %}}
 
+```mermaid
 graph TD
     A[Cell 1: Define variable] --> B[Cell 2: Use variable]
     A --> C[Cell 3: Use variable]
@@ -91,6 +92,7 @@ graph TD
     G[Delete Cell] --> H[Scrub variables]
     I[Run Cell] --> J[Auto-run affected cells]
     K[Update UI Element] --> J
+```
 
 Imagine a notebook where running a cell or tweaking a UI element automatically updates all affected parts of your code. That's marimo in action! It keeps your code and outputs in perfect harmony, like a well-orchestrated symphony of data and computations.
 
