@@ -155,3 +155,35 @@ But wait, there's more:
 - **Developer-Friendly**: GitHub Copilot integration, Black code formatting, HTML export, fast code completion, VS Code extension – marimo's got your back at every step.
 
 As I explored these features, I couldn't help but feel like I was glimpsing the future of Python notebooks. marimo isn't just solving problems; it's redefining what's possible in this space.
+
+```markmap
+- Mindmaps
+  - marimo
+    - Consistent State
+      - Guaranteed sync between code, outputs, and state
+      - Reactive programming environment
+      - Automatic cell re-running
+      - Variable scrubbing on cell deletion
+    - Built-in Interactivity
+      - UI elements
+        - Sliders
+        - Dataframe transformers
+        - Interactive plots
+      - Automatic synchronization with Python code
+      - Real-time updates of affected cells
+    - Pure Python Programs
+      - Saved as .py files
+      - Executable as scripts
+      - Deployable as web apps
+    - Advanced Features
+      - Deterministic execution order
+      - Performance optimizations
+        - Selective cell execution
+        - Optional disabling of expensive cells
+      - Developer tools
+        - GitHub Copilot integration
+        - Black code formatting
+        - HTML export
+        - Fast code completion
+        - VS Code extension
+```
