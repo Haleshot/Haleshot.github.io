@@ -81,6 +81,17 @@ After stumbling upon marimo in my daily newsletter dive (shout out to [TLDR](htt
 At its core, marimo models notebooks as **dataflow graphs**, creating a dynamic and interconnected environment for your code.
 {{% /callout %}}
 
+graph TD
+    A[Cell 1: Define variable] --> B[Cell 2: Use variable]
+    A --> C[Cell 3: Use variable]
+    B --> D[Cell 4: Use results from Cell 2]
+    C --> E[Cell 5: Use results from Cell 3]
+    F[UI Element] --> B
+    F --> C
+    G[Delete Cell] --> H[Scrub variables]
+    I[Run Cell] --> J[Auto-run affected cells]
+    K[Update UI Element] --> J
+
 Imagine a notebook where running a cell or tweaking a UI element automatically updates all affected parts of your code. That's marimo in action! It keeps your code and outputs in perfect harmony, like a well-orchestrated symphony of data and computations.
 
 But marimo isn't just about reactive execution. It's a multifaceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
