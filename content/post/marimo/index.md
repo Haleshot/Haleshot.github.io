@@ -118,7 +118,7 @@ In the following sections, we'll dive deeper into marimo's key features and how 
 
 After diving into marimo, I was blown away by its innovative features. Let's break down the key elements that make this tool a game-changer in the world of Python notebooks.
 
-### 2.1. Consistent State
+### Consistent State
 
 Remember those frustrating moments when your notebook's outputs didn't match your code? Well, marimo says goodbye to that headache! 
 
@@ -133,7 +133,7 @@ But how does it achieve this magical consistency? Two words: *reactive programmi
 
 > "With marimo, what you see is truly what you get. No more surprises!"
 
-### 2.2. Built-in Interactivity
+### Built-in Interactivity
 
 Now, this is where things get really exciting! marimo's interactivity isn't just a bolt-on feature; it's baked into its DNA.
 
@@ -144,7 +144,7 @@ Now, this is where things get really exciting! marimo's interactivity isn't just
 marimo's reactivity makes these UI elements more useful and ergonomic than Jupyter's ipywidgets. Trust me, once you try it, you'll wonder how you ever lived without it!
 {{% /callout %}}
 
-### 2.3. Pure Python Programs
+### Pure Python Programs
 
 Here's where marimo really flexes its muscles:
 
