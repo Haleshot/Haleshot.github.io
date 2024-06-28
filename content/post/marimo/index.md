@@ -70,3 +70,31 @@ I came across marimo from a TL;DR newsletter (finally going through something re
 6. [Use Cases and Examples](#use-cases-and-examples)
 7. [Community and Support](#community-and-support)
 8. [Conclusion](#conclusion)
+
+## What is marimo?
+
+After stumbling upon marimo in my daily newsletter dive (shout out to [TLDR](https://tldr.tech/)), I couldn't help but get excited about its potential. So, what exactly is this intriguing new tool?
+
+**marimo** is a *reactive notebook for Python* that's shaking up the way we think about and interact with computational notebooks. It's not just another Jupyter alternative; it's a ground-up reimagining of what a Python notebook can be.
+
+{{% callout note %}}
+At its core, marimo models notebooks as **dataflow graphs**, creating a dynamic and interconnected environment for your code.
+{{% /callout %}}
+
+Imagine a notebook where running a cell or tweaking a UI element automatically updates all affected parts of your code. That's marimo in action! It keeps your code and outputs in perfect harmony, like a well-orchestrated symphony of data and computations.
+
+But marimo isn't just about reactive execution. It's a multifaceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
+
+1. **Consistency is king**: marimo ensures that your code, outputs, and program state are always in sync. No more hidden states or mysterious bugs!
+
+2. **Pure Python power**: Every marimo notebook is stored as pure Python. This means you can easily execute it as a script or even deploy it as a fully-fledged app. Talk about versatility!
+
+3. **Interactive by nature**: Built-in UI elements aren't just add-ons; they're an integral part of the marimo experience, seamlessly synchronized with your Python code.
+
+4. **Reproducibility made easy**: By automatically running affected cells or marking them as stale, marimo takes the guesswork out of reproducing results.
+
+> "marimo was built from the ground up to solve well-known problems associated with traditional notebooks."
+
+As someone who's spent countless hours wrestling with traditional notebooks, I can't overstate how refreshing this approach is. marimo isn't just iterating on existing solutions; it's reimagining the entire notebook paradigm.
+
+In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
