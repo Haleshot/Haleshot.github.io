@@ -98,3 +98,49 @@ But marimo isn't just about reactive execution. It's a multifaceted tool designe
 As someone who's spent countless hours wrestling with traditional notebooks, I can't overstate how refreshing this approach is. marimo isn't just iterating on existing solutions; it's reimagining the entire notebook paradigm.
 
 In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
+
+## Key Features of marimo
+
+After diving into marimo, I was blown away by its innovative features. Let's break down the key elements that make this tool a game-changer in the world of Python notebooks.
+
+### 2.1. Consistent State
+
+Remember those frustrating moments when your notebook's outputs didn't match your code? Well, marimo says goodbye to that headache! 
+
+{{% callout note %}}
+marimo **guarantees** that your code, outputs, and program state are always in sync, solving a major pain point of traditional notebooks like Jupyter.
+{{% /callout %}}
+
+But how does it achieve this magical consistency? Two words: *reactive programming*.
+
+1. **Smart Cell Execution**: Run a cell, and marimo automatically runs any cells that reference its variables. No more manual re-running and crossing your fingers!
+2. **Clean Slate**: Delete a cell, and poof! marimo scrubs its variables from program memory. Say goodbye to hidden states lurking in the shadows.
+
+> "With marimo, what you see is truly what you get. No more surprises!"
+
+### 2.2. Built-in Interactivity
+
+Now, this is where things get really exciting! marimo's interactivity isn't just a bolt-on feature; it's baked into its DNA.
+
+- **UI Elements Galore**: Sliders, dataframe transformers, interactive plots – marimo's got them all, and they're *automatically synchronized* with your Python code. 
+- **Real-time Reactivity**: Tweak a UI element, and watch as affected cells update instantly. It's like your notebook is alive!
+
+{{% callout note %}}
+marimo's reactivity makes these UI elements more useful and ergonomic than Jupyter's ipywidgets. Trust me, once you try it, you'll wonder how you ever lived without it!
+{{% /callout %}}
+
+### 2.3. Pure Python Programs
+
+Here's where marimo really flexes its muscles:
+
+1. **Python All the Way**: Every marimo notebook is saved as a pure Python file. No more JSON shenanigans!
+2. **Script-Ready**: Run your notebooks as regular Python scripts. It's that simple.
+3. **App Deployment**: With a single command (`marimo run your_notebook.py`), transform your notebook into an interactive web app. Mind blown yet?
+
+But wait, there's more:
+
+- **Deterministic Execution**: Cells execute based on variable references, not their position. Organize your notebook to tell your data story, your way.
+- **Performance Boost**: marimo's smart runtime only runs the cells that need updating, saving you precious computation time.
+- **Developer-Friendly**: GitHub Copilot integration, Black code formatting, HTML export, fast code completion, VS Code extension – marimo's got your back at every step.
+
+As I explored these features, I couldn't help but feel like I was glimpsing the future of Python notebooks. marimo isn't just solving problems; it's redefining what's possible in this space.
