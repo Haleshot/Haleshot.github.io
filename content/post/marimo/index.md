@@ -314,10 +314,10 @@ To see marimo in action across these domains, check out these resources:
 1. [Official Examples](https://github.com/marimo-team/marimo/tree/main/examples): A collection of notebooks showcasing marimo's features.
 2. [Cookbook](https://github.com/marimo-team/cookbook): Practical recipes and use cases for marimo.
 3. [Public Gallery](https://marimo.io/@public): A showcase of interactive marimo notebooks across various domains.
-4. [Haleshot's marimo-tutorials](https://github.com/Haleshot/marimo-tutorials): A community-driven repository with additional tutorials and examples.
+4. [Haleshot's marimo-tutorials](https://github.com/Haleshot/marimo-tutorials): A community-driven repository (that's the aim - still working on getting stuff started) with additional tutorials and examples.
 
 {{% callout note %}}
-Exciting news! marimo now offers a Pyodide-powered playground at [https://marimo.new](https://marimo.new). This allows you to try marimo directly in your browser without any installation!
+marimo offers a Pyodide-powered playground at [https://marimo.new](https://marimo.new). This allows you to try marimo directly in your browser without any installation!
 {{% /callout %}}
 
 ### Pyodide Integration and WASM Notebooks
@@ -339,3 +339,40 @@ These features open up new possibilities for collaboration, education, and rapid
 As you explore these examples and features, you'll see how marimo's capabilities come together to create powerful, interactive computational narratives. The ability to easily turn notebooks into web apps or share them via Pyodide, coupled with the consistent state management, opens up new horizons for sharing your work and insights.
 
 In the next section, we'll dive into the community and support around marimo, helping you connect with other users and get help when you need it.
+
+## 7. Community and Support
+
+One of the most exciting aspects of marimo is its vibrant and growing community. As someone who's been exploring marimo, I've been impressed by the level of engagement and support available. Here's how you can get involved and find help when you need it:
+
+1. **GitHub Repository**: The [marimo GitHub repo](https://github.com/marimo-team/marimo) is the heart of the project. It's where you can find the source code, report issues, and contribute to the project. I've found it to be a great resource for staying up-to-date with the latest developments.
+
+2. **Discord Community**: Join the [marimo Discord server](https://discord.gg/JE7nhX6mD8) to connect with other users and the maintainers. It's a fantastic place to ask questions, share your projects, and get quick help. I've been amazed at how responsive and helpful the community is!
+
+3. **Documentation**: The [official marimo documentation](https://docs.marimo.io) is comprehensive and well-maintained. Whether you're just starting or looking for advanced features, it's an invaluable resource.
+
+4. **Newsletter**: Stay in the loop by subscribing to the [marimo newsletter](https://marimo.io/newsletter). It's a great way to learn about new features, use cases, and community highlights.
+
+{{% callout note %}}
+In my experience, the maintainers have been incredibly responsive and helpful, whether on the Discord server or through GitHub issues.
+{{% /callout %}}
+
+What truly stands out about the marimo community is the collaborative spirit. Contributors often jump in to help resolve issues, and there's a genuine sense of excitement about pushing the boundaries of what's possible with this tool.
+
+Whether you're a seasoned developer or just starting your journey with marimo, you'll find a welcoming and supportive community ready to help you make the most of this powerful tool.
+
+## 8. Conclusion
+
+As I wrap up this deep dive into marimo, I can't help but feel excited about its potential to revolutionize how we work with Python notebooks. Here's my TL;DR (pun intended, given that I discovered marimo through the TL;DR newsletter!):
+
+- marimo is a game-changer in the world of Python notebooks, offering a more consistent, interactive, and Python-native experience.
+- Its reactive nature, built-in interactivity, and pure Python approach address many pain points of traditional notebooks.
+- The Pyodide integration and WASM notebooks open up new possibilities for sharing and collaboration.
+- A growing, supportive community and robust documentation make getting started and finding help easy.
+
+Personally, I'm planning on shifting to marimo completely for my notebook needs. Its innovative approach to solving long-standing issues in interactive computing is truly refreshing. 
+
+What excites me most is the potential for marimo to become a mainstream tool, helping us move beyond the limitations of traditional Python notebooks. And as an open-source enthusiast, I'm thrilled to see such a powerful tool freely available to the community.
+
+Whether you're a data scientist, researcher, educator, or developer, I encourage you to give marimo a try. It might just change the way you think about interactive computing in Python.
+
+As we look to the future, it's clear that marimo is not just solving today's problems – it's paving the way for new possibilities in how we interact with code and data. I, for one, can't wait to see where this journey leads!
