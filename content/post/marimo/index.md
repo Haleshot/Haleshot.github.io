@@ -150,7 +150,7 @@ Here's where marimo really flexes its muscles:
 
 1. **Python All the Way**: Every marimo notebook is saved as a pure Python file. No more JSON shenanigans!
 2. **Script-Ready**: Run your notebooks as regular Python scripts. It's that simple.
-3. **App Deployment**: With a single command (`marimo run your_notebook.py`), transform your notebook into an interactive web app. Mind blown yet?
+3. **App Deployment**: With a single command (`marimo run file.py`), transform your notebook into an interactive web app. Mind blown yet?
 
 But wait, there's more:
 
@@ -171,7 +171,8 @@ As I explored these features, I couldn't help but feel like I was glimpsing the 
       - UI elements
         - Sliders
         - Dataframe transformers
-        - Interactive plots
+        - Interactive data visualization tools/plots
+        - and [more](https://docs.marimo.io/api/index.html)
       - Automatic synchronization with Python code
       - Real-time updates of affected cells
     - Pure Python Programs
@@ -185,8 +186,56 @@ As I explored these features, I couldn't help but feel like I was glimpsing the 
         - Optional disabling of expensive cells
       - Developer tools
         - GitHub Copilot integration
-        - Black code formatting
         - HTML export
         - Fast code completion
         - VS Code extension
 ```
+
+## Comparison with Jupyter Notebooks
+
+As someone who's spent countless hours in Jupyter notebooks, I was curious to see how marimo stacks up.
+
+### Reimagining the Notebook
+
+First things first: marimo isn't just an upgrade to Jupyter; it's a complete reimagining of what a Python notebook can be. While Jupyter brought interactive computing to the masses, marimo takes it to the next level by addressing some of Jupyter's long-standing pain points.
+
+### Consistency is Key
+
+One of the biggest headaches with Jupyter notebooks is maintaining consistency between your code, outputs, and program state. We've all been there - running cells out of order, forgetting to re-run affected cells, and ending up with a notebook that's more confusing than helpful.
+
+marimo tackles this head-on:
+
+- **Automatic Reactivity**: Run a cell, and marimo automatically updates all cells that depend on it. No more manual cell juggling!
+- **Clean Slate**: Delete a cell, and marimo doesn't just remove the code - it scrubs the associated variables from memory. Say goodbye to hidden states lurking in the shadows!
+
+> "With marimo, what you see is truly what you get. No more 'it works on my machine' moments!"
+
+### Interactivity on Steroids
+
+While Jupyter offers interactivity through ipywidgets, marimo takes it to a whole new level:
+
+- **Built-in UI Elements**: Sliders, dataframe transformers, interactive plots and [more](https://docs.marimo.io/api/index.html) - they're all baked right in.
+- **Seamless Synchronization**: These elements aren't just add-ons; they're deeply integrated with your Python code.
+- **Real-time Updates**: Tweak a UI element, and watch as affected cells update instantly. It's like your notebook is alive!
+
+{{% callout note %}}
+marimo's reactive nature makes its UI elements feel more natural and responsive compared to Jupyter's ipywidgets.
+{{% /callout %}}
+
+### Pure Python Power
+
+Here's where marimo really shines:
+
+- **Python Files, Not JSON**: marimo notebooks are stored as pure Python files, not JSON like Jupyter notebooks.
+- **Script-Ready**: Run your marimo notebooks as regular Python scripts without any extra steps.
+- **App Deployment**: Transform your notebook into an interactive web app with a single command. Try doing that with a Jupyter notebook!
+- **Git-Friendly**: Version control your notebooks as easily as any other Python file. No more JSON diffs!
+
+### The Bottom Line
+
+While Jupyter notebooks have been a game-changer for interactive computing, marimo feels like the next evolutionary step. It addresses many of Jupyter's limitations while introducing powerful new features that make your workflow smoother and more intuitive.
+
+Is marimo perfect for every use case? Probably not. Jupyter's widespread adoption and extensive ecosystem are hard to beat. But for those seeking a more consistent, interactive, and Python-native notebook experience, marimo is a breath of fresh air.
+
+As I've explored marimo, I can't help but feel excited about its potential to reshape how we approach interactive computing in Python. It's not just solving problems; it's opening up new possibilities for how we work with data and code.
+
