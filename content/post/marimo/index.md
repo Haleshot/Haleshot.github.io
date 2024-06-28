@@ -239,3 +239,103 @@ Is marimo perfect for every use case? Probably not. Jupyter's widespread adoptio
 
 As I've explored marimo, I can't help but feel excited about its potential to reshape how we approach interactive computing in Python. It's not just solving problems; it's opening up new possibilities for how we work with data and code.
 
+## 5. Getting Started with marimo
+
+Ready to dive into the world of marimo? Getting started is a breeze! Here's how you can jump right in:
+
+1. First, let's install marimo. Open your terminal and run:
+
+```bash
+pip install marimo
+```
+
+2. Once installed, you can kick off with a tutorial:
+
+```bash
+marimo tutorial intro
+```
+
+This will guide you through the basics of marimo, helping you get familiar with its unique features.
+
+3. Ready to create your own notebook? It's as simple as:
+
+```bash
+marimo edit
+```
+
+This command will open up a new marimo notebook, ready for your code and ideas!
+
+{{% callout note %}}
+For a comprehensive guide and detailed documentation, check out the [official marimo documentation](https://docs.marimo.io/getting_started/index.html). It's a treasure trove of information to help you make the most of marimo!
+{{% /callout %}}
+
+Now that you're set up, let's explore some exciting use cases and examples!
+
+[YouTube Video Placeholder]
+
+## 6. Use Cases and Examples
+
+marimo's versatility shines across various domains. Let's explore some key areas where marimo can supercharge your Python notebooks:
+
+```markmap
+- marimo Use Cases
+  - Data Science
+    - Exploratory Data Analysis
+    - Machine Learning Model Development
+    - Interactive Visualizations
+  - Education
+    - Interactive Tutorials
+    - Coding Exercises
+    - Concept Demonstrations
+  - Research
+    - Reproducible Experiments
+    - Parameter Exploration
+    - Result Visualization
+  - Software Development
+    - Prototyping
+    - Documentation
+    - Code Demonstrations
+  - Business
+    - Interactive Reports
+    - Data Dashboards
+    - Decision Support Tools
+  - Pyodide-powered Use Cases
+    - Rapid Experimentation
+    - Blog Posts and Tutorials
+    - Interactive Documentation
+    - Custom Tools (e.g., Data Labelers)
+    - Bug Reproductions
+```
+
+marimo can be used in many ways, from a next-gen replacement for Jupyter notebooks to creating powerful apps, dashboards, and internal tools. Its reactive nature allows you to explore data rapidly and run experiments in an environment that prevents bugs before they happen.
+
+To see marimo in action across these domains, check out these resources:
+
+1. [Official Examples](https://github.com/marimo-team/marimo/tree/main/examples): A collection of notebooks showcasing marimo's features.
+2. [Cookbook](https://github.com/marimo-team/cookbook): Practical recipes and use cases for marimo.
+3. [Public Gallery](https://marimo.io/@public): A showcase of interactive marimo notebooks across various domains.
+4. [Haleshot's marimo-tutorials](https://github.com/Haleshot/marimo-tutorials): A community-driven repository with additional tutorials and examples.
+
+{{% callout note %}}
+Exciting news! marimo now offers a Pyodide-powered playground at [https://marimo.new](https://marimo.new). This allows you to try marimo directly in your browser without any installation!
+{{% /callout %}}
+
+### Pyodide Integration and WASM Notebooks
+
+marimo's integration with Pyodide brings several advantages:
+- Accessibility: No need to install Python, making scientific computing available to everyone.
+- Easy Sharing: Share executable notebooks via URL without deploying backend infrastructure.
+- Snappy Development: Eliminate network requests to remote Python runners for a faster experience.
+
+#### Creating and Sharing WASM Notebooks
+
+1. Create new WASM notebooks at [marimo.new](https://marimo.new).
+2. Your work is automatically saved in your browser's local storage.
+3. Generate shareable permalinks for your notebooks (note: these are publicly accessible).
+4. Convert local notebooks to WASM: Use `Share > Create WebAssembly link` in the marimo editor's notebook action menu.
+
+These features open up new possibilities for collaboration, education, and rapid prototyping. Whether you're a data scientist, educator, researcher, or developer, marimo offers tools to make your notebooks more dynamic, interactive, and shareable.
+
+As you explore these examples and features, you'll see how marimo's capabilities come together to create powerful, interactive computational narratives. The ability to easily turn notebooks into web apps or share them via Pyodide, coupled with the consistent state management, opens up new horizons for sharing your work and insights.
+
+In the next section, we'll dive into the community and support around marimo, helping you connect with other users and get help when you need it.
