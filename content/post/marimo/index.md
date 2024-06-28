@@ -92,7 +92,7 @@ graph TD
     F[UI Element] --> B
     F --> C
     G[Delete Cell] --> H[Scrub variables]
-    I[Run Cell] --> J[Auto-run affected cells (unless lazy run for expensive cells)]
+    I[Run Cell] --> J[Auto-run affected cells, unless lazy cells]
     K[Update UI Element] --> J
 ```
 
