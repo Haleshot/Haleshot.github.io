@@ -110,7 +110,17 @@ As someone who's spent countless hours wrestling with traditional notebooks, I c
 
 In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
 
-## 2. Key Features of marimo
+## 2. GitHub Accelerator Announcement
+
+Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop):
+
+[marimo](https://www.marimo.io) has been selected to participate in the [GitHub Accelerator program](https://accelerator.github.com/) for open source AI projects. This is a significant achievement, as the program is highly competitive, with only *11 projects chosen to participate*.
+
+This recognition from GitHub is a testament to marimo's innovative approach to Python notebooks and its potential impact on the open source AI ecosystem. It's an encouraging sign for the project's future development and adoption.
+
+Now, let's delve into what makes marimo stand out in the world of Python notebooks.
+
+## 3. Key Features of marimo
 
 After diving into marimo, I was blown away by its innovative features. Let's break down the key elements that make this tool a game-changer in the world of Python notebooks.
 
@@ -187,7 +197,7 @@ As I explored these features, I couldn't help but feel like I was glimpsing the 
         - VS Code extension
 ```
 
-## 3. Comparison with Jupyter Notebooks
+## 4. Comparison with Jupyter Notebooks
 
 As someone who's spent countless hours in Jupyter notebooks, I was curious to see how marimo stacks up.
 
@@ -235,7 +245,7 @@ Is marimo perfect for every use case? Probably not. Jupyter's widespread adoptio
 
 As I've explored marimo, I can't help but feel excited about its potential to reshape how we approach interactive computing in Python. It's not just solving problems; it's opening up new possibilities for how we work with data and code.
 
-## 4. Getting Started with marimo
+## 5. Getting Started with marimo
 
 Ready to dive into the world of marimo? Getting started is a breeze! Here's how you can jump right in:
 
@@ -269,7 +279,7 @@ Now that you're set up, let's explore some exciting use cases and examples!
 
 [YouTube Video Placeholder]
 
-## 5. Use Cases and Examples
+## 6. Use Cases and Examples
 
 marimo's versatility shines across various domains. Let's explore some key areas where marimo can supercharge your Python notebooks:
 
@@ -336,7 +346,7 @@ As you explore these examples and features, you'll see how marimo's capabilities
 
 In the next section, we'll dive into the community and support around marimo, helping you connect with other users and get help when you need it.
 
-## 6. Community and Support
+## 7. Community and Support
 
 One of the most exciting aspects of marimo is its vibrant and growing community. As someone who's been exploring marimo, I've been impressed by the level of engagement and support available. Here's how you can get involved and find help when you need it:
 
@@ -356,7 +366,7 @@ What truly stands out about the marimo community is the collaborative spirit. Co
 
 Whether you're a seasoned developer or just starting your journey with marimo, you'll find a welcoming and supportive community ready to help you make the most of this powerful tool.
 
-## 7. Conclusion
+## 8. Conclusion
 
 As I wrap up this deep dive into marimo, I can't help but feel excited about its potential to revolutionize how we work with Python notebooks. Here's my TL;DR (pun intended, given that I discovered marimo through the TL;DR newsletter!):
 
