@@ -38,35 +38,6 @@ I came across marimo from a TL;DR newsletter (finally going through something re
 
 {{< toc hide_on="xl" >}}
 
-## Table of Contents
-
-1. [What is marimo?](#what-is-marimo)
-2. [Key Features of marimo](#key-features-of-marimo)
-
-   2.1. [Consistent State](#consistent-state)
-
-   2.2. [Built-in Interactivity](#built-in-interactivity)
-
-   2.3. [Pure Python Programs](#pure-python-programs)
-
-3. [Solving Common Notebook Problems](#solving-common-notebook-problems)
-
-   3.1. [Reproducibility](#reproducibility)
-
-   3.2. [Maintainability](#maintainability)
-
-   3.3. [Interactivity](#interactivity)
-
-   3.4. [Reusability](#reusability)
-
-   3.5. [Shareability](#shareability)
-   
-4. [Comparison with Jupyter Notebooks](#comparison-with-jupyter-notebooks)
-5. [Getting Started with marimo](#getting-started-with-marimo)
-6. [Use Cases and Examples](#use-cases-and-examples)
-7. [Community and Support](#community-and-support)
-8. [Conclusion](#conclusion)
-
 ## 1. What is marimo?
 
 After stumbling upon marimo in my daily newsletter dive (shout out to [TLDR](https://tldr.tech/)), I couldn't help but get excited about its potential. So, what exactly is this intriguing new tool?
@@ -112,7 +83,7 @@ In the following sections, we'll dive deeper into marimo's key features and how 
 
 ## 2. GitHub Accelerator Announcement
 
-Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop):
+Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop)
 
 [marimo](https://www.marimo.io) has been selected to participate in the [GitHub Accelerator program](https://accelerator.github.com/) for open source AI projects. This is a significant achievement, as the program is highly competitive, with only *11 projects chosen to participate*.
 
