@@ -246,11 +246,11 @@ This command will open up a new marimo notebook, ready for your code and ideas!
 For a comprehensive guide and detailed documentation, check out the [official marimo documentation](https://docs.marimo.io/getting_started/index.html). It's a treasure trove of information to help you make the most of marimo!
 {{% /callout %}}
 
-Now that you're set up, let's explore some exciting use cases and examples!
+Checkout the video shown below where I explore marimo and all the things I talked about in the blog!
 
 {{< youtube A4zWSrgx7Ec >}}
 
-[YouTube Video Placeholder]
+Now that you're set up, let's explore some exciting use cases and examples!
 
 ## 6. Use Cases and Examples
 
