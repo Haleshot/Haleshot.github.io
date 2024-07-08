@@ -34,7 +34,7 @@ projects:
 
 {{< toc >}}
 
-I came across marimo from a TL;DR newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes contributing too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks. Let's dive into what makes marimo so special and how it's addressing long-standing issues in the notebook ecosystem.
+I came across marimo from a TL;DR newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily; for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes contributing too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks (which I associate with regularly). Let's dive into what makes marimo so special and how it's addressing long-standing issues in the notebook ecosystem.
 
 {{< toc hide_on="xl" >}}
 
@@ -323,17 +323,23 @@ In the next section, we'll dive into the community and support around marimo, he
 
 One of the most exciting aspects of marimo is its vibrant and growing community. As someone who's been exploring marimo, I've been impressed by the level of engagement and support available. Here's how you can get involved and find help when you need it:
 
-1. **GitHub Repository**: The [marimo GitHub repo](https://github.com/marimo-team/marimo) is the heart of the project. It's where you can find the source code, report issues, and contribute to the project. I've found it to be a great resource for staying up-to-date with the latest developments.
-
-2. **Discord Community**: Join the [marimo Discord server](https://discord.gg/JE7nhX6mD8) to connect with other users and the maintainers. It's a fantastic place to ask questions, share your projects, and get quick help. I've been amazed at how responsive and helpful the community is!
-
-3. **Documentation**: The [official marimo documentation](https://docs.marimo.io) is comprehensive and well-maintained. Whether you're just starting or looking for advanced features, it's an invaluable resource.
-
-4. **Newsletter**: Stay in the loop by subscribing to the [marimo newsletter](https://marimo.io/newsletter). It's a great way to learn about new features, use cases, and community highlights.
-
 {{% callout note %}}
 In my experience, the maintainers have been incredibly responsive and helpful, whether on the Discord server or through GitHub issues.
 {{% /callout %}}
+
+💬 Chat with them on [Discord](https://discord.gg/JE7nhX6mD8) - to connect with other users and the maintainers. It's a fantastic place to ask questions, share your projects, and get quick help. I've been amazed at how responsive and helpful the community is!
+
+📧 Subscribe to their [newsletter](https://marimo.io/newsletter) - Stay in the loop by subscribing to the [marimo newsletter](https://marimo.io/newsletter). It's a great way to learn about new features, use cases, and community highlights.
+
+☁️ Join the waitlist for [marimo Cloud](https://marimo.io/cloud)
+
+💡 Checkout their [documentation](https://docs.marimo.io) - is comprehensive and well-maintained. Whether you're just starting or looking for advanced features, it's an invaluable resource.
+
+✏️ Start a [GitHub discussion](https://github.com/marimo-team/marimo/discussions)
+
+🐦 Follow them on [Twitter](https://twitter.com/marimo_io)
+
+🌟 Star them on [GitHub](https://github.com/marimo-team/marimo) - is the heart of the project. It's where you can find the source code, report issues, and contribute to the project. I've found it to be a great resource for staying up-to-date with the latest developments.
 
 What truly stands out about the marimo community is the collaborative spirit. Contributors often jump in to help resolve issues, and there's a genuine sense of excitement about pushing the boundaries of what's possible with this tool.
 
@@ -355,3 +361,14 @@ What excites me most is the potential for marimo to become a mainstream tool, he
 Whether you're a data scientist, researcher, educator, or developer, I encourage you to give marimo a try. It might just change the way you think about interactive computing in Python.
 
 As we look to the future, it's clear that marimo is not just solving today's problems – it's paving the way for new possibilities in how we interact with code and data. I, for one, can't wait to see where this journey leads!
+
+## 9. References:
+
+1. https://marimo.io/blog/lessons-learned
+2. https://marimo.io/blog/pyodide
+3. https://marimo.io/blog/introducing-marimo
+4. https://docs.marimo.io
+5. https://github.com/marimo-team/marimo/
+
+Join the marimo community
+We’re a team of just two developers, and we’re just getting started. If you’re interested in helping shape marimo’s future, here are some ways you can get involved:
