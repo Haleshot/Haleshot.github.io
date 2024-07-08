@@ -248,6 +248,8 @@ For a comprehensive guide and detailed documentation, check out the [official ma
 
 Now that you're set up, let's explore some exciting use cases and examples!
 
+{{< youtube A4zWSrgx7Ec >}}
+
 [YouTube Video Placeholder]
 
 ## 6. Use Cases and Examples
