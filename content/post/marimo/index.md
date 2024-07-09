@@ -58,7 +58,7 @@ graph TD
     F[UI Element] --> B
     F --> C
     G[Delete Cell] --> H[Scrub variables]
-    I[Run Cell] --> J[Auto-run affected cells, unless [lazy](https://docs.marimo.io/api/layouts/lazy.html#lazy) cells]
+    I[Run Cell] --> J[Auto-run affected cells, unless expensive cells computationally]
     K[Update UI Element] --> J
 ```
 
