@@ -82,7 +82,7 @@ As someone who's spent countless hours wrestling with traditional notebooks, I c
 
 In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
 
-## 2. GitHub Accelerator Announcement
+## 2. GitHub Accelerator Announcement!
 
 Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop)
 
