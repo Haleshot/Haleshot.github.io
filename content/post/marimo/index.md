@@ -80,7 +80,7 @@ In the following sections, we'll dive deeper into marimo's key features and how 
 
 ## 2. GitHub Accelerator Announcement!
 
-Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop)
+Before we dive into the details of marimo, I'd like to share some exciting news I recently came across on [LinkedIn](https://www.linkedin.com/posts/marimo-io_2024-github-accelerator-meet-the-11-projects-activity-7199446355365302273-6Ncf?utm_source=share&utm_medium=member_desktop).
 
 [marimo](https://www.marimo.io) has been selected to participate in the [GitHub Accelerator program](https://accelerator.github.com/) for open source AI projects. This is a significant achievement, as the program is highly competitive, with only *11 projects chosen to participate*.
 
