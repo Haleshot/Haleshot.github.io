@@ -64,7 +64,7 @@ graph TD
 
 Imagine a notebook where running a cell or tweaking a UI element automatically updates all affected parts of your code. That's marimo in action! It keeps your code and outputs in perfect harmony, like a well-orchestrated symphony of data and computations.
 
-But marimo isn't just about reactive execution. It's a multi-faceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
+But [marimo](https://marimo.io/) isn't just about reactive execution. It's a multi-faceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
 
 1. **Consistency is king**: marimo ensures that your code, outputs, and program state are always in sync. No more hidden states or mysterious bugs!
 
@@ -97,7 +97,7 @@ Now, let's dive into what makes marimo stand out in the world of Python notebook
 Remember those frustrating moments when your notebook's outputs didn't match your code? Well, marimo says goodbye to that headache! 
 
 {{% callout note %}}
-marimo **guarantees** that your code, outputs, and program state are always in sync, solving a major pain point of traditional notebooks like Jupyter.
+[marimo](https://marimo.io/) **guarantees** that your code, outputs, and program state are always in sync, solving a major pain point of traditional notebooks like Jupyter.
 {{% /callout %}}
 
 But how does it achieve this magical consistency? Two words: *reactive programming*.
@@ -118,7 +118,7 @@ marimo's reactivity makes these UI elements more useful and ergonomic than Jupyt
 
 ### Pure Python Programs
 
-Here's where marimo really flexes its muscles:
+Here's where [marimo](https://marimo.io/) really flexes its muscles:
 
 1. **Python All the Way**: Every marimo notebook is saved as a pure Python file. No more JSON shenanigans!
 2. **Script-Ready**: Run your notebooks as regular Python scripts. It's that simple.
@@ -175,7 +175,7 @@ First things first: marimo isn't just an upgrade to Jupyter; it's a complete rei
 
 One of the biggest headaches with Jupyter notebooks is maintaining consistency between your code, outputs, and program state. We've all been there - running cells out of order, forgetting to re-run affected cells, and ending up with a notebook that's more confusing than helpful.
 
-marimo tackles this head-on:
+[marimo](https://marimo.io/) tackles this head-on:
 
 - **Automatic Reactivity**: Run a cell, and marimo automatically updates all cells that depend on it. No more manual cell juggling!
 - **Clean Slate**: Delete a cell, and marimo doesn't just remove the code - it scrubs the associated variables from memory. Say goodbye to hidden states lurking in the shadows!
@@ -207,7 +207,7 @@ Here's where marimo really shines:
 
 While Jupyter notebooks have been a game-changer for interactive computing, marimo feels like the next evolutionary step. It addresses many of Jupyter's limitations while introducing powerful new features that make your workflow smoother and more intuitive.
 
-Is marimo perfect for every use case? Probably not. Jupyter's widespread adoption and extensive ecosystem are hard to beat. But for those seeking a more consistent, interactive, and Python-native notebook experience, marimo is a breath of fresh air.
+Is [marimo](https://marimo.io/) perfect for every use case? Probably not. Jupyter's widespread adoption and extensive ecosystem are hard to beat. But for those seeking a more consistent, interactive, and Python-native notebook experience, marimo is a breath of fresh air.
 
 As I've explored marimo, I can't help but feel excited about its potential to reshape how we approach interactive computing in Python. It's not just solving problems; it's opening up new possibilities for how we work with data and code.
 
@@ -249,7 +249,7 @@ Now that you're set up, let's explore some exciting use cases and examples!
 
 ## 6. Use Cases and Examples
 
-marimo's versatility shines across various domains. Let's explore some key areas where marimo can supercharge your Python notebooks:
+[marimo](https://marimo.io/)'s versatility shines across various domains. Let's explore some key areas where marimo can supercharge your Python notebooks:
 
 ```markmap
 - marimo Use Cases
@@ -281,7 +281,7 @@ marimo's versatility shines across various domains. Let's explore some key areas
     - Bug Reproductions
 ```
 
-marimo can be used in many ways, from a next-gen replacement for Jupyter notebooks to creating powerful apps, dashboards, and internal tools. Its reactive nature allows you to explore data rapidly and run experiments in an environment that prevents bugs before they happen.
+[marimo](https://marimo.io/) can be used in many ways, from a next-gen replacement for Jupyter notebooks to creating powerful apps, dashboards, and internal tools. Its reactive nature allows you to explore data rapidly and run experiments in an environment that prevents bugs before they happen.
 
 To see marimo in action across these domains, check out these resources:
 
