@@ -312,8 +312,6 @@ These features open up new possibilities for collaboration, education, and rapid
 
 As you explore these examples and features, you'll see how marimo's capabilities come together to create powerful, interactive computational narratives. The ability to easily turn notebooks into web apps or share them via Pyodide, coupled with the consistent state management, opens up new horizons for sharing your work and insights.
 
-In the next section, we'll dive into the community and support around marimo, helping you connect with other users and get help when you need it.
-
 ## 7. Community and Support
 
 One of the most exciting aspects of marimo is its vibrant and growing community. As someone who's been exploring marimo, I've been impressed by the level of engagement and support available. Here's how you can get involved and find help when you need it:
@@ -342,7 +340,7 @@ Whether you're a seasoned developer or just starting your journey with marimo, y
 
 ## 8. Conclusion
 
-As I wrap up this deep dive into marimo, I can't help but feel excited about its potential to revolutionize how we work with Python notebooks. Here's my TL;DR (pun intended, given that I discovered marimo through the TL;DR newsletter!):
+As I wrap up this deep dive into [marimo](https://marimo.io/), I can't help but feel excited about its potential to revolutionize how we work with Python notebooks. Here's my TL;DR (pun intended, given that I discovered marimo through the TL;DR newsletter!):
 
 - marimo is a game-changer in the world of Python notebooks, offering a more consistent, interactive, and Python-native experience.
 - Its reactive nature, built-in interactivity, and pure Python approach address many pain points of traditional notebooks.
@@ -352,8 +350,6 @@ As I wrap up this deep dive into marimo, I can't help but feel excited about its
 Personally, I'm planning on shifting to marimo completely for my notebook needs. Its innovative approach to solving long-standing issues in interactive computing is truly refreshing. 
 
 What excites me most is the potential for marimo to become a mainstream tool, helping us move beyond the limitations of traditional Python notebooks. And as an open-source enthusiast, I'm thrilled to see such a powerful tool freely available to the community.
-
-Whether you're a data scientist, researcher, educator, or developer, I encourage you to give marimo a try. It might just change the way you think about interactive computing in Python.
 
 As we look to the future, it's clear that marimo is not just solving today's problems – it's paving the way for new possibilities in how we interact with code and data. I, for one, can't wait to see where this journey leads!
 
