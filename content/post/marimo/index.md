@@ -64,7 +64,7 @@ graph TD
 
 Imagine a notebook where running a cell or tweaking a UI element automatically updates all affected parts of your code. That's marimo in action! It keeps your code and outputs in perfect harmony, like a well-orchestrated symphony of data and computations.
 
-But marimo isn't just about reactive execution. It's a multifaceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
+But marimo isn't just about reactive execution. It's a multi-faceted tool designed to address some of the most persistent pain points in the notebook ecosystem:
 
 1. **Consistency is king**: marimo ensures that your code, outputs, and program state are always in sync. No more hidden states or mysterious bugs!
 
