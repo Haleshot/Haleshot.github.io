@@ -35,18 +35,16 @@ projects:
 
 {{< toc >}}
 
-I came across marimo from a TL;DR newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily; for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes contributing too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks (which I associate with regularly). Let's dive into what makes marimo so special and how it's addressing long-standing issues in the notebook ecosystem.
+I came across [marimo](https://marimo.io/) from the [TL;DR](https://tldr.tech/) newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily; for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes contributing too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks (which I associate with regularly). Let's dive into what makes [marimo](https://marimo.io/) so special and how it's addressing long-standing issues in the notebook ecosystem.
 
 {{< toc hide_on="xl" >}}
 
 ## 1. What is marimo?
 
-After stumbling upon marimo in my daily newsletter dive (shout out to [TLDR](https://tldr.tech/)), I couldn't help but get excited about its potential. So, what exactly is this intriguing new tool?
-
-**marimo** is a *reactive notebook for Python* that's shaking up the way we think about and interact with computational notebooks. It's not just another Jupyter alternative; it's a ground-up reimagining of what a Python notebook can be.
+**[marimo](https://marimo.io/)** is a *reactive notebook for Python* that's shaking up the way we think about and interact with computational notebooks. It's not just another Jupyter alternative; it's a ground-up reimagining of what a Python notebook can be.
 
 {{% callout note %}}
-At its core, marimo models notebooks as **dataflow graphs**, creating a dynamic and interconnected environment for your code.
+At its core, marimo models notebooks as **[Directed Acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph)**, creating a dynamic and interconnected environment for your code.
 {{% /callout %}}
 
 How I see the dataflow graph working for marimo:
@@ -60,7 +58,7 @@ graph TD
     F[UI Element] --> B
     F --> C
     G[Delete Cell] --> H[Scrub variables]
-    I[Run Cell] --> J[Auto-run affected cells, unless lazy cells]
+    I[Run Cell] --> J[Auto-run affected cells, unless [lazy](https://docs.marimo.io/api/layouts/lazy.html#lazy) cells]
     K[Update UI Element] --> J
 ```
 
@@ -363,7 +361,7 @@ Whether you're a data scientist, researcher, educator, or developer, I encourage
 
 As we look to the future, it's clear that marimo is not just solving today's problems – it's paving the way for new possibilities in how we interact with code and data. I, for one, can't wait to see where this journey leads!
 
-## 9. References:
+## 9. References
 
 1. https://marimo.io/blog/lessons-learned
 2. https://marimo.io/blog/pyodide
