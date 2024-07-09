@@ -72,9 +72,9 @@ But marimo isn't just about reactive execution. It's a multi-faceted tool design
 
 3. **Interactive by nature**: Built-in UI elements aren't just add-ons; they're an integral part of the marimo experience, seamlessly synchronized with your Python code.
 
-4. **Reproducibility made easy**: By automatically running affected cells or marking them as stale, marimo takes the guesswork out of reproducing results.
+4. **Reproducibility made easy**: By automatically running affected cells or marking them as stale, marimo takes the guesswork out of reproducing results (which is a huge deal - *A [study of 10 million notebooks](https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github-this-is-what-we-learned/) on GitHub found that 36% percent of them were executed out of order in this way*).
 
-> "marimo was built from the ground up to solve well-known problems associated with traditional notebooks."
+> "marimo was built from the ground up to solve well-known problems associated with traditional notebooks." ~ [marimo team]https://marimo.io/blog/pyodide)
 
 As someone who's spent countless hours wrestling with traditional notebooks, I can't overstate how refreshing this approach is. marimo isn't just iterating on existing solutions; it's reimagining the entire notebook paradigm.
 
