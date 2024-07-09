@@ -3,7 +3,7 @@ title: "marimo: Revolutionizing Python Notebooks for Enhanced Reproducibility an
 subtitle: "Exploring a New Era of Consistent, Interactive, and Shareable Python Programs"
 summary: "Discover marimo, a groundbreaking reinvention of Python notebooks that offers guaranteed consistency, built-in interactivity, and seamless deployment as web apps."
 date: '2024-06-27T00:00:00Z'
-lastmod: '2024-06-27T00:00:00Z'
+lastmod: '2024-07-09T00:00:00Z'
 draft: false
 featured: true
 commentable: true
