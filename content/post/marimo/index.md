@@ -180,7 +180,7 @@ One of the biggest headaches with Jupyter notebooks is maintaining consistency b
 - **Automatic Reactivity**: Run a cell, and marimo automatically updates all cells that depend on it. No more manual cell juggling!
 - **Clean Slate**: Delete a cell, and marimo doesn't just remove the code - it scrubs the associated variables from memory. Say goodbye to hidden states lurking in the shadows!
 
-> "With marimo, what you see is truly what you get. No more 'it works on my machine' moments!"
+With marimo, what you see is truly what you get. No more 'it works on my machine' moments!
 
 ### Interactivity on Steroids
 
