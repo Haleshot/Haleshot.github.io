@@ -44,7 +44,7 @@ I came across [marimo](https://marimo.io/) from the [TL;DR](https://tldr.tech/) 
 **[marimo](https://marimo.io/)** is a *reactive notebook for Python* that's shaking up the way we think about and interact with computational notebooks. It's not just another Jupyter alternative; it's a ground-up reimagining of what a Python notebook can be.
 
 {{% callout note %}}
-At its core, marimo models notebooks as **[Directed Acyclic graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph)**, creating a dynamic and interconnected environment for your code.
+At its core, marimo models notebooks as **[Directed Acyclic Graphs](https://en.wikipedia.org/wiki/Directed_acyclic_graph)**, creating a dynamic and interconnected environment for your code.
 {{% /callout %}}
 
 How I see the dataflow graph working for marimo:
