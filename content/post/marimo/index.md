@@ -74,7 +74,7 @@ But marimo isn't just about reactive execution. It's a multi-faceted tool design
 
 4. **Reproducibility made easy**: By automatically running affected cells or marking them as stale, marimo takes the guesswork out of reproducing results (which is a huge deal - *A [study of 10 million notebooks](https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github-this-is-what-we-learned/) on GitHub found that 36% percent of them were executed out of order in this way*).
 
-> "marimo was built from the ground up to solve well-known problems associated with traditional notebooks." ~ [marimo team]https://marimo.io/blog/pyodide)
+> "marimo was built from the ground up to solve well-known problems associated with traditional notebooks." ~ marimo team
 
 In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
 
