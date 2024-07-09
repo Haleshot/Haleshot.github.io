@@ -22,6 +22,7 @@ tags:
  - Local Hosting
 categories:
  - Technology
+ - Featured Blogs
  - Artificial Intelligence
  - Software
  - Privacy and Security
