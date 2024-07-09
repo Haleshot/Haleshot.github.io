@@ -24,6 +24,7 @@ tags:
   - Featured Blogs
 categories:
   - Technology
+  - Artificial Intelligence
   - Programming
   - Data Science
   - Software Development
