@@ -76,8 +76,6 @@ But marimo isn't just about reactive execution. It's a multi-faceted tool design
 
 > "marimo was built from the ground up to solve well-known problems associated with traditional notebooks." ~ [marimo team]https://marimo.io/blog/pyodide)
 
-As someone who's spent countless hours wrestling with traditional notebooks, I can't overstate how refreshing this approach is. marimo isn't just iterating on existing solutions; it's reimagining the entire notebook paradigm.
-
 In the following sections, we'll dive deeper into marimo's key features and how they address common notebook challenges. Trust me, whether you're a data scientist, a researcher, or just a Python enthusiast, you're in for a treat!
 
 ## 2. GitHub Accelerator Announcement!
@@ -88,7 +86,7 @@ Before we dive into the details of marimo, I'd like to share some exciting news 
 
 This recognition from GitHub is a testament to marimo's innovative approach to Python notebooks and its potential impact on the open source AI ecosystem. It's an encouraging sign for the project's future development and adoption.
 
-Now, let's delve into what makes marimo stand out in the world of Python notebooks.
+Now, let's dive into what makes marimo stand out in the world of Python notebooks.
 
 ## 3. Key Features of marimo
 
