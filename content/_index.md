@@ -62,13 +62,31 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Software Engineering Internship
+        - title: Research Intern
+          company: Polymath Jr. program (DIC)
+          company_url: 'https://geometrynyc.wixsite.com/polymathreu'
+          company_logo: polymath
+          location: Remote, United States, India.
+          date_start: '2020-05-01'
+          date_end: ''
+          description: |2-
+              * **[Notabot Studio Project](https://notabot.ai/)**
+                - **Role:** Team Leader, Game Developer
+                - **Technologies Used:** PlayCanvas
+                    **Key Responsibilities**:
+                    - **Ideation:** Contributed ideas; one selected for development.
+                    - **Team Leadership:** Led a team; coordinated project efforts.
+                    - **Game Development:** Designed mechanics to teach math concepts; used PlayCanvas.
+                    **Achievements**:
+                    - Developing a project combining education and entertainment.
+          
+        - title: AI Internship
           company: Digital India Corporation (DIC)
           company_url: 'https://dic.gov.in/'
           company_logo: dic
           location: Remote, New Delhi, India.
           date_start: '2020-05-01'
-          date_end: ''
+          date_end: '01/07/2024'
           description: |2-
               * Roles and Responsibilities:
                 * Analyzed product listing workflow and proposed AI solutions for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/).
