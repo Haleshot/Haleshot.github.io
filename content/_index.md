@@ -75,8 +75,8 @@ sections:
                 - **Technologies Used:** PlayCanvas
                     **Key Responsibilities**:
                     - **Ideation:** Contributed ideas; one selected for development.
-                    - **Team Leadership:** Led a team; coordinated project efforts.
-                    - **Game Development:** Designed mechanics to teach math concepts; used PlayCanvas.
+                    - **Team Leadership:** Leading a team; coordinated project efforts.
+                    - **Game Development:** Designing mechanics to teach math concepts; using PlayCanvas.
                     **Achievements**:
                     - Developing a project combining education and entertainment.
           
