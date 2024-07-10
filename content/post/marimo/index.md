@@ -120,7 +120,7 @@ marimo's reactivity makes these UI elements more useful and ergonomic than Jupyt
 
 Here's where [marimo](https://marimo.io/) really flexes its muscles:
 
-1. **Python All the Way**: Every marimo notebook is saved as a pure Python file. No more JSON shenanigans!
+1. **Python All the Way**: Every marimo notebook is saved as a pure Python file. No more JSON shenanigans (looking at you Jupyter)!
 2. **Script-Ready**: Run your notebooks as regular Python scripts. It's that simple.
 3. **App Deployment**: With a single command (`marimo run file.py`), transform your notebook into an interactive web app. Mind blown yet?
 
@@ -322,7 +322,7 @@ In my experience, the maintainers have been incredibly responsive and helpful, w
 
 💬 Chat with them on [Discord](https://discord.gg/JE7nhX6mD8) - to connect with other users and the maintainers. It's a fantastic place to ask questions, share your projects, and get quick help. I've been amazed at how responsive and helpful the community is!
 
-📧 Subscribe to their [newsletter](https://marimo.io/newsletter) - Stay in the loop by subscribing to the [marimo newsletter](https://marimo.io/newsletter). It's a great way to learn about new features, use cases, and community highlights.
+📧 Subscribe to their [newsletter](https://marimo.io/newsletter) - It's a great way to learn about new features, use cases, and community highlights.
 
 ☁️ Join the waitlist for [marimo Cloud](https://marimo.io/cloud)
 
