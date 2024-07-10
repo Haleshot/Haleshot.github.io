@@ -67,7 +67,7 @@ sections:
           company_url: 'https://geometrynyc.wixsite.com/polymathreu'
           company_logo: polymath
           location: Remote, United States, India.
-          date_start: '2020-06-17'
+          date_start: '2024-06-17'
           date_end: ''
           description: |2-
               * **[Notabot Studio Project](https://notabot.ai/)**
@@ -85,8 +85,8 @@ sections:
           company_url: 'https://dic.gov.in/'
           company_logo: dic
           location: Remote, New Delhi, India.
-          date_start: '2020-05-01'
-          date_end: '01/07/2024'
+          date_start: '2024-05-01'
+          date_end: '2024-07-01'
           description: |2-
               * Roles and Responsibilities:
                 * Analyzed product listing workflow and proposed AI solutions for [IndiaHandMade E-commerce Platform](https://www.indiahandmade.com/).
