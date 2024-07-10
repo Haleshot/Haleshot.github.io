@@ -71,13 +71,13 @@ sections:
           date_end: ''
           description: |2-
               * **[Notabot Studio Project](https://notabot.ai/)**
-                - **Role:** Team Leader, Game Developer
+                - **Role:** Project organizer, Game Developer
                 - **Technologies Used:** PlayCanvas
                     **Key Responsibilities**:
                     - **Ideation:** Contributed ideas; one selected for development.
                     - **Team Leadership:** Leading a team; coordinated project efforts.
                     - **Game Development:** Designing mechanics to teach math concepts; using PlayCanvas.
-                    **Achievements**:
+                - **Achievements**:
                     - Developing a project combining education and entertainment.
           
         - title: AI Internship
