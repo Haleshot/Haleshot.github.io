@@ -63,11 +63,11 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - title: Research Intern
-          company: Polymath Jr. program (DIC)
+          company: Polymath Jr. program
           company_url: 'https://geometrynyc.wixsite.com/polymathreu'
           company_logo: polymath
           location: Remote, United States, India.
-          date_start: '2020-05-01'
+          date_start: '2020-06-17'
           date_end: ''
           description: |2-
               * **[Notabot Studio Project](https://notabot.ai/)**
