@@ -35,7 +35,7 @@ projects:
 
 {{< toc >}}
 
-I came across [marimo](https://marimo.io/) from the [TL;DR](https://tldr.tech/) newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily; for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes contributing too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks (which I associate with regularly). Let's dive into what makes [marimo](https://marimo.io/) so special and how it's addressing long-standing issues in the notebook ecosystem.
+I came across [marimo](https://marimo.io/) from the [TL;DR](https://tldr.tech/) newsletter (finally going through something regularly with passion pays off!) which I have a habit of going through daily; for personal interests, passion and curating of resources to use in personal/group projects as I'm an open-source enthusiast who likes [contributing](https://github.com/marimo-team/marimo/commits?author=Haleshot) too. This exciting discovery immediately caught my attention, promising to revolutionize the way we interact with Python notebooks (which I associate with regularly). Let's dive into what makes [marimo](https://marimo.io/) so special and how it's addressing long-standing issues in the notebook ecosystem.
 
 {{< toc hide_on="xl" >}}
 
