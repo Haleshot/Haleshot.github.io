@@ -73,7 +73,7 @@ sections:
               * **[Notabot Studio Project](https://notabot.ai/)**
                 - **Role:** Project organizer, Game Developer
                 - **Technologies Used:** PlayCanvas
-                    **Key Responsibilities**:
+                  **Key Responsibilities**:
                     - **Ideation:** Contributed ideas; one selected for development.
                     - **Team Leadership:** Leading a team; coordinated project efforts.
                     - **Game Development:** Designing mechanics to teach math concepts; using PlayCanvas.
