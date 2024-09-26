@@ -66,6 +66,10 @@ The problem was reported in [Issue #1033](https://github.com/marimo-team/marimo/
 "I am using the ArviZ library with PyMC and the plots are not being displayed. All I see is the axis info but not the plots."
 {{% /callout %}}
 
+### The First Attempt: A Learning Experience
+
+My initial approach to solving this issue resulted in a Pull Request that, while well-intentioned, didn't quite hit the mark. Here's what I learned from this first attempt:
+
 ### The Investigation
 
 I dove deep into the ArviZ documentation and source code to understand the root cause. After extensive research, I discovered that adding `plt.show()` after any ArviZ plot function call resolved the display issue in most cases.
