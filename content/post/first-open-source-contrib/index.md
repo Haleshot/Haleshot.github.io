@@ -129,21 +129,38 @@ The key improvements in this PR included:
 - Better performance considerations
 - Improved type checking and import handling
 
+## Challenges and Learnings
+
+Throughout this process, I faced several challenges that provided valuable learning experiences:
+
+1. **CI/CD Pipeline Issues**: I repeatedly encountered failures in the repository's CI tests. This experience gave me practical insights into DevOps practices, complementing my theoretical knowledge from college courses.
+
+2. **Code Style and Linting**: Adhering to the project's coding standards and passing linting checks taught me the importance of consistent code style in collaborative projects.
+
+3. **Type Checking in Python**: Implementing proper type checking, especially for optional dependencies, was a new challenge that improved my understanding of Python's type system.
+
+4. **Performance Considerations**: Optimizing the solution for large datasets without compromising functionality was an interesting problem to solve.
+
 ## Lessons Learned
 
-This contribution taught me several valuable lessons:
+This contribution journey taught me several valuable lessons:
 
-1. **Deep Dive into Documentation**: Understanding the intricacies of ArviZ and matplotlib was crucial for finding the right solution.
-2. **Iterative Problem-Solving**: My approach evolved from a simple fix to a comprehensive formatter implementation.
-3. **Collaboration and Feedback**: The project maintainers provided invaluable guidance, helping me refine my solution.
-4. **Attention to Detail**: Addressing issues like type checking, import statements, and performance considerations was essential for creating a robust solution.
+1. **The Value of Persistence**: My initial failed attempt didn't discourage me but motivated me to learn more and come back stronger.
+
+2. **The Importance of Thorough Research**: Deep diving into documentation and source code is crucial for understanding complex issues.
+
+3. **Practical DevOps Experience**: Dealing with CI/CD pipelines and automated tests gave me hands-on experience that surpassed my college coursework.
+
+4. **The Open Source Community**: The guidance and feedback from project maintainers were invaluable in refining my solution.
+
+5. **Balancing Commitments**: Learning to manage open-source contributions alongside other responsibilities is a crucial skill.
 
 ## Looking Ahead
 
-This experience has motivated me to continue contributing to open-source projects. I'm excited to tackle more complex issues and help improve tools that developers rely on every day.
+This experience has not only improved my technical skills but also given me a deeper appreciation for the open-source community. I'm excited to tackle more complex issues and continue contributing to projects that make a difference in the developer ecosystem.
 
 {{% callout note %}}
-Remember, every contribution, no matter how small, helps move the open-source community forward. Don't be afraid to dive in and start contributing!
+Remember, the path to meaningful contributions isn't always straightforward. Embrace the learning process, be persistent, and don't be afraid to ask for help or take a step back when needed.
 {{% /callout %}}
 
 I'm grateful for the opportunity to contribute to Marimo and look forward to many more open-source adventures ahead!
