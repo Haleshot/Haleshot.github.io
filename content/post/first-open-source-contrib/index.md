@@ -96,7 +96,66 @@ When I revisited the issue, I decided to conduct a thorough investigation of Arv
 <details>
 <summary>Click to view my detailed ArviZ plotting research</summary>
 
-[Insert your detailed ArviZ plotting research here]
+### ArviZ Plot Functions Overview
+
+| Function | Input | Return | Behavior | Issues |
+|----------|-------|--------|----------|--------|
+| `plot_autocorr` | - | Axes or bokeh_figures | Causes typical issue error | Displays complex Axes structure |
+| `plot_bf` | - | Dictionary, then plot | Plots without `plt.show()` | Returns text dictionary before plot |
+| `plot_bpv` | - | 2D ndarray of Axes or Bokeh Figure | Plots without `plt.show()` | - |
+| `plot_compare` | - | Axes or Bokeh Figure, pandas DataFrame | Issues warning | Not InferenceData |
+| `plot_density` | - | 2D ndarray of Axes or Bokeh Figure | Causes typical issue error | Displays complex Axes structure |
+| `plot_dist` | Array-like | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_dist_comparison` | InferenceData | 2D ndarray of Axes | - | - |
+| `plot_dot` | Array-like | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_ecdf` | Array-like | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_elpd` | Mapping of {str:ELPDData or InferenceData} | Axes or Bokeh Figure | - | - |
+| `plot_energy` | obj | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_ess` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | - |
+| `plot_forest` | InferenceData | 1D ndarray of Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_hdi` | Array-like | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_kde` | Array-like | Axes or Bokeh Figure, optional glyphs list | Plots without any issue | - |
+| `plot_khat` | ELPData or Array-like | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_loo_pit` | InferenceData | Axes or Bokeh Figure | Plots without any issue | - |
+| `plot_lm` | str or DataArray or ndarray | Axes or Bokeh Figure | Causes typical issue error | Issues with Bokeh backend |
+| `plot_mcse` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | Bokeh: Only axes, no data points |
+| `plot_pair` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | Works well with Bokeh |
+| `plot_parallel` | InferenceData | Axes or Bokeh Figure | Plots without any issue | Bokeh: No controls in Marimo |
+| `plot_posterior` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | Bokeh: Incorrect rendering |
+| `plot_ppc` | InferenceData | Axes or Bokeh Figure, optional Animation | Plots without any issue* | Bokeh doesn't work properly |
+| `plot_rank` | InferenceData | Axes or Bokeh Figure | Causes typical issue error (sometimes) | - |
+| `plot_separation` | InferenceData | Axes or Bokeh Figure | Plots without any issue | Trouble with Bokeh |
+| `plot_trace` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | Works well with Bokeh |
+| `plot_ts` | InferenceData | Axes or Bokeh Figure | Causes typical issue error | No Bokeh support |
+| `plot_violin` | InferenceData | Axes or Bokeh Figure | - | Works well with Bokeh |
+
+### Common Issues and Observations
+
+1. **Typical Issue Error**: Many functions require `plt.show()` at the end of the cell block to display the plot.
+
+2. **Bokeh Backend Issues**:
+   - Often opens a random new file in the temp folder
+   - Controls for Bokeh don't always work correctly
+   - Some functions work well with Bokeh, opening in a new window with proper controls
+   - Others have rendering issues or don't display data correctly
+
+3. **Plot Display**:
+   - Some functions plot without requiring `plt.show()`
+   - Others cause the "typical issue error" where `plt.show()` is needed
+
+4. **Return Types**:
+   - Most functions return matplotlib Axes or Bokeh Figures
+   - Some return additional data structures (e.g., pandas DataFrames, dictionaries)
+
+5. **Input Types**:
+   - Many functions accept InferenceData objects
+   - Some work with array-like inputs or specific data types (e.g., ELPDData)
+
+6. **Specific Function Notes**:
+   - `plot_autocorr` and `plot_density` return complex Axes structures
+   - `plot_bf` returns a dictionary before displaying the plot
+   - `plot_ppc` works fine for single plots but has issues with multiple plots using coords or flatten
+   - `plot_parallel` may have text overlap issues with too much information
 
 </details>
 
