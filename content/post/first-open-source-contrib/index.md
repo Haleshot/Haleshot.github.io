@@ -38,7 +38,7 @@ Before diving into my open-source journey, I'm thrilled to share some exciting n
 As a Marimo Ambassador, I contribute to the growth of the AI/ML and developer relations community through content creation, community engagement, and event participation.
 {{% /callout %}}
 
-I'm particularly excited about managing the [Marimo Spotlights GitHub repository](https://github.com/marimo-team/spotlights), where we showcase weekly community projects that demonstrate creative uses of Marimo notebooks.
+I'm spearheading the [Marimo Spotlights GitHub repository](https://github.com/marimo-team/spotlights), where we showcase weekly community projects that demonstrate creative uses of Marimo notebooks.
 
 For more details about my role and Marimo's ambassador program, check out my [LinkedIn post](https://www.linkedin.com/posts/srihari-thyagarajan_marimo-framework-ambassador-activity-7242540448949428225-wSqS?utm_source=share&utm_medium=member_desktop) and the [Marimo Ambassadors webpage](https://marimo.io/ambassadors).
 
