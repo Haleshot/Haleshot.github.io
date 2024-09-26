@@ -70,58 +70,64 @@ The problem was reported in [Issue #1033](https://github.com/marimo-team/marimo/
 
 My initial approach to solving this issue resulted in a Pull Request that, while well-intentioned, didn't quite hit the mark. Here's what I learned from this first attempt:
 
-### The Investigation
+1. **Importance of Thorough Research**: I realized I needed to dive deeper into ArviZ's documentation and source code to truly understand the problem.
+2. **Overcomplicating Solutions**: My first PR attempted to implement a complex formatter, which wasn't necessary for the issue at hand.
 
-I dove deep into the ArviZ documentation and source code to understand the root cause. After extensive research, I discovered that adding `plt.show()` after any ArviZ plot function call resolved the display issue in most cases.
+Here's an excerpt from my first PR comment:
 
-### The Solution
+> "This PR addresses issue #1033 by implementing an ArviZ formatter that can handle various plot types returned by ArviZ functions, including numpy arrays, matplotlib axes, and bokeh figures."
 
-Instead of implementing a complex formatter, I proposed a simpler approach:
+While this approach showed initiative, it wasn't the optimal solution for the problem at hand.
 
-```python
-import arviz as az
-import matplotlib.pyplot as plt
+### The Transition: Life Gets in the Way
 
-# ArviZ plotting function
-az.plot_trace(...)
+After my initial attempt, I found myself caught up with various commitments:
 
-# Add this line to display the plot
-plt.show()
-```
+- College coursework intensified
+- My ongoing capstone project demanded attention
+- Other personal projects and responsibilities piled up
 
-### The Pull Request
+This period taught me an important lesson about balancing open-source contributions with other life commitments. It's okay to take a step back, regroup, and return to a problem with fresh eyes.
 
-After further investigation and testing, I created a comprehensive Pull Request to address the issue:
+### Extensive Research and Testing
 
-1. Implemented a new `ArviZFormatter` class.
-2. Added methods to handle numpy arrays containing matplotlib `Axes` objects.
-3. Created utility methods to extract axes information and convert plots to HTML format.
-4. Ensured consistent plot rendering across various ArviZ functions.
+When I revisited the issue, I decided to conduct a thorough investigation of ArviZ's plotting capabilities. I created a comprehensive overview of ArviZ plot functions, their inputs, outputs, and behavior in different environments.
 
-Here's a snippet of the core functionality:
+<details>
+<summary>Click to view my detailed ArviZ plotting research</summary>
 
-```python
-@staticmethod
-def _contains_axes(arr: np.ndarray) -> bool:
-    """
-    Check if the numpy array contains any matplotlib Axes objects.
-    To ensure performance, we limit the check to the first 100 items.
-    """
-    MAX_ITEMS_TO_CHECK = 100
+[Insert your detailed ArviZ plotting research here]
 
-    if arr.ndim == 1:
-        return any(isinstance(item, plt.Axes) for item in arr[:MAX_ITEMS_TO_CHECK])
-    elif arr.ndim == 2:
-        items_checked = 0
-        for row in arr:
-            for item in row:
-                if isinstance(item, plt.Axes):
-                    return True
-                items_checked += 1
-                if items_checked >= MAX_ITEMS_TO_CHECK:
-                    return False
-    return False
-```
+</details>
+
+This extensive research was crucial in understanding the nuances of ArviZ's plotting functions and their interaction with Marimo's environment.
+
+### The Solution: A Refined Approach
+
+After my research, I proposed a simpler yet more effective solution:
+
+<details>
+<summary>Click to view the core logic of the solution</summary>
+
+[Insert your core logic code here]
+
+</details>
+
+This approach focuses on:
+1. Detecting ArviZ plot outputs
+2. Handling various return types (numpy arrays, matplotlib Axes, etc.)
+3. Ensuring consistent rendering across different ArviZ functions
+
+### The Improved Pull Request
+
+My second PR reflected a more mature and thoughtful approach to the problem. Here's an excerpt from the PR description:
+
+> "This PR addresses the issue with ArviZ plots not displaying correctly in the Marimo output. It implements a custom formatter for ArviZ objects, specifically handling numpy arrays containing matplotlib `Axes` objects along with `az.InferenceData`."
+
+The key improvements in this PR included:
+- More targeted handling of ArviZ-specific outputs
+- Better performance considerations
+- Improved type checking and import handling
 
 ## Lessons Learned
 
