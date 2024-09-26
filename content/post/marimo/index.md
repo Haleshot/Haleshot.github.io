@@ -22,6 +22,7 @@ tags:
   - Reproducibility
   - Interactive Programming
   - Featured Blogs
+  - marimo
 categories:
   - Technology
   - Artificial Intelligence
@@ -29,6 +30,7 @@ categories:
   - Data Science
   - Software Development
   - Featured Blogs
+  - Open Source
 projects:
   - data-science-tools
 ---
