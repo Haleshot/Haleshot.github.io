@@ -32,7 +32,7 @@ projects:
 
 ## Exciting Update: Becoming a Marimo Ambassador!
 
-Before diving into the blog, I wanted to share some exciting news: I've recently become an ambassador for [Marimo](https://marimo.io)! 
+Before diving into the blog, I wanted to share some exciting news: I've recently become an ambassador for [Marimo](https://marimo.io)!
 
 {{% callout note %}}
 As a Marimo Ambassador, I contribute to the growth of the AI/ML and developer relations community through content creation, community engagement, and event participation.
