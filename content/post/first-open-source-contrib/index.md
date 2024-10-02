@@ -48,7 +48,7 @@ Open source has been a passion of mine ever since I was introduced to Git and Gi
 
 1. **The Beginner Phase**: Publishing random programs and projects with minimal documentation and structure.
 2. **Learning Good Practices**: Improving existing projects with better documentation, feature enhancements, and proper directory structures.
-3. **Active Curation**: Regularly going through newsletters like TLDR and Rundown AI to collect and organize resources for personal projects and potential contributions.
+3. **Active Curation**: Regularly going through newsletters like [TLDR](https://tldr.tech/) and [Rundown AI](https://www.therundown.ai/) to collect and organize resources for personal projects and potential contributions.
 
 > "I feel that's what I'm good at - curating and categorizing resources like GitHub repos, HuggingFace models and collections, and reading articles from various forums and threads."
 
