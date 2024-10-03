@@ -165,7 +165,7 @@ This extensive research was crucial in understanding the nuances of ArviZ's plot
 
 ### The Solution: A Refined Approach
 
-After my research, I proposed a simpler yet more effective solution:
+After my research, I proposed the following solution (after trying various approaches I devised from feedback gathered):
 
 <details>
 
