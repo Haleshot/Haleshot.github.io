@@ -357,7 +357,7 @@ The key improvements in this PR included:
 
 ### My journey wrapped up
 
-{{</* mermaid */>}}
+```mermaid
 journey
     title My First Significant Open Source Contribution
     section Preparation
@@ -379,7 +379,7 @@ journey
       Create refined PR: 4: Me
       Address CI/CD and linting issues: 3: Me, CI System
       Get PR approved and merged: 5: Me, Maintainers
-{{</* /mermaid */>}}
+```
 
 ## Challenges and Learnings
 
