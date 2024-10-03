@@ -1,7 +1,7 @@
 ---
 title: "My Journey into Open Source: Solving an ArviZ Plotting Issue in Marimo"
 subtitle: "From Curating Resources to Making Meaningful Contributions"
-summary: "Explore my path from a curious developer to an open-source contributor, culminating in fixing a significant plotting issue for the Marimo project."
+summary: "A detailed look into my journey of making my first meaningful open-source contribution, culminating in fixing a plotting issue for the Marimo project."
 date: '2024-09-26T00:00:00Z'
 lastmod: '2024-10-03T00:00:00Z'
 draft: false
