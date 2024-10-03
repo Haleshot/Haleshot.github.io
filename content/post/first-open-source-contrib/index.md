@@ -166,6 +166,7 @@ This extensive research was crucial in understanding the nuances of ArviZ's plot
 After my research, I proposed a simpler yet more effective solution:
 
 <details>
+
 <summary>Click to view the core logic of the solution</summary>
 
 from __future__ import annotations
