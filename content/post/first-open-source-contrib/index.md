@@ -73,7 +73,7 @@ The problem was reported in [Issue #1033](https://github.com/marimo-team/marimo/
 My initial approach to solving this issue resulted in a Pull Request that, while well-intentioned, didn't quite hit the mark. Here's what I learned from this first attempt:
 
 1. **Importance of Thorough Research**: I realized I needed to dive deeper into ArviZ's documentation and source code to truly understand the problem.
-2. **Overcomplicating Solutions**: My first PR attempted to implement a complex formatter, which wasn't necessary for the issue at hand.
+2. **Oversimplifying Solutions**: My first PR attempted to implement a very simple (and not relevant) formatter, which wasn't necessary/correct for the issue at hand.
 
 Here's an excerpt from my first PR comment:
 
