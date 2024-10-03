@@ -50,7 +50,7 @@ Open source has been a passion of mine ever since I was introduced to Git and Gi
 2. **Learning Good Practices**: Improving existing projects with better documentation, feature enhancements, and proper directory structures.
 3. **Active Curation**: Regularly going through newsletters like [TLDR](https://tldr.tech/) and [Rundown AI](https://www.therundown.ai/) to collect and organize resources for personal projects and potential contributions.
 
-> "I feel that's what I'm good at - curating and categorizing resources like GitHub repos, HuggingFace models and collections, and reading articles from various forums and threads."
+> "My strength lies in synthesizing information from diverse sources. I excel at curating and categorizing valuable resources—whether it's GitHub repositories, HuggingFace models, or insightful articles from tech forums. By doing this regularly, I build up a great collection of knowledge. It helps me see connections between different ideas and tools in the world of open-source and AI. This makes it easier for me to come up with new ideas and find ways to contribute to projects."
 
 This curation phase has led me to maintain a list of repositories I'm interested in contributing to, either by raising issues or solving existing ones.
 
