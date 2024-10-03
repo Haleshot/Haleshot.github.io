@@ -355,6 +355,32 @@ The key improvements in this PR included:
 - Better performance considerations
 - Improved type checking and import handling
 
+### My journey wrapped up
+
+{{</* mermaid */>}}
+journey
+    title My First Significant Open Source Contribution
+    section Preparation
+      Curate tech news and resources: 3: Me
+      Discover Marimo project: 4: Me
+      Find interesting issue (ArviZ plotting): 5: Me
+    section First Attempt
+      Research ArviZ and Matplotlib: 4: Me
+      Create initial PR: 3: Me
+      Receive feedback: 2: Me, Maintainers
+    section Life Interruption
+      Focus on college coursework: 1: Me
+      Work on capstone project: 1: Me
+    section Renewed Effort
+      Conduct extensive ArviZ research: 5: Me
+      Test various ArviZ plot functions: 4: Me
+      Develop improved solution: 5: Me
+    section Successful Contribution
+      Create refined PR: 4: Me
+      Address CI/CD and linting issues: 3: Me, CI System
+      Get PR approved and merged: 5: Me, Maintainers
+{{</* /mermaid */>}}
+
 ## Challenges and Learnings
 
 Throughout this process, I faced several challenges that provided valuable learning experiences:
