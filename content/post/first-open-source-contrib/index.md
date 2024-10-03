@@ -346,7 +346,7 @@ This approach focuses on:
 
 ### The Improved Pull Request
 
-My second PR reflected a more mature and thoughtful approach to the problem. Here's an excerpt from the PR description:
+My second PR reflected a more thoughtful approach to the problem. Here's an excerpt from the PR description:
 
 > "This PR addresses the issue with ArviZ plots not displaying correctly in the Marimo output. It implements a custom formatter for ArviZ objects, specifically handling numpy arrays containing matplotlib `Axes` objects along with `az.InferenceData`."
 
