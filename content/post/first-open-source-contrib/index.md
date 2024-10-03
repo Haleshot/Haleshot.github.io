@@ -58,7 +58,7 @@ This curation phase has led me to maintain a list of repositories I'm interested
 
 ## My First Significant Contribution
 
-While I've made smaller contributions before, this particular contribution to Marimo stands out as my first significant fix for a user-reported issue. However, the path to a successful contribution wasn't straightforward.
+While I've made smaller contributions before (documentation and READMEs), this particular contribution to Marimo stands out as my first significant fix for a user-reported issue. However, the path to a successful contribution wasn't straightforward.
 
 ### The Issue: ArviZ Plots Not Displaying
 
