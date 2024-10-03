@@ -367,7 +367,7 @@ journey
     section First Attempt
       Research ArviZ and Matplotlib: 4: Me
       Create initial PR: 3: Me
-      Receive feedback: 2: Me, Maintainers
+      Receive feedback: 4: Me, Maintainers
     section Life Interruption
       Focus on college coursework: 1: Me
       Work on capstone project: 1: Me
