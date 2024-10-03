@@ -19,11 +19,13 @@ tags:
   - Data Visualization
   - Marimo
   - ArviZ
+  - Featured Blogs
 categories:
   - Technology
   - Programming
   - Data Science
   - Open Source
+  - Featured Blogs
 projects:
   - open-source-contributions
 ---
