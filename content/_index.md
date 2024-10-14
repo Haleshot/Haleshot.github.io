@@ -87,8 +87,9 @@ sections:
               * **Educational Content:** 
                 - Develop tutorials, examples, and best practices for marimo usage.
                 - Offer tips to enhance productivity in AI/ML workflows.
-                - Lead a [marimo-tutorials GitHub repository](https://github.com/Haleshot/marimo-tutorials) where marimo notebook implementations spanning various domains are stored (to serve as a good reference point for newcomers and experienced users alike).
-              <br>
+                - Core maintainer of [marimo-tutorials GitHub repository](https://github.com/Haleshot/marimo-tutorials) where marimo notebook implementations spanning various domains are stored (to serve as a good reference point for newcomers and experienced users alike).
+              
+
               Skills: Python, Developer Relations, Communication, Community Outreach and Engagement, Content Creation, Open-Source Development, AI/ML, Data Science, Notebooks, Developer Advocacy
 
         - title: Research Intern
