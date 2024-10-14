@@ -71,34 +71,24 @@ sections:
           date_end: ''
           description: |2-
               As a [marimo Ambassador](https://marimo.io/ambassadors), I contribute to the growth and engagement of the AI/ML and developer relations community through:
-
               <br>
-
               * **Content Creation:** 
                 - Regularly share tutorials, examples, and tips on marimo's tools and features.
                 - Create resources for developers and data scientists using AI/ML notebooks with marimo.
-
               <br>
-
               * **Community Contributions:** 
                 - Manage and contribute to the [marimo Spotlights GitHub repository](https://github.com/marimo-team/spotlights).
                 - Showcase weekly community projects demonstrating creative uses of marimo notebooks.
                 - Encourage diverse applications and community contributions.
-
               <br>
-
               * **Event Participation:** 
                 - Assist in organizing and participating in community events, including quarterly calls and weekly spotlights.
-
               <br>
-
               * **Educational Content:** 
                 - Develop tutorials, examples, and best practices for marimo usage.
                 - Offer tips to enhance productivity in AI/ML workflows.
                 - Lead a [marimo-tutorials GitHub repository](https://github.com/Haleshot/marimo-tutorials) where marimo notebook implementations spanning various domains are stored (to serve as a good reference point for newcomers and experienced users alike).
-
               <br>
-
               Skills: Python, Developer Relations, Communication, Community Outreach and Engagement, Content Creation, Open-Source Development, AI/ML, Data Science, Notebooks, Developer Advocacy
 
         - title: Research Intern
