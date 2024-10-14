@@ -62,6 +62,58 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: Ambassador
+          company: marimo
+          company_url: 'https://marimo.io'
+          company_logo: marimo
+          location: Remote, United States
+          date_start: '2024-09-01'
+          date_end: ''
+          description: |2-
+              As a [marimo Ambassador](https://marimo.io/ambassadors), I contribute to the growth and engagement of the AI/ML and developer relations community through:
+
+              * **Content Creation:** 
+                - Regularly share tutorials, examples, and tips on marimo's tools and features.
+                - Create resources for developers and data scientists using AI/ML notebooks with marimo.
+
+              * **Community Contributions:** 
+                - Manage and contribute to the [marimo Spotlights GitHub repository](https://github.com/marimo-team/spotlights).
+                - Showcase weekly community projects demonstrating creative uses of marimo notebooks.
+                - Encourage diverse applications and community contributions.
+
+              * **Event Participation:** 
+                - Assist in organizing and participating in community events, including quarterly calls and weekly spotlights.
+
+              * **Educational Content:** 
+                - Develop tutorials, examples, and best practices for marimo usage.
+                - Offer tips to enhance productivity in AI/ML workflows.
+
+              Skills: Python, Developer Relations, Communication, Community Outreach and Engagement, Content Creation, Open-Source Development
+
+        - title: Research Intern
+          company: SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering
+          company_url: 'https://engineering.nmims.edu/'
+          company_logo: nmims
+          location: Mumbai, Maharashtra, India
+          date_start: '2024-07-01'
+          date_end: ''
+          description: |2-
+              **Capstone Project:** MathMate | Multimodal AI Assistant for Math Learning
+              **Mentor:** Dr. Vaishali Kulkarni
+
+              Developing an innovative LLM-based project specialized in mathematical reasoning and problem-solving.
+
+              Key accomplishments:
+              * Implemented model merging techniques using [mergekit](https://github.com/cg123/mergekit), combining NuminaMath-7B-TIR and DeepSeek-Prover-V1.5-RL models.
+              * Created Mathmate-7B-DELLA, a 6.91B parameter model optimized for mathematical tasks.
+              * Conducted model evaluation using LLM AutoEval with the Nous dataset.
+              * Applied ORPO fine-tuning on a specialized math dataset to enhance model performance.
+              * Utilized cutting-edge tools including [Hugging Face](https://huggingface.co/), [Lightning.ai](https://lightning.ai/), and [Weights & Biases](https://wandb.ai/) for model development and analysis.
+
+              This project aims to advance AI capabilities in mathematical reasoning, potentially revolutionizing how students and researchers approach complex mathematical problems.
+
+              Skills: Python, Research, Large Language Models (LLM), AI, Machine Learning, Computer Vision, GUI, Product Ideation and Development, Cloud Applications, Model Deployment, Git, GitHub
+
         - title: Research Intern
           company: Polymath Jr. program
           company_url: 'https://geometrynyc.wixsite.com/polymathreu'
