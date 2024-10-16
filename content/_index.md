@@ -100,7 +100,8 @@ sections:
           date_start: '2024-07-01'
           date_end: ''
           description: |2-
-              **Capstone Project:** MathMate | Multimodal AI Assistant for Math Learning
+              **Capstone Project:** [MathMate | Multimodal AI Assistant for Math Learning](https://github.com/Haleshot/Capstone_Project/)
+              <br>
               **Mentor:** Dr. Vaishali Kulkarni
 
               Developing an innovative LLM-based project specialized in mathematical reasoning and problem-solving.
