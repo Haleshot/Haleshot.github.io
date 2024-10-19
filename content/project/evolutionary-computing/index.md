@@ -4,10 +4,10 @@ summary: Implementation of the "Improving Neural-Network Classifiers Using Neare
 tags:
  - Neural Networks
  - KNN Partitioning
- - Evolutionary Computing
  - Machine Learning
  - Streamlit
  - Data Visualization
+ - Misc
 date: '2024-06-02T00:00:00Z'
 
 image:
