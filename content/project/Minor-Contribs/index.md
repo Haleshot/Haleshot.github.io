@@ -8,9 +8,8 @@ tags:
  - GitHub
  - Misc
 date: '2024-10-19T00:00:00Z'
-
 image:
- caption: [Open Source Guides](https://opensource.guide/how-to-contribute/)
+ caption: Open Source Guides
  focal_point: Smart
 
 links:
