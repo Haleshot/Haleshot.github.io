@@ -6,7 +6,6 @@ tags:
  - Documentation
  - Bug Fixes
  - GitHub
- - Misc
 date: '2024-10-19T00:00:00Z'
 image:
  caption: Open Source Guides
