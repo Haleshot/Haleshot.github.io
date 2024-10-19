@@ -291,8 +291,8 @@ sections:
           tag: Deep Learning
         - name: Image Processing
           tag: Image Processing
-        - name: Evolutionary Computing
-          tag: Evolutionary Computing
+        - name: Open Source
+          tag: Open Source
         - name: Miscellaneous
           tag: Misc
     design:
