@@ -270,7 +270,11 @@ social:
 highlight_name: true
 ---
 
-I am a tech-enthusiast who loves programming and gaming; a senior - pursuing a bachelor's degree in Artificial Intelligence at NMIMS, where I learn about the theory and practice of machine learning, computer vision, natural language processing and deep learning.
+I am a Tech-enthusiast and aspiring Machine Learning Engineer pursuing a Bachelor's degree in Artificial Intelligence at NMIMS. My studies focus on the theory and practice of ML, CV, NLP, and DL.
 
-My goal is to become a machine learning engineer who can create innovative and impactful solutions for real-world problems. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world. I also like to express my creativity and personality through streaming, content creation and video editing. I believe that technology and gaming can bring joy and value to people's lives, and I want to be part of that.
+Over the past year, I've developed a passion for fostering collaborations, developer relations, and open-source advocacy. This journey began through extensive resource curation, reading newsletters, and engaging with relevant articles. I've found great fulfillment in understanding and contributing to open-source frameworks, whether it's fixing issues, making contributions, or utilizing them in projects from scratch.
+
+My strengths lie in integrating relevant frameworks with other platforms, services, and libraries. This intersection of technical skills and community engagement is where I thrive. It combines my love for coding with developer relations, community building through platform integrations, and open-source advocacy.
+
+My goal is to create innovative and impactful solutions for real-world problems while continuing to learn and collaborate with other passionate individuals in the tech community. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world.
 {style="text-align: justify;"}
