@@ -29,7 +29,7 @@ external_link: ''
 
 ---
 
-As a B.Tech AI senior undergrad, I'm always on the lookout for resources that offer AI/ML/DL problems from scratch. Enter [deep-ml.com](https://github.com/Open-Deep-ML/DML-OpenProblem) - my latest obsession, courtesy of the TL;DR Newsletter (shoutout to my favorite "procrastination enabler"!). It's like finding a goldmine for an AI nerd like me, perfectly aligning with my *totally healthy* habit of curating resources for future projects and contributions.
+As a B.Tech AI senior undergrad, I'm always on the lookout for resources that offer AI/ML/DL problems from scratch. Enter [deep-ml.com](https://github.com/Open-Deep-ML/DML-OpenProblem) - my latest obsession, courtesy of the [TL;DR Newsletter](https://tldr.tech/webdev) (shoutout to my favorite "procrastination enabler"!). It's like finding a goldmine for an AI nerd like me, perfectly aligning with my *totally healthy* habit of curating resources for future projects and contributions.
 
 {{% callout note %}}
 The DML-OpenProblem repository is an open-source collection of problems focused on linear algebra, machine learning, and deep learning. It powers the [deep-ml.com](https://github.com/Open-Deep-ML/DML-OpenProblem), providing a platform for solving problems from scratch and offering a robust learning experience.
