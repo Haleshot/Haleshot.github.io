@@ -1,5 +1,5 @@
 ---
-title: Open-Deep-ML | [deep-ml](c)
+title: Open-Deep-ML | [deep-ml](https://www.deep-ml.com/)
 summary: Significant contributions to the [DML-OpenProblem repository](https://github.com/Open-Deep-ML/DML-OpenProblem), which powers the [deep-ml.com](https://github.com/Open-Deep-ML/DML-OpenProblem) website. These contributions include bug fixes, documentation improvements, and future plans for enhancing the platform's functionality and user experience.
 tags:
  - Deep Learning
