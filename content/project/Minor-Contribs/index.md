@@ -40,7 +40,7 @@ This project showcases my initial steps into the world of open source contributi
 
 | Repository | Contribution | PR Link | Status |
 |------------|--------------|---------|---------|
-| huggingface/dataspeech | Added .github folder with issue and PR templates | [#20](https://github.com/huggingface/dataspeech/pull/20) | Merged |
+| huggingface/dataspeech | Added .github folder with issue and PR templates | [#20](https://github.com/huggingface/dataspeech/pull/20) | Open |
 
 ## Impact Analysis
 
