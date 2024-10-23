@@ -29,7 +29,7 @@ This project showcases my initial steps into the world of open source contributi
 
 | Repository | Issue Description | PR Link | Status |
 |------------|------------------|---------|---------|
-| janhq/jan | Fixed incorrect Martian API documentation link in Settings | [#3857](https://github.com/janhq/jan/pull/3857) | Open |
+| janhq/jan | Fixed incorrect Martian API documentation link in Settings | [#3857](https://github.com/janhq/jan/pull/3857) | Merged |
 | huggingface/dataspeech | Fixed broken hyperlink in README | [#18](https://github.com/huggingface/dataspeech/pull/18) | Merged |
 | pipeless-ai/pipeless | Fixed incorrect LICENSE hyperlink in README | [#142](https://github.com/pipeless-ai/pipeless/pull/142) | Merged |
 | pipeless-ai/docs | Fixed hyperlink typo in Multipose Detection example | [#11](https://github.com/pipeless-ai/docs/pull/11) | Merged |
