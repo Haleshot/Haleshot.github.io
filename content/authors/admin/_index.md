@@ -33,7 +33,7 @@ interests:
   - Natural Language Processing
   - Machine Learning
   - Computer Vision
-  - Image Processing
+  - Recommendation Systems
   - LLMs
   - Open Source
   - GenAI
