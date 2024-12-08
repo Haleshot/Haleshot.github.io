@@ -259,6 +259,8 @@ social:
   - icon: bluesky
     icon_pack: fab
     link: https://bsky.app/profile/haleshot.bsky.social
+    display:
+      header: true
   - icon: youtube
     icon_pack: fab
     link: https://www.youtube.com/Haleshot
