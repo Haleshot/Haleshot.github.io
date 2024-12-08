@@ -257,7 +257,7 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/in/srihari-thyagarajan/
   - icon: bluesky
-    icon_pack: fab
+    icon_pack: brands
     link: https://bsky.app/profile/haleshot.bsky.social
     display:
       header: true
