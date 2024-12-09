@@ -257,11 +257,9 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/in/srihari-thyagarajan/
   - icon: bluesky
-    icon_pack: custom
-    link: https://bsky.app/profile/haleshot.bsky.social
-  - icon: youtube
     icon_pack: fab
-    link: https://www.youtube.com/Haleshot
+    link: https://bsky.app/profile/haleshot.bsky.social
+  
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
