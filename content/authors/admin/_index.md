@@ -259,7 +259,9 @@ social:
   - icon: bluesky
     icon_pack: fab
     link: https://bsky.app/profile/haleshot.bsky.social
-  
+  - icon: youtube
+    icon_pack: fab
+    link: https://www.youtube.com/Haleshot
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
