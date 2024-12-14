@@ -64,13 +64,13 @@ sections:
       items:
         - title: Ambassador
           company: marimo
-          company_url: 'https://marimo.io'
+          company_url: 'https://marimo.io?ref=https://haleshot.github.io/'
           company_logo: marimo
           location: Remote, United States
           date_start: '2024-09-01'
           date_end: ''
           description: |2-
-              As a [marimo Ambassador](https://marimo.io/ambassadors), I contribute to the growth and engagement of the AI/ML and developer relations community through:
+              As a [marimo Ambassador](https://marimo.io/ambassadors?ref=https://haleshot.github.io/), I contribute to the growth and engagement of the AI/ML and developer relations community through:
               <br>
               * **Content Creation:** 
                 - Regularly share tutorials, examples, and tips on marimo's tools and features.
