@@ -108,7 +108,7 @@ sections:
 
               Key accomplishments:
               * Implemented model merging techniques using [mergekit](https://github.com/cg123/mergekit), combining NuminaMath-7B-TIR and DeepSeek-Prover-V1.5-RL models.
-              * Created Mathmate-7B-DELLA, a 6.91B parameter model optimized for mathematical tasks.
+              * Created [Mathmate-7B-DELLA](https://huggingface.co/Haleshot/Mathmate-7B-DELLA), a 6.91B parameter model optimized for mathematical tasks.
               * Conducted model evaluation using LLM AutoEval with the Nous dataset.
               * Applied ORPO fine-tuning on a specialized math dataset to enhance model performance.
               * Utilized cutting-edge tools including [Hugging Face](https://huggingface.co/), [Lightning.ai](https://lightning.ai/), and [Weights & Biases](https://wandb.ai/) for model development and analysis.
