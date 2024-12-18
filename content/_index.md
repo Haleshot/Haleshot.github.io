@@ -64,13 +64,13 @@ sections:
       items:
         - title: Ambassador
           company: marimo
-          company_url: 'https://marimo.io'
+          company_url: 'https://marimo.io?ref=https://haleshot.github.io/'
           company_logo: marimo
           location: Remote, United States
           date_start: '2024-09-01'
           date_end: ''
           description: |2-
-              As a [marimo Ambassador](https://marimo.io/ambassadors), I contribute to the growth and engagement of the AI/ML and developer relations community through:
+              As a [marimo Ambassador](https://marimo.io/ambassadors?ref=https://haleshot.github.io/), I contribute to the growth and engagement of the AI/ML and developer relations community through:
               <br>
               * **Content Creation:** 
                 - Regularly share tutorials, examples, and tips on marimo's tools and features.
@@ -90,7 +90,7 @@ sections:
                 - Core maintainer of [marimo-tutorials GitHub repository](https://github.com/Haleshot/marimo-tutorials) where marimo notebook implementations spanning various domains are stored (to serve as a good reference point for newcomers and experienced users alike).
               
 
-              Skills: Python, Developer Relations, Communication, Community Outreach and Engagement, Content Creation, Open-Source Development, AI/ML, Data Science, Notebooks, Developer Advocacy
+              Skills: Python, Developer Relations, Communication, Community Outreach and Engagement, Content Creation, Open-Source Development, AI/ML, Data Science, Notebooks
 
         - title: Research Intern
           company: SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering
@@ -108,7 +108,7 @@ sections:
 
               Key accomplishments:
               * Implemented model merging techniques using [mergekit](https://github.com/cg123/mergekit), combining NuminaMath-7B-TIR and DeepSeek-Prover-V1.5-RL models.
-              * Created Mathmate-7B-DELLA, a 6.91B parameter model optimized for mathematical tasks.
+              * Created [Mathmate-7B-DELLA](https://huggingface.co/Haleshot/Mathmate-7B-DELLA), a 6.91B parameter model optimized for mathematical tasks.
               * Conducted model evaluation using LLM AutoEval with the Nous dataset.
               * Applied ORPO fine-tuning on a specialized math dataset to enhance model performance.
               * Utilized cutting-edge tools including [Hugging Face](https://huggingface.co/), [Lightning.ai](https://lightning.ai/), and [Weights & Biases](https://wandb.ai/) for model development and analysis.
