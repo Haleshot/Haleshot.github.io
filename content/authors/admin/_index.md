@@ -256,8 +256,8 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/srihari-thyagarajan/
-  - icon: "bluesky"
-    icon_pack: "fab"
+  - icon: bluesky
+    icon_pack: fab
     link: https://bsky.app/profile/haleshot.bsky.social
   - icon: youtube
     icon_pack: fab
