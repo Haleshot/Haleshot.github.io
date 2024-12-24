@@ -270,7 +270,7 @@ social:
 highlight_name: true
 ---
 
-I am an aspiring Machine Learning Engineer pursuing a Bachelor's degree in Artificial Intelligence at NMIMS. My studies focus on the theory and practice of ML, CV, NLP, and DL.
+I am an aspiring ML Engineer pursuing a Bachelor's degree in AI at NMIMS. My studies focus on the theory and practice of ML, CV, NLP, and DL.
 
 Over the past year, I've developed a passion for fostering collaborations, developer relations, and open-source advocacy. This journey began through extensive resource curation, reading newsletters, and engaging with relevant articles. I've found great fulfillment in understanding and contributing to open-source frameworks, whether it's fixing issues, making contributions, or utilizing them in projects from scratch.
 
