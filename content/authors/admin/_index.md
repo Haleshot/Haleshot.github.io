@@ -25,7 +25,7 @@ organizations:
     url: https://www.nmims.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Hi, I’m Haleshot, a final-year student studying B Tech Artificial Intelligence. I like projects relating to ML, AI, DL, CV, NLP, Image Processing, etc. Currently exploring Python, FastAPI, projects involving AI and platforms such as HuggingFace and Kaggle.
+bio: Hi, I’m Haleshot, a senior-year student studying B Tech Artificial Intelligence. I like projects relating to ML, AI, DL, CV, NLP, Image Processing, etc. Currently exploring Python, FastAPI, projects involving AI and platforms such as HuggingFace and Kaggle.
 
 # Interests to show in About widget
 interests:
@@ -270,7 +270,7 @@ social:
 highlight_name: true
 ---
 
-I am an aspiring ML Engineer pursuing a Bachelor's degree in AI at NMIMS. My studies focus on the theory and practice of ML, CV, NLP, and DL.
+I am an aspiring ML Engineer pursuing a Bachelor's degree in AI at NMIMS. My studies focuses on the theory and practice of ML, CV, NLP, and DL.
 
 Over the past year, I've developed a passion for fostering collaborations, developer relations, and open-source advocacy. This journey began through extensive resource curation, reading newsletters, and engaging with relevant articles. I've found great fulfillment in understanding and contributing to open-source frameworks, whether it's fixing issues, making contributions, or utilizing them in projects from scratch.
 
