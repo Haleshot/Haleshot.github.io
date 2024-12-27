@@ -253,7 +253,8 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/Haleshot
-  - icon: <i class="fa-brands fa-bluesky"></i>
+  - icon: bluesky
+    icon_pack: brands
     link: https://bsky.app/profile/haleshot.bsky.social
   - icon: linkedin
     icon_pack: fab
