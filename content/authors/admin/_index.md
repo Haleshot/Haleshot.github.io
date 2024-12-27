@@ -253,6 +253,8 @@ social:
   - icon: github
     icon_pack: fab
     link: https://github.com/Haleshot
+  -icon: <i class="fa-brands fa-bluesky"></i>
+    link: https://bsky.app/profile/haleshot.bsky.social
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/srihari-thyagarajan/
