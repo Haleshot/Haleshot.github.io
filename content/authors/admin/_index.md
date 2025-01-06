@@ -279,5 +279,5 @@ Over the past year, I've developed a passion for fostering collaborations, devel
 
 My strengths lie in integrating relevant frameworks with other platforms, services, and libraries. This intersection of technical skills and community engagement is where I thrive. It combines my love for coding with developer relations and community building through platform integrations.
 
-My goal is to create innovative and impactful solutions for real-world problems while continuing to learn and collaborate with other passionate individuals in the tech community. I am always eager to learn new skills and technologies and to collaborate with other passionate and talented people; especially in the open-source world.
+My goal is to create innovative and impactful solutions for real-world problems while continuing to learn and collaborate with other passionate individuals in the tech community.
 {style="text-align: justify;"}
