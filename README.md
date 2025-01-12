@@ -1,4 +1,5 @@
 # [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
+- _Bootstrap_
 
 [![Screenshot](./preview.png)](https://hugoblox.com/templates/)
 
