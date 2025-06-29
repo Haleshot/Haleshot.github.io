@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: B Tech AI Senior Student
+role: Intern @ marimo | OSS Enthusiast
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -25,18 +25,17 @@ organizations:
     url: https://www.nmims.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Hi, I’m Haleshot, a senior-year student studying B Tech Artificial Intelligence. I like projects relating to ML, AI, DL, CV, NLP, Image Processing, etc. Currently exploring Python, FastAPI, projects involving AI and platforms such as HuggingFace and Kaggle.
+bio: B Tech AI student passionate about open-source contributions, developer relations, and creating educational content. Currently an intern at marimo.io, focused on AI/ML tools and fostering community collaboration.
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Natural Language Processing
-  - Machine Learning
-  - Computer Vision
-  - Recommendation Systems
-  - LLMs
   - Open Source
-  - GenAI
+  - Developer Advocacy/relations  
+  - Community Building
+  - Dev-tools
+  - AI/ML Tools & Platforms
+  - Technical Writing
+  - Educational Content Creation
 
 # Education to show in About widget
 education:
@@ -44,194 +43,6 @@ education:
     - course: B Tech in Artificial Intelligence
       institution: NMIMS University
       year: 2025
-
-# Skills
-# For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
-skills:
-  - name: Technical (Core)
-    items:
-      - name: Python
-        description: ''
-        percent: 75
-        icon: python
-        icon_pack: fab
-      - name: Java
-        description: ''
-        percent: 45
-        icon: java
-        icon_pack: custom
-      - name: AI
-        description: ''
-        percent: 80
-        icon: chart-line
-        icon_pack: fas
-      - name: Machine Learning
-        description: ''
-        percent: 68
-        icon: machineLearning
-        icon_pack: custom
-      - name: Deep Learning
-        description: ''
-        percent: 75
-        icon: deepLearning
-        icon_pack: custom
-      - name: NLP
-        description: ''
-        percent: 60
-        icon: NLP
-        icon_pack: custom
-      - name: Signal and Image Processing
-        description: ''
-        percent: 70
-        icon: SIP
-        icon_pack: custom
-      - name: DSA
-        description: ''
-        percent: 65
-        icon: dsa
-        icon_pack: custom
-      - name: Statistics
-        description: ''
-        percent: 60
-        icon: statistics
-        icon_pack: custom
-      - name: Pandas
-        description: ''
-        percent: 70
-        icon: pandas-original
-        icon_pack: custom
-      - name: Scikit-learn
-        description: ''
-        percent: 71
-        icon: scikitlearn-original
-        icon_pack: custom
-  - name: Libraries/Frameworks
-    color: '#8ddd20'
-    color_border: '#f0bf23'
-    items:
-      - name: FastAPI
-        description: ''
-        percent: 68
-        icon: fastapi-original
-        icon_pack: custom
-      - name: Flask
-        description: ''
-        percent: 60
-        icon: flask-original
-        icon_pack: custom
-      - name: Jupyter
-        description: ''
-        percent: 80
-        icon: jupyter-original
-        icon_pack: custom
-      - name: Marimo
-        description: ''
-        percent: 75
-        icon: marimo
-        icon_pack: custom
-      - name: keras
-        description: ''
-        percent: 60
-        icon: keras-original
-        icon_pack: custom
-      - name: Markdown
-        description: ''
-        percent: 65
-        icon: markdown-original
-        icon_pack: custom
-      - name: Matplotlib
-        description: ''
-        percent: 68
-        icon: matplotlib-original
-        icon_pack: custom
-      - name: NumPy
-        description: ''
-        percent: 70
-        icon: numpy-original-workmark
-        icon_pack: custom
-      - name: OpenCV
-        description: ''
-        percent: 65
-        icon: opencv-original
-        icon_pack: custom
-      - name: Qt
-        description: ''
-        percent: 62
-        icon: qt-original
-        icon_pack: custom
-      - name: Streamlit
-        description: ''
-        percent: 68
-        icon: streamlit-original
-        icon_pack: custom
-  - name: Developer Tools/Platforms
-    color: '#1ed780'
-    color_border: '#784DF4'
-    items:
-      - name: Git
-        description: ''
-        percent: 75
-        icon: git-original
-        icon_pack: custom
-      - name: GitHub
-        description: ''
-        percent: 85
-        icon: github-original
-        icon_pack: custom
-      - name: GitLab
-        description: ''
-        percent: 65
-        icon: gitlab-original
-        icon_pack: custom
-      - name: Ubuntu
-        description: ''
-        percent: 65
-        icon: ubuntu-original
-        icon_pack: custom
-      - name: Windows
-        description: ''
-        percent: 78
-        icon: windows
-        icon_pack: custom
-      - name: VSCode
-        description: ''
-        percent: 89
-        icon: vscode-original
-        icon_pack: custom
-  - name: Databases and Hobbies
-    color: '#eeac02'
-    color_border: '#4DF464'
-    items:
-      - name: MySql
-        description: ''
-        percent: 75
-        icon: mysql
-        icon_pack: custom
-      - name: MongoDB
-        description: ''
-        percent: 43
-        icon: mongodb
-        icon_pack: custom
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-hiking
-        icon_pack: fas
-      - name: Dogs
-        description: ''
-        percent: 100
-        icon: dog
-        icon_pack: fas
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera-retro
-        icon_pack: fas
-      - name: Gaming
-        description: ''
-        percent: 80
-        icon: gaming
-        icon_pack: custom
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -273,10 +84,10 @@ social:
 highlight_name: true
 ---
 
-I am an aspiring ML Engineer pursuing a Bachelor's degree in AI at NMIMS. My studies focuses on the theory and practice of ML, CV, NLP, and DL.
+An undergraduate in AI at NMIMS and currently an intern at marimo, where I focus on developer advocacy, open-source and building communities. I enjoy working at the intersection of technology and people — helping developers adopt new tools, collaborating on projects and creating resources that make tech more approachable.
 
-Over the past year, I've developed a passion for fostering collaborations, developer relations, and open-source advocacy. This journey began through extensive resource curation, reading newsletters, and engaging with relevant articles. I've found great fulfillment in understanding and contributing to open-source frameworks, whether it's fixing issues, making contributions, or utilizing them in projects from scratch.
+Over the past year, I've spent a lot of time working on collaborations and open-source contributions. I like finding ways to integrate different dev-tools and platforms, then creating tutorials or content that makes them more accessible to other developers.
 
-My strengths lie in integrating relevant frameworks with other platforms, services, and libraries. This intersection of technical skills and community engagement is where I thrive. It combines my love for coding with developer relations and community building through platform integrations.
+Currently working in developer advocacy and partnerships at marimo. I find myself drawn to developer experience, platform adoption, and creating resources that actually help people succeed w/ relevant emerging technologies. My work spans technical contributions, community engagement & educational content creation.
 
 {style="text-align: justify;"}
