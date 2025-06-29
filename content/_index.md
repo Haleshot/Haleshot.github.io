@@ -84,7 +84,7 @@ sections:
           company_logo: nmims
           location: Mumbai, Maharashtra, India
           date_start: '2024-07-01'
-          date_end: ''
+          date_end: '2024-11-17'
           description: |2-
               **Capstone Project:** [MathMate | Multimodal AI Assistant for Math Learning](https://github.com/Haleshot/Capstone_Project/)
               <br>
@@ -109,7 +109,7 @@ sections:
           company_logo: polymath
           location: Remote, United States, India.
           date_start: '2024-06-17'
-          date_end: ''
+          date_end: '2024-08-15'
           description: |2-
               * **[Notabot Studio Project](https://notabot.ai/)**
                 - **Role:** Project organizer, Game Developer
