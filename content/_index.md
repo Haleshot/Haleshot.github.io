@@ -68,9 +68,8 @@ sections:
               * Showcase community projects through weekly [spotlight features](https://github.com/marimo-team/spotlights), highlighting innovative applications and encouraging diverse use cases
 
               **Developer Engagement**:
-              * Participate in community events and quarterly calls, facilitating knowledge sharing between users and the core development team
-              * Create practical examples and best practices documentation that addresses real developer pain points in data science workflows
-              * Support new contributors through code reviews, mentorship, and guidance on effective notebook design patterns
+              * Create practical examples and relevant docs that addresses real developer pain points in data science workflows
+              * Support new contributors through code reviews, mentorship & guidance on effective notebook design patterns
 
               **Ecosystem Growth**:
               * Collaborate with educational platforms and open-source projects to expand marimo's integration within the broader developer tools ecosystem
