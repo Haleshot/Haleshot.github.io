@@ -29,7 +29,7 @@ sections:
           company_logo: marimo
           location: Remote, SF, United States
           date_start: '2025-01-01'
-          date_end: '2025-07-01'
+          date_end: ''
           description: |2-
               Joined marimo to work on their reactive Python notebook platform; ended up getting really into the community and adoption side of things.
 
