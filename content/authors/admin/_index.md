@@ -86,8 +86,8 @@ highlight_name: true
 
 An undergraduate in AI at NMIMS and currently an intern at marimo, where I focus on developer advocacy, open-source, and building communities. I enjoy working at the intersection of technology and people — helping developers adopt new tools and collaborating on projects.
 
-Over the past year, I've spent a lot of time working on collaborations and open-source contributions. I like finding ways to integrate different dev-tools and platforms, then creating tutorials or content that makes them more accessible to other developers.
+Over the past year, I've spent a lot of time working on collaborations and OSS contributions. I like finding ways to integrate different dev-tools and platforms, then creating tutorials/guides or content that makes them more accessible to other developers.
 
-Currently working in developer advocacy and partnerships at marimo. I’m passionate about developer experience, platform adoption and helping people succeed w/ emerging technologies. My work spans technical contributions, community engagement, and educational content creation.
+I'm passionate about developer experience, platform research, and finding integration opportunities between different dev-tools. My approach involves dogfooding platforms extensively, identifying friction points, then contributing fixes and creating educational resources that make complex concepts more accessible.
 
 {style="text-align: justify;"}
