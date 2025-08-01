@@ -190,7 +190,7 @@ sections:
       subtitle: 'Technical Content & Learning Journey'
       text: |-
         {{% callout note %}}
-        **Content Strategy**: Currently focused on creating high-quality technical content for developer advocacy and community building. New in-depth articles and tutorials are coming soon!
+        Currently focused on creating high-quality technical content for developer advocacy and community building. New in-depth articles and tutorials are coming soon!
         {{% /callout %}}
       filters:
         folders:
