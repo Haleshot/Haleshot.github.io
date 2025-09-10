@@ -48,7 +48,7 @@ links:
   - icon: link
     icon_pack: fas
     name: LinkedIn Post
-    url: https://www.linkedin.com/posts/igor-kuvychko_switching-from-pandas-to-polars-activity-7363198730948284416-DwEr/
+    url: https://www.linkedin.com/posts/srihari-thyagarajan_just-wrapped-up-conducting-a-hands-on-workshop-activity-7371061575694249984-NBB7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADSJzvgBkjBd85IWDyUWA6ttzq8B-NDq-Hs
 
 projects: []
 
