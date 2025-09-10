@@ -6,14 +6,14 @@ event_url: https://nmims.edu/
 
 location: Mukesh Patel School of Technology Management & Engineering, Mumbai
 address:
-  street: opp. Cooper Hospital, Navpada, Suvarna Nagar
+  street: opp. Cooper Hospital, Vile Parle (E)
   city: Mumbai
   region: Maharashtra
   postcode: 400056
   country: India
 
 summary: Two workshop sessions introducing marimo’s reactive notebooks; interactive AI/ML notebook showcases & walkthroughs; OSS and portfolio guidance.
-abstract: "Short, hands-on workshop; marimo’s reactive IDE; slides/app view toggle; activation functions primer notebook; model training via UI; Molab intro (mainly for non-WASM packages); widgets/anywidget; OSS discovery and contributing; tailored to AI syllabus; code-along."
+abstract: "Hands-on workshop; marimo’s reactive IDE; slides/app view toggle; activation functions primer notebook; model training via UI; Molab intro (mainly for non-WASM packages); widgets/anywidget; OSS discovery and contributing; tailored to AI syllabus; code-along."
 
 date: "2025-09-08T10:00:00+05:30"
 date_end: "2025-09-08T14:00:00+05:30"
@@ -37,14 +37,6 @@ links:
     icon_pack: fas
     name: marimo docs
     url: https://docs.marimo.io/
-  - icon: download
-    icon_pack: fas
-    name: Install marimo
-    url: https://docs.marimo.io/getting_started/installation/
-  - icon: wrench
-    icon_pack: fas
-    name: Install uv
-    url: https://docs.astral.sh/uv/getting-started/installation/
   - icon: github
     icon_pack: fab
     name: marimo repo
@@ -53,17 +45,9 @@ links:
     icon_pack: fab
     name: marimo-learn
     url: https://github.com/marimo-team/learn
-  - icon: youtube
-    icon_pack: fab
-    name: "The Matrix as an User Interface"
-    url: https://youtu.be/dVrkzc_arE8?si=LWmxZ3HbKwXnV0lY
-  - icon: youtube
-    icon_pack: fab
-    name: "Previewing some Linear Algebra"
-    url: https://youtu.be/1SJOqnZTV-E?si=srMEu0VMBWolwTUy
   - icon: link
     icon_pack: fas
-    name: PyData ecosystem post (LinkedIn)
+    name: LinkedIn Post
     url: https://www.linkedin.com/posts/igor-kuvychko_switching-from-pandas-to-polars-activity-7363198730948284416-DwEr/
 
 projects: []
@@ -85,5 +69,4 @@ Resources:
 - repo: https://github.com/marimo-team/marimo/
 - learn: https://github.com/marimo-team/learn
 
-External post with photos and context: https://www.linkedin.com/posts/srihari-thyagarajan_just-wrapped-up-conducting-a-hands-on-workshop-activity-7371061575694249984-NBB7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADSJzvgBkjBd85IWDyUWA6ttzq8B-NDq-Hs
-
+External post with photos and context: [LinkedIn Post](https://www.linkedin.com/posts/srihari-thyagarajan_just-wrapped-up-conducting-a-hands-on-workshop-activity-7371061575694249984-NBB7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADSJzvgBkjBd85IWDyUWA6ttzq8B-NDq-Hs)
