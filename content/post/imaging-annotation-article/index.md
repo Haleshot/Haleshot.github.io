@@ -39,6 +39,8 @@ Uncertainty should be visible without hunting. If the model isn’t sure, say so
 
 The notebook is the workbench off to the side. Pin the environment, keep a short log of runs, compare yesterday's model to today's. Review happens in the viewer; the paper trail lives with the experiments.
 
+As Colliot et al. note in their work on reproducibility in medical imaging ML, "sharing detailed research data is associated with increased citation rate" and "code sharing is associated with research impact." The tight loop we're describing—DICOM in, suggestions out, corrections logged—creates exactly this kind of shareable research artifact that teams can build on.
+
 <details>
 <summary>Obligatory xkcd (and why human oversight matters)</summary>
 
@@ -116,3 +118,4 @@ I saw a [gamepad-driven annotation demo](https://youtu.be/fYlsew5PGag?si=DXlfTPi
 - *Interactive CV annotation setup*: [https://youtu.be/yxdGw-52M8c?si=mnnU_FyZgqRe7fwi](https://youtu.be/yxdGw-52M8c?si=mnnU_FyZgqRe7fwi)
 - *Zotero* (study organization): [https://www.zotero.org/](https://www.zotero.org/)
 - *Deepnote*: [https://deepnote.com/](https://deepnote.com/)
+- Colliot O, Thibeau-Sutre E, Burgos N. _Reproducibility in Machine Learning for Medical Imaging_. In: Colliot O, editor. Machine Learning for Brain Disorders [Internet]. New York, NY: Humana; 2023. Chapter 21. Available from: [https://www.ncbi.nlm.nih.gov/books/NBK597469/](https://www.ncbi.nlm.nih.gov/books/NBK597469/)
