@@ -24,7 +24,7 @@ DICOM is the common file and metadata standard for medical images (CT, MRI, etc.
 
 ### The loop, in one pass
 
-Start small. Point the server at a [compact study list](https://www.zotero.org/) and connect a viewer. Let the model draft a first pass; reviewers correct in place, and those edits become training signal.
+Start small. Point the server at a small DICOM study folder (a study queue) and connect a viewer. Let the model draft a first pass; reviewers correct in place, and those edits become training signal.
 
 - Selection: surface the next batch by uncertainty and diversity so you don’t re‑label the same easy cases.
 - Update: retrain on a cadence (e.g., nightly) and promote only if simple baselines are beaten on held‑out cases.
@@ -39,7 +39,7 @@ Uncertainty should be visible without hunting. If the model isn’t sure, say so
 
 The notebook is the workbench off to the side. Pin the environment, keep a short log of runs, compare yesterday's model to today's. Review happens in the viewer; the paper trail lives with the experiments.
 
-As Colliot et al. note in their work on reproducibility in medical imaging ML, "sharing detailed research data is associated with increased citation rate" and "code sharing is associated with research impact." The tight loop we're describing—DICOM in, suggestions out, corrections logged—creates exactly this kind of shareable research artifact that teams can build on.
+As Colliot et al. summarize in their work on reproducibility in medical imaging ML, evidence shows that sharing detailed research data and code increases research impact. The tight loop we're describing—DICOM in, suggestions out, corrections logged—creates exactly this kind of shareable research artifact that teams can build on.
 
 <details>
 <summary>Obligatory xkcd (and why human oversight matters)</summary>
