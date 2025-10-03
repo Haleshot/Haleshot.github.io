@@ -10,7 +10,7 @@ Clinicians don't need another flashy model; they need cleaner labels with fewer 
 Why now? Two things converged. First, MONAI Label is a practical toolkit for AI‑assisted annotation: it plugs into familiar viewers (`3D Slicer`, `MITK`, `OHIF`), serves predictions in real time, and learns from user corrections via active learning. Second, notebook workflows make iteration tight — short runs, quick comparisons, easy sharing—so you can measure improvement instead of guessing.
 
 <details>
-<summary>Why that GIS meme fits here (optional note)</summary>
+<summary>Why that GIS meme fits here</summary>
 
 Missing sidecar files in GIS have the same energy as incomplete medical image shares: DICOM without key metadata, masks without the paired scan, or half‑pinned environments. The point isn’t the meme — it’s the reminder to prefer shareable, reproducible setups. See the meme: [“missing sidecar files”](https://www.linkedin.com/posts/milan-janosov_i-will-officially-post-this-every-time-i-activity-7378323152818470912-IVz3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADSJzvgBkjBd85IWDyUWA6ttzq8B-NDq-Hs). Background on medical image sharing and setup friction: [1](https://www.mantralabsglobal.com/blog/how-are-medical-images-shared-among-healthcare-enterprises/), [3](https://docs.monai.io/projects/label/en/latest/installation.html), [5](https://monai.io/deploy.html).
 
