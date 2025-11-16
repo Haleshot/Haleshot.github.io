@@ -29,7 +29,10 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          for i in 1 2 3; do
+            pnpm install --frozen-lockfile && break || sleep 10
+          done
 
       - name: Run Biome Check (includes linting and formatting)
         run: pnpm run check

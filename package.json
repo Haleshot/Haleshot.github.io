@@ -1,7 +1,12 @@
 {
-  "name": "steipete-astro",
+  "name": "haleshot-blog",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && pagefind --site dist",
