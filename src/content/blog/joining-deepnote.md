@@ -10,7 +10,7 @@ draft: false
 
 I'm joining Deepnote as a Technical Writer :)
 
-First post on this newly revamped website, figured I'd start with that! Deepnote is a _collaborative_ data notebook platform – think Jupyter, but built for teams working together in the cloud. Came across the role on their careers page and applied. The role aligns well with what I've been doing: that _mix_ of community building, developer advocacy, and technical content creation (you might notice what I wrote on my [About](/about) page about this – I think it aligns well with that).
+First post on this newly revamped website, figured I'd start with that! [Deepnote](https://deepnote.com/) is a _collaborative_ data notebook platform – think Jupyter, but built for teams working together in the cloud. Came across the role on their careers page and applied. The role aligns well with what I've been doing: that _mix_ of community building, developer advocacy, and technical content creation (you might notice what I wrote on my [About](/about) page about this – I think it aligns well with that).
 
 This seemed like the right moment to revamp my website (previously built with [Hugoblox's academic-theme-cv](https://github.com/HugoBlox/theme-academic-cv)) since I'm planning to write more. Wanted a proper blog setup with tags, RSS, and the whole shebang.
 
