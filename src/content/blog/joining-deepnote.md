@@ -1,7 +1,7 @@
 ---
 title: "Joining Deepnote as a Technical Writer"
 description: "Career update: I'm joining Deepnote as a Technical Writer :)"
-pubDatetime: 2025-11-16T10:00:00Z
+pubDatetime: 2025-11-16T00:00:00Z
 author: "Srihari Thyagarajan"
 tags: ["career"]
 featured: true
