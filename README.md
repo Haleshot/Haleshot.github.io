@@ -1,50 +1,63 @@
-# [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
-- _Bootstrap_
+# Haleshot's Personal Website
 
-[![Screenshot](./preview.png)](https://hugoblox.com/templates/)
+This is the source code for my personal website, built with [Astro](https://astro.build) and deployed on GitHub Pages.
 
-The Hugo **Academic Resumé Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
+## About
 
-[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
-[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/GetResearchDev)
+I'm Srihari Thyagarajan (Haleshot), a Technical Writer at Deepnote passionate about developer tools, documentation, and open-source communities. This website hosts my blog and information about my work in technical writing, developer advocacy, and community building.
 
-️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, Hugo Blox Builder**, making every site truly personalized ⭐⭐⭐⭐⭐
+## Project Structure
 
-Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
+```text
+├── public/               # Static assets (images, fonts, favicon)
+│   ├── assets/          # Images for blog posts
+│   └── fonts/           # Web fonts
+├── src/
+│   ├── assets/          # Icons and images used in components
+│   ├── components/      # Reusable UI components
+│   │   └── ui/          # React components
+│   ├── content/         # Content collections
+│   │   └── blog/        # Blog posts in Markdown format (organized by year)
+│   ├── layouts/         # Page layouts and templates
+│   ├── pages/           # Routes and pages
+│   ├── styles/          # Global styles and CSS
+│   └── utils/           # Utility functions
+├── astro.config.mjs     # Astro configuration
+├── vercel.json          # Vercel deployment and CSP configuration
+├── package.json         # Project dependencies and scripts
+├── tailwind.config.mjs  # Tailwind CSS configuration
+└── LICENSE              # Dual license (CC BY 4.0 + MIT)
+```
 
-[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [get inspired by our academics and research groups](https://hugoblox.com/creators/).
+## Commands
 
-The integrated [**Hugo Blox Builder**](https://hugoblox.com) and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
+| Command                | Action                                      |
+| :--------------------- | :------------------------------------------ |
+| `npm install`          | Installs dependencies                       |
+| `npm run dev`          | Starts local dev server at `localhost:4321` |
+| `npm run build`        | Build the production site to `./dist/`      |
+| `npm run preview`      | Preview the build locally, before deploying |
 
-- 👉 [**Get Started**](https://hugoblox.com/templates/)
-- 📚 [View the **documentation**](https://docs.hugoblox.com/)
-- 💬 [Chat with the **Hugo Blox Builder community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@GetResearchDev](https://twitter.com/GetResearchDev) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithHugoBlox](https://twitter.com/search?q=%23MadeWithHugoBlox&src=typed_query)
-- ⬇️ **Automatically import your publications from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
-- 💡 [Suggest an improvement](https://github.com/HugoBlox/hugo-blox-builder/issues)
-- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
+## Deployment
 
-## We ask you, humbly, to support this open source movement
+This site is deployed on GitHub Pages. Push to the `main` branch to trigger automatic deployment.
 
-Today we ask you to defend the open source independence of the Hugo Blox Builder and themes 🐧
+## License
 
-We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
+This repository uses dual licensing:
 
-### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
+- **Documentation & Blog Posts**: Licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+- **Code & Code Snippets**: Licensed under the [MIT License](LICENSE)
 
-<p align="center"><a href="https://hugoblox.com/templates/" target="_blank" rel="noopener"><img src="https://hugoblox.com/uploads/readmes/academic_logo_200px.png" alt="Hugo Academic Theme for Hugo Blox Builder"></a></p>
+See the [LICENSE](LICENSE) file for full details.
 
-## Demo image credits
+## Attribution & Inspiration
 
-- [Unsplash](https://unsplash.com)
+This website was inspired by [Peter Steinberger's personal website](https://steipete.me) ([GitHub](https://github.com/steipete/steipete.me)). I discovered Peter's site while exploring personal blogs and portfolios of developers working in the open-source space. What caught my attention was the clean, modern design, conversational writing style, and how he balanced technical content with community-focused work — something I deeply relate to in my own journey with developer relations and community building.
 
-## Latest news
+Peter's site itself is built with [Astro](https://astro.build) and uses the excellent [AstroPaper theme](https://astro-paper.pages.dev/) created by [Sat Naing](https://github.com/satnaing). I loved the approach so much that I decided to adapt it for my own use, customizing it to reflect my work with notebooks, technical writing, and open-source collaboration.
 
-<!--START_SECTION:news-->
-* [6 Compelling Reasons I Switched from WordPress to Hugo](https:&#x2F;&#x2F;hugoblox.com&#x2F;vs&#x2F;wordpress&#x2F;)
-* [The 7 best landing page builders in 2024](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;7-best-landing-page-builders&#x2F;)
-* [Start a Blog and Make Money in 2024: Here&#39;s What You Need to Know](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;start-a-blog-and-make-money&#x2F;)
-* [Hugo vs Quarto: Which One is Better for 2024?](https:&#x2F;&#x2F;hugoblox.com&#x2F;vs&#x2F;quarto&#x2F;)
-* [Easily make an academic CV website to get more cites and grow your audience 🚀](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;easily-make-academic-website&#x2F;)
-<!--END_SECTION:news-->
+Special thanks to:
+
+- **[Peter Steinberger (@steipete)](https://github.com/steipete)** for the inspiration and demonstrating how to build a developer-focused personal site with personality
+- **[Sat Naing (@satnaing)](https://github.com/satnaing)** for creating and maintaining the [AstroPaper theme](https://astro-paper.pages.dev/) that powers this site

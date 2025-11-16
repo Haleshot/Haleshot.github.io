@@ -1,0 +1,123 @@
+---
+import { getCollection } from "astro:content";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import IconRss from "@/assets/icons/IconRss.svg";
+import Card from "@/components/Card.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import Hr from "@/components/Hr.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import Socials from "@/components/Socials.astro";
+import StructuredData from "@/components/StructuredData.astro";
+import { SITE, SOCIALS } from "@/config";
+import Layout from "@/layouts/Layout.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+
+const posts = await getCollection("blog");
+
+const sortedPosts = getSortedPosts(posts);
+const posts2025AndLater = sortedPosts.filter(({ data }) => data.pubDatetime.getFullYear() >= 2025);
+const featuredPosts = posts2025AndLater.filter(({ data }) => data.featured);
+const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
+---
+
+<Layout description="Srihari Thyagarajan: Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content — with a soft spot for notebooks and open-source communities.">
+  <StructuredData type="WebSite" data={{}} />
+  <StructuredData type="Person" data={{}} />
+  <Header />
+  <main id="main-content" data-layout="index">
+    <section id="hero" class="pt-6 pb-4">
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+        <a href="/about" class="block mx-auto sm:mx-0 group">
+          <img 
+            src="/srihari-avatar.png" 
+            alt="Srihari Thyagarajan" 
+            class="w-40 h-40 rounded-full object-cover flex-shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+          />
+        </a>
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <h1 class="my-2 inline-block text-2xl font-bold sm:my-4 sm:text-3xl">
+              Hi, I'm Haleshot.
+            </h1>
+            <a
+              target="_blank"
+              href="/rss.xml"
+              class="inline-block"
+              aria-label="rss feed"
+              title="RSS Feed"
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="scale-125 stroke-accent stroke-3"
+              />
+              <span class="sr-only">RSS Feed</span>
+            </a>
+          </div>
+          <p>
+            Technical Writer at <a href="https://deepnote.com/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Deepnote</a>. Prev @ <a href="https://marimo.io/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">marimo</a>. Core volunteer at <a href="https://github.com/scipy-india/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">SciPy India</a>.<br />
+            I write about developer tools, documentation, and technical content — especially notebooks and open-source communities.
+          </p>
+          {
+            // only display if at least one social link is enabled
+            SOCIALS.filter((social) => social.active).length > 0 && (
+              <div class="mt-4 flex flex-row items-center justify-center sm:justify-start">
+                <Socials />
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <Hr />
+
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured" class="pt-12 pb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+            <ul>
+              {featuredPosts.map((data) => (
+                <Card variant="h3" {...data} showImage={false} />
+              ))}
+            </ul>
+          </section>
+          {recentPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <ul>
+            {recentPosts.map(
+              (data, index) =>
+                index < SITE.postPerIndex && <Card variant="h3" {...data} showImage={false} />,
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-8 text-center">
+      <LinkButton href="/posts/">
+        All Posts
+        <IconArrowRight class="inline-block" />
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset?.layout;
+    if (indexLayout) {
+      sessionStorage.setItem("backUrl", "/");
+    }
+  });
+</script>

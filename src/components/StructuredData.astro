@@ -1,0 +1,81 @@
+---
+export interface Props {
+  type: "BlogPosting" | "Person" | "WebSite";
+  data: any;
+}
+
+const { type, data } = Astro.props;
+
+let structuredData = {};
+
+if (type === "BlogPosting") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: data.title,
+    description: data.description,
+    author: {
+      "@type": "Person",
+      name: data.author || "Srihari Thyagarajan",
+      url: "https://haleshot.github.io/about",
+    },
+    datePublished: data.pubDatetime.toISOString(),
+    dateModified: data.modDatetime?.toISOString() || data.pubDatetime.toISOString(),
+    publisher: {
+      "@type": "Person",
+      name: "Srihari Thyagarajan",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://haleshot.github.io/srihari-avatar.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": data.url,
+    },
+    image: data.ogImage || "https://haleshot.github.io/srihari-avatar.png",
+    articleSection: data.tags?.[0] || "Technology",
+    keywords: data.tags?.join(", ") || "",
+    wordCount: data.wordCount,
+    timeRequired: data.readingTime,
+  };
+} else if (type === "Person") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Srihari Thyagarajan",
+    url: "https://haleshot.github.io",
+    image: "https://haleshot.github.io/srihari-avatar.png",
+    sameAs: [
+      "https://github.com/Haleshot",
+      "https://twitter.com/hari_leo03",
+      "https://bsky.app/profile/haleshot.bsky.social",
+      "https://www.linkedin.com/in/srihari-thyagarajan/",
+      "https://mastodon.social/@haleshot",
+    ],
+    jobTitle: "Technical Writer",
+    description:
+      "Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content — with a soft spot for notebooks and open-source communities.",
+  };
+} else if (type === "WebSite") {
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Haleshot",
+    url: "https://haleshot.github.io",
+    description:
+      "Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content — with a soft spot for notebooks and open-source communities.",
+    author: {
+      "@type": "Person",
+      name: "Srihari Thyagarajan",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://haleshot.github.io/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

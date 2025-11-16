@@ -1,0 +1,79 @@
+{
+  "name": "steipete-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "build:check": "astro check && astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "scripts/deploy.sh",
+    "add-source-metadata": "node scripts/add-source-metadata.mjs",
+    "remove-tags": "node scripts/remove-tags-from-posts.mjs",
+    "sync": "astro sync",
+    "lint": "biome lint src",
+    "lint:fix": "biome lint --write src",
+    "format": "biome format --write src",
+    "check": "biome check src",
+    "check:fix": "biome check --write src",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.5.1",
+    "@giscus/react": "^3.1.0",
+    "@pagefind/default-ui": "^1.4.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/vite": "^4.1.13",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "@vite-pwa/astro": "^1.1.0",
+    "astro": "^5.13.5",
+    "astro-embed": "^0.9.0",
+    "dayjs": "^1.11.18",
+    "fuse.js": "^7.1.0",
+    "github-slugger": "^2.0.0",
+    "gray-matter": "^4.0.3",
+    "lodash.kebabcase": "^4.1.1",
+    "pagefind": "^1.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "reading-time": "^1.5.0",
+    "remark-collapse": "^0.1.2",
+    "remark-toc": "^9.0.0",
+    "satori": "^0.18.2",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "esbuild": "^0.25.5",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.3",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/lodash.kebabcase": "^4.1.9",
+    "autoprefixer": "^10.4.21",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "postcss": "^8.5.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json}": [
+      "biome check --write --files-ignore-unknown=true"
+    ]
+  }
+}
