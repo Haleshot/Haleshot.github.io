@@ -26,7 +26,7 @@ Contributing to open source deepens your understanding of a tool in ways that ju
 
 Reading the recent [Slides-to-Speech blog](https://cocoindex.io/blogs/slides-to-speech) is a good example. My mind immediately started mapping where else this pattern could apply. CFP platforms like [Papercall](https://papercall.io) and [Pretalx](https://pretalx.com) came to mind right away (maybe my mind is just wired this way).
 
-Now exploring whether CocoIndex could work for these use cases. [Posted about this](https://x.com/hari_leo03/status/2014905695095910508) and started a discussion on the [CocoIndex Discord](https://discord.gg/cocoindex) if you want to help build a Pretalx plugin.
+Now exploring whether CocoIndex could work for these use cases. [Posted about this](https://x.com/hari_leo03/status/2014905695095910508) and started a discussion on the [CocoIndex Discord](https://discord.com/channels/1314801574169673738/1324891077693669438/1464870495253172407) if you want to help build a Pretalx plugin.
 
 Earlier this month, gave a talk on CocoIndex at Rust Delhi; you can read about it [here](https://www.linkedin.com/posts/srihari-thyagarajan_kicking-off-2026-with-rust-delhi-meetup-12-activity-7420450968770764800-SQyb).
 
