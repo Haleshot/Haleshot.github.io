@@ -41,7 +41,7 @@ const {
 } = post.data;
 
 const { Content } = await render(post);
-const readingTime = calculateReadingTime(post.body);
+const readingTime = calculateReadingTime(post.body ?? "");
 
 let ogImageUrl: string | undefined;
 
@@ -90,7 +90,7 @@ const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost = currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
 
 // Calculate word count for structured data
-const wordCount = post.body.split(/\s+/).length;
+const wordCount = (post.body ?? "").split(/\s+/).filter(Boolean).length;
 ---
 
 <Layout {...layoutProps}>
@@ -182,7 +182,7 @@ const wordCount = post.body.split(/\s+/).length;
     <!-- Comments Section -->
     <Comments 
       client:only="react" 
-      repo={GISCUS.repo}
+      repo={GISCUS.repo as `${string}/${string}`}
       repoId={GISCUS.repoId}
       category={GISCUS.category}
       categoryId={GISCUS.categoryId}
@@ -404,8 +404,6 @@ const wordCount = post.body.split(/\s+/).length;
     // Look for YouTube embeds
     const youtubeEmbedRegex = /\{% youtube (https:\/\/[^\s]+|[a-zA-Z0-9_-]+) %\}/g;
     
-    let foundYoutubeEmbeds = false;
-    
     // Helper to extract a YouTube video ID from various URL formats
     const extractYouTubeId = (input) => {
       let videoId = input;
@@ -431,7 +429,6 @@ const wordCount = post.body.split(/\s+/).length;
       const ytMatch = text.match(/\{% youtube (https:\/\/[^\s]+|[a-zA-Z0-9_-]+) %\}/);
 
       if (ytMatch && ytMatch[1]) {
-        foundYoutubeEmbeds = true;
         const videoId = extractYouTubeId(ytMatch[1]);
         const container = document.createElement("div");
         container.className = "youtube-embed-container";
@@ -441,7 +438,7 @@ const wordCount = post.body.split(/\s+/).length;
             height="315"
             src="https://www.youtube.com/embed/${videoId}"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -455,7 +452,6 @@ const wordCount = post.body.split(/\s+/).length;
       article,
       NodeFilter.SHOW_TEXT,
       null,
-      false,
     );
 
     const textNodes = [];
@@ -466,11 +462,11 @@ const wordCount = post.body.split(/\s+/).length;
 
     textNodes.forEach((textNode) => {
       let content = textNode.textContent;
+      if (!content) return;
       let hasChanges = false;
 
       // Process YouTube embeds
-      content = content.replace(youtubeEmbedRegex, (match, videoId) => {
-        foundYoutubeEmbeds = true;
+      content = content.replace(youtubeEmbedRegex, (_match, videoId) => {
         hasChanges = true;
         videoId = extractYouTubeId(videoId);
 
@@ -480,7 +476,7 @@ const wordCount = post.body.split(/\s+/).length;
               height="315"
               src="https://www.youtube.com/embed/${videoId}"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
@@ -494,6 +490,7 @@ const wordCount = post.body.split(/\s+/).length;
 
         // Replace the text node with the new HTML elements
         const parent = textNode.parentNode;
+        if (!parent) return;
         while (tempDiv.firstChild) {
           parent.insertBefore(tempDiv.firstChild, textNode);
         }

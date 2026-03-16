@@ -23,10 +23,10 @@
     localStorage.setItem("theme", newTheme);
   }
 
-  async function handleThemeToggle() {
+  function handleThemeToggle() {
     // Use View Transitions API if available (Safari 18+, Chrome 111+)
     if (document.startViewTransition) {
-      await document.startViewTransition(() => {
+      document.startViewTransition(() => {
         toggleTheme();
       });
     } else {

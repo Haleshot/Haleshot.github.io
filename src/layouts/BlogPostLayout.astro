@@ -17,7 +17,7 @@ const { title, description, pubDatetime, modDatetime, heroImage, slug, readingTi
 // Enforce canonical URL to always be /posts/ path without trailing slash
 // This matches Vercel's trailingSlash: false configuration
 const canonicalPath = `/posts/${slug}`;
-const canonicalURL = new URL(canonicalPath, Astro.site);
+const canonicalURL = new URL(canonicalPath, Astro.site).toString();
 ---
 
 <Layout
@@ -168,13 +168,13 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 <script>
   function initializeTwitterWidgets() {
     // Check if Twitter widgets are already loaded
-    if (window.twttr && window.twttr.widgets) {
+    if (window.twttr?.widgets) {
       // Load all Twitter embeds on the page
       window.twttr.widgets.load();
     } else {
       // If not loaded, wait for the script to load
       window.addEventListener('load', () => {
-        if (window.twttr && window.twttr.widgets) {
+        if (window.twttr?.widgets) {
           window.twttr.widgets.load();
         }
       });
@@ -192,10 +192,8 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
       /\{% youtube (https:\/\/[^\s]+|[a-zA-Z0-9_-]+) %\}/g;
 
     let foundTwitterEmbeds = false;
-    let foundYoutubeEmbeds = false;
-
     // Helper to extract a YouTube video ID from various URL formats
-    const extractYouTubeId = (input) => {
+    const extractYouTubeId = (input: string) => {
       let videoId = input;
       try {
         if (videoId.includes("youtube.com/watch")) {
@@ -232,7 +230,6 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
         `;
         p.replaceWith(placeholder);
       } else if (ytMatch && ytMatch[1]) {
-        foundYoutubeEmbeds = true;
         const videoId = extractYouTubeId(ytMatch[1]);
         const container = document.createElement("div");
         container.className = "youtube-embed-container";
@@ -242,7 +239,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
             height="315"
             src="https://www.youtube.com/embed/${videoId}"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -264,7 +261,6 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
       article,
       NodeFilter.SHOW_TEXT,
       null,
-      false,
     );
 
     const textNodes = [];
@@ -275,10 +271,11 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 
     textNodes.forEach((textNode) => {
       let content = textNode.textContent;
+      if (!content) return;
       let hasChanges = false;
 
       // Process Twitter embeds
-      content = content.replace(twitterEmbedRegex, (match, url) => {
+      content = content.replace(twitterEmbedRegex, (_match, url) => {
         foundTwitterEmbeds = true;
         hasChanges = true;
         return `<div class="twitter-tweet-placeholder" data-tweet-url="${url}">
@@ -289,8 +286,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
       });
 
       // Process YouTube embeds
-      content = content.replace(youtubeEmbedRegex, (match, videoId) => {
-        foundYoutubeEmbeds = true;
+      content = content.replace(youtubeEmbedRegex, (_match, videoId) => {
         hasChanges = true;
         videoId = extractYouTubeId(videoId);
 
@@ -300,7 +296,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
               height="315"
               src="https://www.youtube.com/embed/${videoId}"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
@@ -314,6 +310,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
 
         // Replace the text node with the new HTML elements
         const parent = textNode.parentNode;
+        if (!parent) return;
         while (tempDiv.firstChild) {
           parent.insertBefore(tempDiv.firstChild, textNode);
         }
@@ -341,7 +338,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
     const checkTwitterWidgets = setInterval(() => {
       retryCount++;
       
-      if (window.twttr && window.twttr.widgets) {
+      if (window.twttr?.widgets) {
         window.twttr.widgets.load();
         clearInterval(checkTwitterWidgets);
       } else if (retryCount >= maxRetries) {
@@ -386,7 +383,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
     window.addEventListener('load', function() {
       // Give the Twitter script time to initialize
       setTimeout(function() {
-        if (window.twttr && window.twttr.widgets) {
+        if (window.twttr?.widgets) {
           window.twttr.widgets.load();
         }
       }, 100);

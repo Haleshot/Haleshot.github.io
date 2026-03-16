@@ -10,6 +10,14 @@ import { remarkLazyLoadImages } from "./src/utils/remarkLazyLoadImages.mjs";
 import { SITE } from "./src/config";
 import AstroPWA from "@vite-pwa/astro";
 
+/**
+ * Astro's sitemap typings currently narrow `changefreq` more aggressively than
+ * plain string inference in JS config files. Keep the runtime values explicit
+ * and cast once at the boundary.
+ * @param {"always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"} value
+ */
+const asChangefreq = (value) => /** @type {any} */ (value);
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -49,51 +57,51 @@ export default defineConfig({
         const url = item.url;
         
         // Set defaults
-        item.changefreq = 'monthly';
+        item.changefreq = asChangefreq("monthly");
         item.priority = 0.5;
         
         // Homepage - highest priority, frequent updates
         if (url === SITE.website || url === SITE.website + '/') {
           item.priority = 1.0;
-          item.changefreq = 'daily';
+          item.changefreq = asChangefreq("daily");
           item.lastmod = new Date().toISOString();
         }
         // Main section pages
         else if (url.endsWith('/posts') || url.endsWith('/about') || url.endsWith('/search')) {
           item.priority = 0.9;
-          item.changefreq = 'weekly';
+          item.changefreq = asChangefreq("weekly");
         }
         // Recent blog posts (2024-2025)
         else if (url.includes('/posts/2025') || url.includes('/posts/2024')) {
           item.priority = 0.8;
-          item.changefreq = 'weekly';
+          item.changefreq = asChangefreq("weekly");
         }
         // Somewhat recent posts (2020-2023)
         else if (url.includes('/posts/2023') || url.includes('/posts/2022') || 
                  url.includes('/posts/2021') || url.includes('/posts/2020')) {
           item.priority = 0.6;
-          item.changefreq = 'monthly';
+          item.changefreq = asChangefreq("monthly");
         }
         // Older posts (2010-2019)
         else if (url.includes('/posts/201')) {
           item.priority = 0.4;
-          item.changefreq = 'yearly';
+          item.changefreq = asChangefreq("yearly");
         }
         // Tag pages - low priority
         else if (url.includes('/tags/')) {
           item.priority = 0.1;
-          item.changefreq = 'yearly';
+          item.changefreq = asChangefreq("yearly");
         }
         // Pagination pages
         else if (url.match(/\/page\/\d+$/)) {
           item.priority = 0.4;
-          item.changefreq = 'weekly';
+          item.changefreq = asChangefreq("weekly");
         }
         
         // Note: lastmod dates for individual posts would need to be set
         // from the actual post data, which requires more complex integration
         
-        return item;
+        return /** @type {import("@astrojs/sitemap").SitemapItem} */ (item);
       }
     }),
     react(),

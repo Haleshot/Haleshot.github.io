@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDatetime, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDatetime, modDatetime, heroImage } = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -26,9 +26,9 @@ const { title, description, pubDatetime, updatedDate, heroImage } = Astro.props;
             <span>
               Posted on <FormattedDate date={pubDatetime} />
               {
-                updatedDate && (
+                modDatetime && (
                   <span class="last-updated-on">
-                    · Updated on <FormattedDate date={updatedDate} />
+                    · Updated on <FormattedDate date={modDatetime} />
                   </span>
                 )
               }
@@ -60,7 +60,7 @@ const { title, description, pubDatetime, updatedDate, heroImage } = Astro.props;
       document.body.appendChild(sidebarToggle);
 
       sidebarToggle.addEventListener("click", () => {
-        document.getElementById("sidebar").classList.toggle("show");
+        document.getElementById("sidebar")?.classList.toggle("show");
       });
     </script>
   </body>

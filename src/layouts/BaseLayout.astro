@@ -30,7 +30,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
       document.body.appendChild(sidebarToggle);
 
       sidebarToggle.addEventListener("click", () => {
-        document.getElementById("sidebar").classList.toggle("show");
+        document.getElementById("sidebar")?.classList.toggle("show");
       });
     </script>
   </body>

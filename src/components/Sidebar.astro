@@ -6,7 +6,7 @@ import { SITE_TITLE } from "../consts";
   <div id="nav-wrapper">
     <div id="profile-wrapper" class="d-flex flex-column">
       <div id="avatar" class="d-flex justify-content-center">
-        <a href="/" alt="avatar">
+        <a href="/">
           <img
             src="/srihari-avatar.png"
             alt="Srihari Thyagarajan's avatar"
@@ -76,7 +76,7 @@ import { SITE_TITLE } from "../consts";
       const href = link.getAttribute("href");
       if (href === "/" && currentPath === "/") {
         link.classList.add("active");
-      } else if (href !== "/" && currentPath.startsWith(href)) {
+      } else if (href && href !== "/" && currentPath.startsWith(href)) {
         link.classList.add("active");
       }
     });
