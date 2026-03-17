@@ -44,4 +44,4 @@ That broader pattern has been visible across other meetups for me as well. Back 
 
 By the end of it, Agriya and I were on our way back to the airport after what felt like a short but genuinely useful weekend. I came back with a better sense of where some SciPy India conversations stand, a renewed appreciation for the people doing steady community work, and a few small reminders about why I keep making time for these events in the first place.
 
-I will also be cross-posting this on the [FossUnited Discourse forum](https://forum.fossunited.org/). Thanks to FossUnited for supporting this visit; I appreciate the help in making the trip possible.
+I've also [cross-posted](https://forum.fossunited.org/t/my-experience-at-pyconf-hyderabad-2026/7549) this on the [FossUnited Discourse forum](https://forum.fossunited.org/). Thanks to FossUnited for supporting this visit; I appreciate the help in making the trip possible.
