@@ -8,44 +8,48 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await getCollection("blog");
 
   return posts.flatMap((post) => {
-      // Use post.id as the slug (e.g., "2012/dont-call-willchangevalueforkey")
-      const postSlug = post.id;
+    // Use post.id as the slug (e.g., "2012/dont-call-willchangevalueforkey")
+    const postSlug = post.id;
 
-      // Skip posts without id
-      if (!postSlug) {
-        console.warn("Post without id found:", post);
-        return [];
-      }
+    // Skip posts without id
+    if (!postSlug) {
+      console.warn("Post without id found:", post);
+      return [];
+    }
 
-      // Check if post is already in a year directory (e.g., 2020/apple-silicon-m1...)
-      const yearDirMatch = postSlug.match(/^(\d{4})\/(.*)/);
-      if (yearDirMatch) {
-        return [{
+    // Check if post is already in a year directory (e.g., 2020/apple-silicon-m1...)
+    const yearDirMatch = postSlug.match(/^(\d{4})\/(.*)/);
+    if (yearDirMatch) {
+      return [
+        {
           params: { slug: postSlug },
           props: { post, yearSlug: postSlug },
-        }];
-      }
+        },
+      ];
+    }
 
-      // For posts not in year directories, extract year from metadata or slug
-      const pubDate = post.data.pubDatetime;
-      const year = pubDate
-        ? pubDate.getFullYear().toString()
-        : // Fallback: Try to extract year from slug if it starts with a date pattern
-          postSlug.match(/^(\d{4})-\d{2}-\d{2}/)
-          ? postSlug.substring(0, 4)
-          : // If no year can be found, use the current year as fallback
-            new Date()
-              .getFullYear()
-              .toString();
+    // For posts not in year directories, extract year from metadata or slug
+    const pubDate = post.data.pubDatetime;
+    const year = pubDate
+      ? pubDate.getFullYear().toString()
+      : // Fallback: Try to extract year from slug if it starts with a date pattern
+        postSlug.match(/^(\d{4})-\d{2}-\d{2}/)
+        ? postSlug.substring(0, 4)
+        : // If no year can be found, use the current year as fallback
+          new Date()
+            .getFullYear()
+            .toString();
 
-      // Create a slug with the year prefix
-      const yearSlug = `${year}/${postSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "")}`;
+    // Create a slug with the year prefix
+    const yearSlug = `${year}/${postSlug.replace(/^\d{4}-\d{2}-\d{2}-/, "")}`;
 
-      return [{
+    return [
+      {
         params: { slug: yearSlug },
         props: { post, yearSlug },
-      }];
-    });
+      },
+    ];
+  });
 };
 
 type Props = {
