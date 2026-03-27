@@ -12,4 +12,8 @@ The rule: if I can't explain it in my own words, I don't write about it. AI help
 
 ---
 
+> "100% human written, including em dashes. Sigh."
+>
+> Footer on every post — [nadh.in](https://nadh.in/blog/code-is-cheap/)
+>
 > This page is inspired by [Damo Mitchel's AI Manifesto](https://www.bydamo.la/p/ai-manifesto) and [Jake Worth's AI page](https://www.jakeworth.com/ai/).
