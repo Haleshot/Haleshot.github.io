@@ -14,13 +14,13 @@ I've been noticing a pattern in the tools I gravitate toward; they all seem to s
 
 There's another pattern too: I keep finding myself drawn to devtools and frameworks in their *early stages* of development. The kind where user feedback actually shapes the product, where maintainers are accessible, where your contributions can have real impact. That's the sweet spot.
 
-## When the Framework Picks the Language
+## When the framework picks the language
 
 Here's something I find genuinely interesting: I always assumed you learn a language first, *then* find frameworks that use it. But for me it's been the opposite. marimo pulled me deeper into Python; CocoIndex is now pulling me into Rust. The project comes first, the language follows.
 
 > I think this happens when a tool's design philosophy resonates with you so strongly that learning its underlying language becomes a natural byproduct rather than a prerequisite.
 
-## OSS Contributions as a Way of Understanding
+## OSS contributions as a way of understanding
 
 Contributing to open source deepens your understanding of a tool in ways that just *using* it never can. You start seeing the design decisions, the trade-offs, the places where the maintainers had to choose between competing priorities.
 
@@ -30,13 +30,13 @@ Now exploring whether CocoIndex could work for these use cases. [Posted about th
 
 Earlier this month, gave a talk on CocoIndex at Rust Delhi; you can read about it [here](https://www.linkedin.com/posts/srihari-thyagarajan_kicking-off-2026-with-rust-delhi-meetup-12-activity-7420450968770764800-SQyb).
 
-## The Philosophy That Keeps Showing Up
+## The philosophy that keeps showing up
 
 The analogy between marimo and CocoIndex feels almost too neat. marimo recomputes notebook cells reactively; only the cells affected by a change get re-executed. CocoIndex does the same thing for data pipelines; it processes _incrementally_, streaming only what's new or modified. Both reject the idea of brute-force recomputation. Both trust that most of the work you did before is still valid.
 
 This "recompute only what's necessary" philosophy is underrated. It shows up in [React's reconciliation algorithm](https://legacy.reactjs.org/docs/reconciliation.html). It shows up in [artifact-based build systems](https://bazel.build/basics/artifact-based-builds). It shows up in reactive programming more broadly. Once you start noticing it, you see it everywhere.
 
-## Looking Ahead
+## Looking ahead
 
 I'll be writing more this year; if not for engagement or feedback, then at least as an archive for myself. There's something valuable about documenting what you're working on, even if the audience is mostly future-you.
 
