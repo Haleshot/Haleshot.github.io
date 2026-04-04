@@ -22,7 +22,93 @@ Most of the conference, for me, revolved around the SciPy India booth and the co
 
 It was also nice seeing familiar faces again. [Jaidev Deshpande](https://2026.pyconfhyd.org/speakers/jaidev-deshpande), for instance, was around; he is someone I have seen across many OSS events in the country, and he had also [run a workshop](https://2026.pyconfhyd.org/speakers/jaidev-deshpande) the previous day. Some of the photos that will eventually show up in the album for this post are thanks to him as well.
 
-<iframe src="https://embed.ente.io/?t=W7LRJ9M3WP#7Bf7G9z9jMz5T3yEXMoMtYgJo3KciPN3GcW7V5MkwEPT" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+<style>
+.pyconf-gallery {
+  position: relative;
+  margin: 1.5rem 0;
+}
+.pyconf-gallery-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.75rem;
+  scrollbar-width: thin;
+}
+.pyconf-gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.pyconf-gallery-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.pyconf-gallery-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+.pyconf-gallery-item {
+  flex: 0 0 min(85%, 520px);
+  scroll-snap-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: #111;
+}
+.pyconf-gallery-item img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.pyconf-gallery-item:hover img {
+  transform: scale(1.02);
+}
+.pyconf-gallery-item figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: #ccc;
+  text-align: center;
+  background: #111;
+}
+.pyconf-gallery-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+</style>
+
+<div class="pyconf-gallery">
+  <div class="pyconf-gallery-scroll">
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/group-pic.jpg" alt="Group photo at the PyConf Hyderabad 2026 booth" loading="lazy" />
+      <figcaption>At the PyConf Hyderabad booth</figcaption>
+    </figure>
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/community-booth-1.jpeg" alt="Conversations at the SciPy India booth" loading="lazy" />
+      <figcaption>Conversations at the SciPy India booth</figcaption>
+    </figure>
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/scipy-showcase-community-partner.jpeg" alt="Showcasing the SciPy India x BangPypers meetup" loading="lazy" />
+      <figcaption>Showcasing the SciPy India x BangPypers meetup</figcaption>
+    </figure>
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/parul-pandey-keynote.jpeg" alt="Parul Pandey's keynote on Data Science in the age of LLMs" loading="lazy" />
+      <figcaption>Parul Pandey's keynote</figcaption>
+    </figure>
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/anand-s-session.jpeg" alt="Anand S's session on how students learn Python" loading="lazy" />
+      <figcaption>Anand S on how students learn Python</figcaption>
+    </figure>
+    <figure class="pyconf-gallery-item">
+      <img src="/images/pyconf-hyd-2026/panel-discussion.jpeg" alt="Panel discussion at PyConf Hyderabad 2026" loading="lazy" />
+      <figcaption>Panel discussion</figcaption>
+    </figure>
+  </div>
+  <p class="pyconf-gallery-hint">← scroll to see more →</p>
+</div>
 
 ## Talks I kept thinking about
 
