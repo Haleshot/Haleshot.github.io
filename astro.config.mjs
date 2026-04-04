@@ -140,7 +140,8 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: "/404",
-        globPatterns: ["**/*.{css,js,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico}"],
+        globPatterns: ["**/*.{css,js,html,svg,woff,woff2,ttf,eot,ico}"],
+      globIgnores: ["images/**"],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
