@@ -119,7 +119,7 @@ The day wrapped with a social outing the organizers had put together for the eve
       <figcaption>Open source contribution benefits</figcaption>
     </figure>
     <figure class="wikimedia-gallery-item">
-      <img src="/images/wikimedia-dsdp-2025/workshop-session-wide-view.jpeg" alt="Workshop session, wide view" loading="lazy" />
+      <img src="/images/wikimedia-dsdp-2025/event-kickoff-intro.jpeg" alt="Event introduction by KC" loading="lazy" />
       <figcaption>Workshop session, wide view</figcaption>
     </figure>
     <figure class="wikimedia-gallery-item">
@@ -168,9 +168,9 @@ The day wrapped with a social outing the organizers had put together for the eve
 
 ## Sunday: the workshop
 
-Sunday was the day I had been looking forward to. My session, "Technical Writing in the Age of AI," was the first slot of the morning and ran for about ~90 minutes. Around 25 participants, most of them intermediate-to-advanced Wikimedia contributors ranging from students to working professionals.
+Sunday was the day I had been looking forward to. My session, "Technical Writing in the Age of AI," was the first slot of the morning and ran for about ~90 minutes. Around 25 participants, most of them intermediate-to-advanced Wikimedia contributors ranging from students to working professionals. I have the [slides from the workshop here](https://haleshot.github.io/talks/technical-writing-wikimedia-03-2026/).
 
-The [slides](https://haleshot.github.io/talks/technical-writing-wikimedia-03-2026/) covered five sections: why the stakes around writing have shifted now that generation is cheap, what writing as a practice involves (drawing on frameworks from [Prashanth Rao](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) and [Shreya Shankar](https://www.sh-reya.com/blog/ai-writing/)), how to design documentation for real users using the [Diataxis framework](https://diataxis.fr/) with Wikimedia-specific examples, how to grow a writing practice over time, and how technical writing connects to community advocacy and devrel.
+The workshop covered five sections: why the stakes around writing have shifted now that generation is cheap, what writing as a practice involves (drawing on frameworks from [Prashanth Rao](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/) and [Shreya Shankar](https://www.sh-reya.com/blog/ai-writing/)), how to design documentation for real users using the [Diataxis framework](https://diataxis.fr/) with Wikimedia-specific examples, how to grow a writing practice over time, and how technical writing connects to community advocacy and devrel.
 
 That last section was personal. My own path went something like this: OSS documentation PRs (for [marimo](https://marimo.io/), [CocoIndex](https://cocoindex.io/)) led to community recognition, which led to holdings booths at OSS events, which led to meeting KC, which led to this invitation. A few people I’d been speaking with were curious about what a technical writing path can look like in practice, so I used that part of the workshop to share some of my own trajectory.
 
