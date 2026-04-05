@@ -1,5 +1,5 @@
 ---
-title: "Déjà Vu: Recompute Only What's Necessary"
+title: "Déjà vu: Recompute only what's necessary"
 description: "On finding myself drawn to tools that embrace incremental computation."
 pubDatetime: 2026-01-26T00:00:00Z
 author: "Srihari Thyagarajan"

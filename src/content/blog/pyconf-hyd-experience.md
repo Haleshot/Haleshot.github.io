@@ -1,5 +1,5 @@
 ---
-title: "My experience at PyConf Hyderabad 2026"
+title: "A weekend at PyConf Hyderabad 2026"
 description: "Representing SciPy India at PyConf Hyderabad 2026; community booths, familiar faces, and a few reminders about why in-person OSS spaces still matter."
 pubDatetime: 2026-03-16T00:00:00Z
 author: "Srihari Thyagarajan"
