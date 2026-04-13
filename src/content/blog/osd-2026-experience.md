@@ -104,8 +104,12 @@ I also spent some time on the teaching and attribution side of this. One of the 
       <div class="osd-gallery-caption">Going through the talk slides</div>
     </div>
     <div class="osd-gallery-item">
-      <img src="/images/osd-2026/osd-2026-campus-2.png" alt="Slide: Teach in public" loading="lazy" />
-      <div class="osd-gallery-caption">Slide: Teach in public</div>
+      <img src="/images/osd-2026/osd-2026-campus-2.png" alt="Slide: On Dogfooding" loading="lazy" />
+      <div class="osd-gallery-caption">Slide: On Dogfooding</div>
+    </div>
+    <div class="osd-gallery-item contain">
+      <img src="/images/osd-2026/osd-2026-greg-wilson-excerpt.png" alt="Excerpt from Greg Wilson's work" loading="lazy" />
+      <div class="osd-gallery-caption">Excerpt from Greg Wilson's work</div>
     </div>
     <div class="osd-gallery-item">
       <video src="/images/osd-2026/osd-2026-peacock.mp4" autoplay muted loop playsinline></video>
