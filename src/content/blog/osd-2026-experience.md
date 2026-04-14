@@ -138,4 +138,4 @@ Part of why I pay attention to these things is that every event I attend feeds b
 
 On the way out, there was another peacock near the exit, this time properly fanned out. A proper show, really, and a decent note to leave on.
 
-I will cross-post this on the FossUnited Discourse as well (and link to the thread here).
+I have cross-posted this on the FossUnited Discourse as well (find the post [here](https://forum.fossunited.org/t/reflections-from-opensourceday-2026/7754?u=srihari_thyagarajan)).
