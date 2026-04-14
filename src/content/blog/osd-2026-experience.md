@@ -93,15 +93,15 @@ I also spent some time on the teaching and attribution side of this. One of the 
     </div>
     <div class="osd-gallery-item">
       <img src="/images/osd-2026/osd-2026-talk.jpg" alt="Talk session at OSD 2026" loading="lazy" />
-      <div class="osd-gallery-caption">Lessons from building a devtool community</div>
+      <div class="osd-gallery-caption">Event conclusion</div>
     </div>
     <div class="osd-gallery-item">
       <img src="/images/osd-2026/osd-2026-campus-wildlife.jpg" alt="Wildlife on campus at DAIICT" loading="lazy" />
-      <div class="osd-gallery-caption">Campus wildlife, DAIICT Gandhinagar</div>
+      <div class="osd-gallery-caption">OpenSourceDay, DAIICT Gandhinagar</div>
     </div>
     <div class="osd-gallery-item">
       <img src="/images/osd-2026/osd-2026-campus-1.png" alt="Going through the talk slides" loading="lazy" />
-      <div class="osd-gallery-caption">Going through the talk slides</div>
+      <div class="osd-gallery-caption">Teach in public slide</div>
     </div>
     <div class="osd-gallery-item">
       <img src="/images/osd-2026/osd-2026-campus-2.png" alt="Slide: On Dogfooding" loading="lazy" />
