@@ -1,5 +1,5 @@
 ---
-title: "My experience at GitHub Constellation 2026"
+title: "Reflections on GitHub Constellation 2026"
 description: "Notes from GitHub Constellation Bangalore: keynote takeaways, hallway conversations, GitHub's AI-era scale, and..."
 pubDatetime: 2026-04-17T00:00:00Z
 author: "Srihari Thyagarajan"
