@@ -8,7 +8,7 @@ featured: false
 draft: false
 ---
 
-I'm getting to this blog later than I care to admit. ChennaiFOSS 2026 happened on April 18, 2026, at IIT Madras in the [IC&SR building](https://icandsr.iitm.ac.in/), and I spent most of that day at the [SciPy India](https://scipy-india.github.io/) booth.
+I'm getting to this blog a little later than I care to admit. ChennaiFOSS 2026 happened on April 18, 2026, at IIT Madras in the [IC&SR building](https://icandsr.iitm.ac.in/), and I spent most of that day at the [SciPy India](https://scipy-india.github.io/) booth.
 
 It was also my first time on the IIT Madras campus. I parked near the guest area, took the shuttle in, and, on the way to the venue, saw deer, blackbucks, and monkeys. It reminded me a little of [visiting](https://haleshot.github.io/posts/osd-2026-experience/) the DAAICT campus in Gujarat earlier this year. Apparently this is just what some of my conference travel looks like now, and I am not complaining!!
 
