@@ -1,6 +1,6 @@
 ---
 title: "A day at ChennaiFOSS 2026"
-description: "A day at IIT Madras with SciPy India, a few sharp sessions, and a reminder that local FOSS meetups still create momentum much faster than the internet does."
+description: "A day at ChennaiFOSS 2026 at IIT Madras, spent between the SciPy India booth, a few sessions, and a lot of conversations."
 pubDatetime: 2026-05-13T16:06:08Z
 author: "Srihari Thyagarajan"
 tags: ["open-source", "community", "conference", "scipy-india", "foss", "chennai"]
