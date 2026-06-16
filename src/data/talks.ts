@@ -1,13 +1,23 @@
 // Talks I've given. Newest first.
 // Titles/venues mirror https://haleshot.github.io/talks/ (source: github.com/Haleshot/talks).
-// `slides`/`post` are optional — drop a field if there's no link.
-export interface Talk {
+// Each entry needs at least one URL because the homepage renders talks as links.
+type TalkBase = {
   title: string;
   venue: string;
   date: string; // human-readable, e.g. "May 2026"
-  slides?: string;
+};
+
+type TalkWithSlides = TalkBase & {
+  slides: string;
   post?: string; // related blog post on this site
-}
+};
+
+type TalkWithPost = TalkBase & {
+  slides?: string;
+  post: string;
+};
+
+export type Talk = TalkWithSlides | TalkWithPost;
 
 export const TALKS: Talk[] = [
   {

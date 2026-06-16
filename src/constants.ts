@@ -14,9 +14,9 @@ export const CURRENT_STATUS = {
 
 export const SOCIALS = [
   {
-    name: "Github",
+    name: "GitHub",
     href: "https://github.com/Haleshot",
-    linkTitle: ` ${SITE.title} on Github`,
+    linkTitle: ` ${SITE.title} on GitHub`,
     icon: "github",
     active: true,
   },

@@ -58,7 +58,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
             </a>
           </div>
           <p>
-            Technical Writer at <a href="https://deepnote.com/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Deepnote</a>. Prev at <a href="https://marimo.io/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">marimo</a>. Co-organizer at <a href="https://github.com/scipy-india/" target="_blank" rel="noopener" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">SciPy India</a>.<br />
+            Technical Writer at <a href="https://deepnote.com/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Deepnote</a>. Prev at <a href="https://marimo.io/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">marimo</a>. Co-organizer at <a href="https://github.com/scipy-india/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">SciPy India</a>.<br />
             I write about developer tools, documentation, and technical content — especially notebooks and open-source communities.
           </p>
           {
@@ -139,7 +139,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
                   <a
                     href={byline.href}
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
                   >
                     {byline.title}
@@ -168,7 +168,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
                   <a
                     href={talk.slides ?? talk.post}
                     target={talk.slides ? "_blank" : undefined}
-                    rel={talk.slides ? "noopener" : undefined}
+                    rel={talk.slides ? "noopener noreferrer" : undefined}
                     class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
                   >
                     {talk.title}
