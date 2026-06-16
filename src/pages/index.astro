@@ -120,67 +120,67 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
       )
     }
 
-    {
-      (TALKS.length > 0 || BYLINES.length > 0) && (
-        <>
-          <Hr />
-          <section id="talks-elsewhere" class="pt-12 pb-6">
-            <div class="grid gap-10 sm:grid-cols-2">
-              {TALKS.length > 0 && (
-                <div>
-                  <div class="flex items-baseline justify-between">
-                    <h2 class="text-2xl font-semibold tracking-wide">Talks</h2>
-                    <a href="/talks" class="text-sm text-accent underline underline-offset-2 hover:text-accent-dark">all →</a>
-                  </div>
-                  <ul class="mt-4 space-y-4">
-                    {TALKS.slice(0, 4).map((talk) => (
-                      <li>
-                        <a
-                          href={talk.slides ?? talk.post}
-                          target={talk.slides ? "_blank" : undefined}
-                          rel={talk.slides ? "noopener" : undefined}
-                          class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
-                        >
-                          {talk.title}
-                        </a>
-                        <div class="text-sm opacity-70">{talk.venue} · {talk.date}</div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-              {BYLINES.length > 0 && (
-                <div>
-                  <h2 class="text-2xl font-semibold tracking-wide">Writing elsewhere</h2>
-                  <ul class="mt-4 space-y-4">
-                    {BYLINES.slice(0, 5).map((byline) => (
-                      <li>
-                        <a
-                          href={byline.href}
-                          target="_blank"
-                          rel="noopener"
-                          class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
-                        >
-                          {byline.title}
-                        </a>
-                        <div class="text-sm opacity-70">{byline.outlet} · {byline.date}</div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </section>
-        </>
-      )
-    }
-
     <div class="my-8 text-center">
       <LinkButton href="/posts/">
         All Posts
         <IconArrowRight class="inline-block" />
       </LinkButton>
     </div>
+
+    {
+      BYLINES.length > 0 && (
+        <>
+          <Hr />
+          <section id="writing-elsewhere" class="pt-12 pb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">Writing elsewhere</h2>
+            <ul class="mt-4 space-y-4">
+              {BYLINES.slice(0, 5).map((byline) => (
+                <li>
+                  <a
+                    href={byline.href}
+                    target="_blank"
+                    rel="noopener"
+                    class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                  >
+                    {byline.title}
+                  </a>
+                  <div class="text-sm opacity-70">{byline.outlet} · {byline.date}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      )
+    }
+
+    {
+      TALKS.length > 0 && (
+        <>
+          <Hr />
+          <section id="talks" class="pt-12 pb-6">
+            <div class="flex items-baseline justify-between">
+              <h2 class="text-2xl font-semibold tracking-wide">Talks</h2>
+              <a href="/talks" class="text-sm text-accent underline underline-offset-2 hover:text-accent-dark">all →</a>
+            </div>
+            <ul class="mt-4 space-y-4">
+              {TALKS.slice(0, 4).map((talk) => (
+                <li>
+                  <a
+                    href={talk.slides ?? talk.post}
+                    target={talk.slides ? "_blank" : undefined}
+                    rel={talk.slides ? "noopener" : undefined}
+                    class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                  >
+                    {talk.title}
+                  </a>
+                  <div class="text-sm opacity-70">{talk.venue} · {talk.date}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      )
+    }
   </main>
   <Footer />
 </Layout>
