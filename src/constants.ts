@@ -1,5 +1,17 @@
 import { SITE } from "./consts";
 
+// Homepage status strip. Edit these one-liners as things change.
+// Any empty string is skipped in the strip, so leave a field blank to hide it.
+export const CURRENT_STATUS = {
+  // Short, concrete current focus. Links to /now. Keep it a few words.
+  now: "notebooks, docs & community",
+  // Next confirmed talk/event. Leave "" to hide it entirely.
+  // Add a venue here (e.g. "PyCon India 2026") when something's booked and it reappears.
+  speakingNext: "",
+  // What you're up for. Kept tight so it doesn't read as a mission statement.
+  openTo: "dev-tools, writing, collabs",
+} as const;
+
 export const SOCIALS = [
   {
     name: "Github",

@@ -9,7 +9,9 @@ import Hr from "@/components/Hr.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
-import { SITE, SOCIALS } from "@/config";
+import { CURRENT_STATUS, SITE, SOCIALS } from "@/config";
+import { BYLINES } from "@/data/bylines";
+import { TALKS } from "@/data/talks";
 import Layout from "@/layouts/Layout.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 
@@ -71,7 +73,23 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
       </div>
     </section>
 
-    <Hr />
+    <section>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-border pb-3 text-[13px] opacity-90">
+        <span class="inline-flex items-center gap-2">
+          <span class="inline-block size-2 flex-shrink-0 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
+          now:{" "}
+          <a href="/now" class="text-accent underline underline-offset-2 hover:text-accent-dark">
+            {CURRENT_STATUS.now}
+          </a>
+        </span>
+        {CURRENT_STATUS.speakingNext && (
+          <span><span class="opacity-40" aria-hidden="true">·</span> speaking next: {CURRENT_STATUS.speakingNext}</span>
+        )}
+        {CURRENT_STATUS.openTo && (
+          <span><span class="opacity-40" aria-hidden="true">·</span> open to: {CURRENT_STATUS.openTo}</span>
+        )}
+      </div>
+    </section>
 
     {
       featuredPosts.length > 0 && (
@@ -99,6 +117,61 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
             )}
           </ul>
         </section>
+      )
+    }
+
+    {
+      (TALKS.length > 0 || BYLINES.length > 0) && (
+        <>
+          <Hr />
+          <section id="talks-elsewhere" class="pt-12 pb-6">
+            <div class="grid gap-10 sm:grid-cols-2">
+              {TALKS.length > 0 && (
+                <div>
+                  <div class="flex items-baseline justify-between">
+                    <h2 class="text-2xl font-semibold tracking-wide">Talks</h2>
+                    <a href="/talks" class="text-sm text-accent underline underline-offset-2 hover:text-accent-dark">all →</a>
+                  </div>
+                  <ul class="mt-4 space-y-4">
+                    {TALKS.slice(0, 4).map((talk) => (
+                      <li>
+                        <a
+                          href={talk.slides ?? talk.post}
+                          target={talk.slides ? "_blank" : undefined}
+                          rel={talk.slides ? "noopener" : undefined}
+                          class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                        >
+                          {talk.title}
+                        </a>
+                        <div class="text-sm opacity-70">{talk.venue} · {talk.date}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {BYLINES.length > 0 && (
+                <div>
+                  <h2 class="text-2xl font-semibold tracking-wide">Elsewhere</h2>
+                  <ul class="mt-4 space-y-4">
+                    {BYLINES.slice(0, 5).map((byline) => (
+                      <li>
+                        <a
+                          href={byline.href}
+                          target="_blank"
+                          rel="noopener"
+                          class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                        >
+                          {byline.title}
+                        </a>
+                        <div class="text-sm opacity-70">{byline.outlet} · {byline.date}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </section>
+        </>
       )
     }
 
