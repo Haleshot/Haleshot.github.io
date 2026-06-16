@@ -9,7 +9,7 @@ import Hr from "@/components/Hr.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
-import { CURRENT_STATUS, SITE, SOCIALS } from "@/config";
+import { SITE, SOCIALS } from "@/config";
 import { BYLINES } from "@/data/bylines";
 import { TALKS } from "@/data/talks";
 import Layout from "@/layouts/Layout.astro";
@@ -70,24 +70,6 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
             )
           }
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-border pb-3 text-[13px] opacity-90">
-        <span class="inline-flex items-center gap-2">
-          <span class="inline-block size-2 flex-shrink-0 rounded-full bg-accent animate-pulse" aria-hidden="true"></span>
-          now:{" "}
-          <a href="/now" class="text-accent underline underline-offset-2 hover:text-accent-dark">
-            {CURRENT_STATUS.now}
-          </a>
-        </span>
-        {CURRENT_STATUS.speakingNext && (
-          <span><span class="opacity-40" aria-hidden="true">·</span> speaking next: {CURRENT_STATUS.speakingNext}</span>
-        )}
-        {CURRENT_STATUS.openTo && (
-          <span><span class="opacity-40" aria-hidden="true">·</span> open to: {CURRENT_STATUS.openTo}</span>
-        )}
       </div>
     </section>
 
