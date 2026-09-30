@@ -44,7 +44,7 @@ const { Content, headings } = await render(post);
 
 // Sections for the sidebar contents list (skips remark-toc's own heading)
 const tocHeadings = headings.filter(
-  (h) => h.depth >= 2 && h.depth <= 3 && h.slug !== "table-of-contents",
+  (h) => h.depth >= 2 && h.depth <= 3 && h.slug !== "table-of-contents"
 );
 const readingTime = calculateReadingTime(post.body ?? "");
 
