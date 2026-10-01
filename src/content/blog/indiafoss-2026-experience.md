@@ -4,7 +4,7 @@ description: "Running the Documentation and Technical Writing devroom at IndiaFO
 pubDatetime: 2026-09-30T16:00:00Z
 author: "Srihari Thyagarajan"
 tags: ["open-source", "community", "conference", "foss", "write-the-docs", "documentation", "scipy-india", "bengaluru"]
-featured: false
+featured: true
 draft: false
 ---
 
@@ -73,7 +73,7 @@ IndiaFOSS 2026 happened on 26 and 27 September at NIMHANS Convention Centre in B
 
 ## Friday
 
-I missed Friday's [unconference](https://fossunited.org/c/indiafoss/maintainer-summit) and the [pre-event the Tangled folks ran](https://luma.com/by2j97ga), since I was working. Next time! (I did catch them at their booth the next day, and we got talking about their vouching system. I knew of [Vouch](https://github.com/mitchellh/vouch) from the Ghostty folks, and wanted to know if theirs drew on something like it. It turned into a great conversation.) We also got a little of the devroom setup done that evening, which made Saturday morning easier.
+I missed Friday's [unconference](https://fossunited.org/c/indiafoss/maintainer-summit) and the [pre-event the Tangled folks ran](https://luma.com/by2j97ga), since I was working. Next time! (I did catch them at their booth the next day. Tangled is an alternative to GitHub, and it has a vouching system where people vouch for others they trust. I knew of [Vouch](https://github.com/mitchellh/vouch) from the Ghostty folks and wanted to know if theirs drew on something like it, which turned into a great conversation.) We also got a little of the devroom setup done that evening, which made Saturday morning easier.
 
 ## Saturday morning
 
@@ -83,7 +83,7 @@ I was at the registration desk early. As devroom managers we had a list of thing
 
 A lot of people turned up!! At one point the room was overflowing. For something that started as a proposal I wasn't sure would get picked (a whole room just for docs?), that was a very nice thing to see.
 
-I won't go through every talk here, since we wrote those up properly in the [devroom debrief on the Write the Docs India site](https://write-the-docs-india.github.io/debriefs/2026/indiafoss-2026-devroom/). The whole morning is also [on YouTube](https://www.youtube.com/live/KNKAi9dfZxA).
+I won't go through every talk here, since we wrote those up properly in the [devroom debrief on the Write the Docs India site](https://write-the-docs-indiagithubio--2.org.readthedocs.build/en/2/blog/2026/indiafoss-2026-devroom/). The whole morning is also [on YouTube](https://www.youtube.com/live/KNKAi9dfZxA).
 
 We got everyone together for a group photo partway through, just before my own lightning talk, [Refactoring documentation without breaking it](https://fossunited.org/c/indiafoss/2026/cfp/6dpd2lbkma). The short version: renaming a heading or moving a page is a refactor, but our editors treat it as a text edit, so links break and CI only tells you once the site is live. One of my suggestions was putting a link checker like [lychee](https://github.com/lycheeverse/lychee) in your docs CI. It felt great to give, and I finished on time, which mattered that morning: one of the volunteers was keeping time, and we were trying hard to stick to it to make up for the minutes lost at the start. The [slides are here](https://haleshot.github.io/talks/indiafoss-docs-refactoring-09-2026/) and the [recording starts at 1:18:38](https://www.youtube.com/live/KNKAi9dfZxA?t=4718).
 
@@ -113,9 +113,9 @@ Between the devroom and the booth, I dropped into a few other rooms: the Open De
 
 ## The SciPy India booth
 
-Saturday afternoon and all of Sunday went into the SciPy India booth with [Malayaja Chutani](https://www.linkedin.com/in/malayajachutani/), [Agriya](https://agriyakhetarp.al/), and [Aditi Juneja](https://www.linkedin.com/in/aditi-juneja-940838204/) (the rest of the [SciPy India team](https://scipy.in/2026/team)), and [Rahul Poruri](https://rahulporuri.in/) (FOSS United's CEO) dropping in every now and then.
+Saturday afternoon and all of Sunday went into the SciPy India booth with [Malayaja Chutani](https://www.linkedin.com/in/malayajachutani/), [Agriya](https://agriyakhetarp.al/), and [Aditi Juneja](https://www.linkedin.com/in/aditi-juneja-940838204/) (the [SciPy India team](https://scipy.in/2026/team)), and [Rahul Poruri](https://rahulporuri.in/) (FOSS United's CEO) dropping in every now and then.
 
-It was a lot of conversations!! Most of them started with what SciPy India is these days and ended with the conference we're running at IIT Madras on 19 and 20 December, with me nudging people to [submit a talk or a workshop](https://cfp.scipy.in/scipy-india-2026) before the CFP closes on 19 October. I also managed to catch [Kailash Nadh](https://nadh.in/) during the conference and talk briefly about SciPy India.
+It was a lot of conversations!! Most of them started with what SciPy India is these days and ended with the conference we're running at IIT Madras on 19 and 20 December, with us nudging people to [submit a talk or a workshop](https://cfp.scipy.in/scipy-india-2026) before the CFP closes on 19 October. I also managed to catch [Kailash Nadh](https://nadh.in/) during the conference and talk briefly about SciPy India.
 
 <div class="indiafoss-gallery">
   <div class="indiafoss-gallery-scroll">
