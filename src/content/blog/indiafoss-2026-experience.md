@@ -1,5 +1,5 @@
 ---
-title: "IndiaFOSS 2026, this time with a devroom to run"
+title: "IndiaFOSS 2026: a packed room for documentation, a lightning talk, and a busy SciPy India booth"
 description: "Running the Documentation and Technical Writing devroom at IndiaFOSS 2026, giving a talk in it, and two days at the SciPy India booth."
 pubDatetime: 2026-09-30T16:00:00Z
 author: "Srihari Thyagarajan"
