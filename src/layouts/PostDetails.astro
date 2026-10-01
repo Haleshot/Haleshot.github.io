@@ -40,7 +40,12 @@ const {
   heroImage,
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+// Sections for the sidebar contents list (skips remark-toc's own heading)
+const tocHeadings = headings.filter(
+  (h) => h.depth >= 2 && h.depth <= 3 && h.slug !== "table-of-contents"
+);
 const readingTime = calculateReadingTime(post.body ?? "");
 
 let ogImageUrl: string | undefined;
@@ -114,11 +119,37 @@ const wordCount = (post.body ?? "").split(/\s+/).filter(Boolean).length;
   <main
     id="main-content"
     class:list={[
-      "mx-auto w-full max-w-3xl px-4 pb-12",
+      "relative mx-auto w-full max-w-3xl px-4 pb-12",
       { "mt-8": !SITE.showBackButton },
     ]}
     data-pagefind-body
   >
+    {
+      tocHeadings.length >= 2 && (
+        <aside
+          aria-label="On this page"
+          data-pagefind-ignore
+          class="absolute top-0 bottom-0 left-full ml-8 hidden w-48 xl:block"
+        >
+          <nav class="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto text-sm">
+            <p class="mb-3 font-semibold text-foreground/80">On this page</p>
+            <ul class="space-y-2 border-l border-border">
+              {tocHeadings.map((h) => (
+                <li class:list={[{ "pl-3": h.depth === 3 }]}>
+                  <a
+                    href={`#${h.slug}`}
+                    data-toc-link
+                    class="-ml-px block border-l-2 border-transparent pl-3 text-foreground/60 hover:text-accent aria-[current=location]:border-accent aria-[current=location]:text-accent"
+                  >
+                    {h.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </aside>
+      )
+    }
     <h1
       transition:name={slugifyStr(title)}
       class="inline-block text-2xl font-bold text-accent sm:text-3xl"
@@ -302,6 +333,28 @@ const wordCount = (post.body ?? "").split(/\s+/).filter(Boolean).length;
     }
   }
   addHeadingLinks();
+
+  /** Highlights the current section in the sidebar contents list */
+  function trackTocSection() {
+    const links = Array.from(document.querySelectorAll("[data-toc-link]"));
+    if (!links.length) return;
+    const sections = links
+      .map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))))
+      .filter(Boolean);
+    const update = () => {
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= 120) current = section;
+      }
+      for (const link of links) {
+        if (link.hash.slice(1) === current?.id) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      }
+    };
+    document.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+  trackTocSection();
 
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
