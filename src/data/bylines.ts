@@ -69,7 +69,7 @@ const ALL_BYLINES: Byline[] = [
     title: "Deepnote alternatives series",
     outlet: "Deepnote",
     date: "2026",
-    href: "https://deepnote.com/alternatives/sagemaker",
+    href: "https://deepnote.com/compare",
     description:
       "A page for each tool people switch to Deepnote from, like Jupyter, Colab, Hex and marimo.",
   },

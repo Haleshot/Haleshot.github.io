@@ -8,6 +8,7 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Hr from "@/components/Hr.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import RelatedMark from "@/components/RelatedMark.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
 import { SITE, SOCIALS } from "@/config";
@@ -129,10 +130,8 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
                   </a>
                   {getRelated(getPath(post.id, post.filePath)).map((r) => (
                     <div class="text-sm">
-                      <span class="inline-flex items-center gap-1.5 align-middle opacity-70">
-                        {r.icon && <img src={r.icon} alt="" width="14" height="14" class="rounded-[3px]" />}
-                        {r.label}
-                      </span>{" "}
+                      <RelatedMark icon={r.icon} size={14} class="mr-1.5 inline-block align-[-2px]" />
+                      <span class="sr-only">{r.kind === "talk" ? "Talk: " : `On ${r.label}: `}</span>
                       <a
                         href={r.href}
                         target="_blank"
@@ -177,10 +176,14 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
             <ul class="mt-4">
               {outlets.map((o) => (
                 <li class="grid gap-x-4 py-3 sm:grid-cols-[12.5rem_minmax(0,1fr)] sm:items-baseline">
-                  <span class="flex items-center gap-2 text-sm opacity-80">
+                  <a
+                    href={`/posts/?from=${o.key}`}
+                    class="flex items-center gap-2 self-start text-sm decoration-dashed underline-offset-4 opacity-80 hover:text-accent hover:underline hover:opacity-100"
+                  >
                     {o.icon && <img src={o.icon} alt="" width="16" height="16" class="rounded-[3px]" />}
                     {o.label}
-                  </span>
+                    <span class="sr-only">, everything I've written there</span>
+                  </a>
                   <div>
                     {o.latest.map((byline) => (
                       <div class="py-0.5">
@@ -194,11 +197,6 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
                         </a>
                       </div>
                     ))}
-                    {o.count > o.latest.length && (
-                      <a href={`/posts/?from=${o.key}`} class="text-sm underline decoration-dashed underline-offset-4 opacity-80 hover:opacity-100">
-                        More on {o.label}
-                      </a>
-                    )}
                   </div>
                 </li>
               ))}
