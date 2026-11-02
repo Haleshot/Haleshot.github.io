@@ -1,0 +1,32 @@
+---
+import type { Byline } from "@/data/bylines";
+import Datetime from "./Datetime.astro";
+
+export interface Props {
+  byline: Byline;
+}
+
+const { byline } = Astro.props;
+---
+
+<li class="my-8">
+  <a
+    href={byline.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+  >
+    <h2 class="text-lg font-medium decoration-dashed group-hover:underline">
+      {byline.title}
+      <span
+        aria-hidden="true"
+        class="ml-1 inline-block opacity-60 transition-transform duration-150 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:transform-none"
+      >↗</span>
+    </h2>
+    <span class="sr-only">(opens on {byline.outlet})</span>
+  </a>
+  <div class="flex items-center gap-3">
+    {byline.pubDate && <Datetime pubDatetime={byline.pubDate} modDatetime={undefined} timezone={undefined} />}
+    <span class="text-sm italic opacity-80">• on {byline.outlet}</span>
+  </div>
+</li>
