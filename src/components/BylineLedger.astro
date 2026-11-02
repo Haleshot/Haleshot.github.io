@@ -19,7 +19,7 @@ const showDay = (i: number) => i === 0 || dayOf(bylines[i]) !== dayOf(bylines[i 
 ---
 
 <li class="my-8" data-group>
-  <ul class="ledger ml-3 border-l border-dashed border-accent/60 pl-5">
+  <ul class="ledger ml-8 border-l border-dashed border-accent/60 pl-4">
     {
       bylines.map((byline, i) => (
         <li class="byline-row relative" data-source={bylineSource(byline)}>
@@ -60,7 +60,7 @@ const showDay = (i: number) => i === 0 || dayOf(bylines[i]) !== dayOf(bylines[i 
   .outlet-mark {
     position: absolute;
     top: 0.6rem;
-    left: calc(-1.25rem - 9.5px);
+    left: calc(-1rem - 9.5px);
     width: 18px;
     height: 18px;
     border-radius: 4px;
