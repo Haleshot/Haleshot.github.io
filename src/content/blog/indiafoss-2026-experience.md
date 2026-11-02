@@ -83,7 +83,7 @@ I was at the registration desk early. As devroom managers we had a list of thing
 
 A lot of people turned up!! At one point the room was overflowing. For something that started as a proposal I wasn't sure would get picked (a whole room just for docs?), that was a very nice thing to see.
 
-I won't go through every talk here, since we wrote those up properly in the [devroom debrief on the Write the Docs India site](https://write-the-docs-indiagithubio--2.org.readthedocs.build/en/2/blog/2026/indiafoss-2026-devroom/). The whole morning is also [on YouTube](https://www.youtube.com/live/KNKAi9dfZxA).
+I won't go through every talk here, since we wrote those up properly in the [devroom debrief on the Write the Docs India site](https://write-the-docs-india.github.io/blog/2026/indiafoss-2026-devroom/). The whole morning is also [on YouTube](https://www.youtube.com/live/KNKAi9dfZxA).
 
 We got everyone together for a group photo partway through, just before my own lightning talk, [Refactoring documentation without breaking it](https://fossunited.org/c/indiafoss/2026/cfp/6dpd2lbkma). The short version: renaming a heading or moving a page is a refactor, but our editors treat it as a text edit, so links break and CI only tells you once the site is live. One of my suggestions was putting a link checker like [lychee](https://github.com/lycheeverse/lychee) in your docs CI. It felt great to give, and I finished on time, which mattered that morning: one of the volunteers was keeping time, and we were trying hard to stick to it to make up for the minutes lost at the start. The [slides are here](https://haleshot.github.io/talks/indiafoss-docs-refactoring-09-2026/) and the [recording starts at 1:18:38](https://www.youtube.com/live/KNKAi9dfZxA?t=4718).
 
