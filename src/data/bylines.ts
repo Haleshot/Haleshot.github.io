@@ -8,7 +8,15 @@ export interface Byline {
   date: string; // human-readable, e.g. "2026"
   href: string;
   pubDate?: string; // ISO date, e.g. "2026-10-09"
+  description?: string; // one line, shown on the posts page
 }
+
+// "Deepnote blog" -> "deepnote", used as the posts page filter key
+export const bylineSource = (b: Byline) =>
+  b.outlet
+    .replace(/ blog$/, "")
+    .toLowerCase()
+    .replace(/\s+/g, "-");
 
 export const BYLINES: Byline[] = [
   {
@@ -23,6 +31,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/jupyter-ai-guide",
     pubDate: "2026-04-29",
+    description:
+      "Whether Jupyter AI is the right assistant for your notebooks: the chat UI, the %%ai magic, and where it stalls.",
   },
   {
     title: "Top AI data visualization tools in 2026",
@@ -30,6 +40,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/ai-data-visualization-tools",
     pubDate: "2026-04-16",
+    description:
+      "The same small churn benchmark run across AI data visualization tools, to see how hard each one makes it to ship a wrong answer.",
   },
   {
     title: "Tracking the ripple effect: how adverse drug events move pharma markets",
@@ -37,26 +49,33 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/tracking-the-ripple-effect-how-adverse-drug-events-move-pharma-markets",
     pubDate: "2026-03-11",
+    description:
+      "An event study mapping adverse drug event signals to pharma stock moves, using price data and FAERS counts.",
   },
   {
     title: "Deepnote alternatives series",
     outlet: "Deepnote",
     date: "2026",
     href: "https://deepnote.com/alternatives/sagemaker",
+    description:
+      "How Deepnote compares with SageMaker, Jupyter, Colab, Hex, Databricks, Kaggle, Mode, VS Code, and Julius.",
   },
-  {
-    title: "Pie charts explained: when to use one, examples, and how to make one",
-    outlet: "Deepnote blog",
-    date: "2026",
-    href: "https://deepnote.com/blog/pie-chart",
-    pubDate: "2026-11-02",
-  },
+  // Scheduled, not live yet:
+  // {
+  //   title: "Pie charts explained: when to use one, examples, and how to make one",
+  //   outlet: "Deepnote blog",
+  //   date: "2026",
+  //   href: "https://deepnote.com/blog/pie-chart",
+  //   pubDate: "2026-11-02",
+  // },
   {
     title: "31 types of graphs and charts (and when to use each)",
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/types-of-graphs",
     pubDate: "2026-10-09",
+    description:
+      "31 types of graphs and charts, with interactive examples and advice on picking the right one for your data.",
   },
   {
     title: "The 15 best data visualization tools in 2026 (free and paid)",
@@ -64,6 +83,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/data-visualization-tools",
     pubDate: "2026-10-08",
+    description:
+      "15 free and paid data visualization tools, compared by workflow, collaboration, AI support, and pricing.",
   },
   {
     title: "Box plots explained: when to use one, examples, and how to make one",
@@ -71,6 +92,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/box-plot",
     pubDate: "2026-10-08",
+    description:
+      "How to read a box plot's median, quartiles, and outliers, and compare distributions with worked examples.",
   },
   {
     title: "8 misleading graph examples: how to spot bad charts and fix them",
@@ -78,6 +101,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/misleading-graphs",
     pubDate: "2026-10-02",
+    description:
+      "Eight misleading graphs, the choices that distort them, and how to check and fix bad charts in Deepnote.",
   },
   {
     title: "Dot plots explained: when to use one, examples, and how to make one",
@@ -85,6 +110,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/dot-plot",
     pubDate: "2026-10-02",
+    description:
+      "Traditional and Cleveland dot plots, how to read them, and when to pick one over another chart.",
   },
   {
     title: "IndiaFOSS 2026: the docs devroom",
@@ -92,6 +119,7 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://write-the-docs-india.github.io/blog/2026/indiafoss-2026-devroom/",
     pubDate: "2026-09-28",
+    description: "Ten talks in one morning, and the chapter's restart.",
   },
   {
     title: "JupyterLab vs Deepnote: a side-by-side comparison for 2026",
@@ -99,6 +127,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/jupyterlab-vs-deepnote",
     pubDate: "2026-08-31",
+    description:
+      "Both give you an interactive notebook for code, data, and visualizations. This compares them side by side.",
   },
   {
     title: "Hex vs Deepnote: a side-by-side comparison",
@@ -106,6 +136,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/hex-vs-deepnote",
     pubDate: "2026-08-31",
+    description:
+      "Hex and Deepnote both combine code, data, AI, and outputs in a browser-based workspace, but they're built for different kinds of work.",
   },
   {
     title: "JupyterHub vs JupyterLab: they solve different problems",
@@ -113,6 +145,8 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/jupyterhub-vs-jupyterlab",
     pubDate: "2026-03-02",
+    description:
+      "JupyterLab is the interface you work in. JupyterHub manages access for multiple users.",
   },
 ];
 
