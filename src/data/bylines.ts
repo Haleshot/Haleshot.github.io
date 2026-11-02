@@ -34,7 +34,7 @@ export const BYLINES: Byline[] = [
     href: "https://deepnote.com/blog/jupyter-ai-guide",
     pubDate: "2026-04-29",
     description:
-      "Whether Jupyter AI is the right assistant for your notebooks: the chat UI, the %%ai magic, and where it stalls.",
+      "Trying the chat UI and the %%ai magic in a real notebook, to see where Jupyter AI helps and where it stalls.",
   },
   {
     title: "Top AI data visualization tools in 2026",
@@ -55,21 +55,13 @@ export const BYLINES: Byline[] = [
       "An event study mapping adverse drug event signals to pharma stock moves, using price data and FAERS counts.",
   },
   {
-    title: "Deepnote alternatives series",
+    title: "Deepnote alternatives series, 12 pages so far",
     outlet: "Deepnote",
     date: "2026",
     href: "https://deepnote.com/alternatives/sagemaker",
     description:
-      "How Deepnote compares with SageMaker, Jupyter, Colab, Hex, Databricks, Kaggle, Mode, VS Code, and Julius.",
+      "Deepnote next to the tools people come from: Jupyter, JupyterLab, Colab, Hex, Databricks, Kaggle, Mode, SageMaker, VS Code, Streamlit, Julius and marimo.",
   },
-  // Scheduled, not live yet:
-  // {
-  //   title: "Pie charts explained: when to use one, examples, and how to make one",
-  //   outlet: "Deepnote blog",
-  //   date: "2026",
-  //   href: "https://deepnote.com/blog/pie-chart",
-  //   pubDate: "2026-11-02",
-  // },
   {
     title: "31 types of graphs and charts (and when to use each)",
     outlet: "Deepnote blog",
@@ -77,7 +69,7 @@ export const BYLINES: Byline[] = [
     href: "https://deepnote.com/blog/types-of-graphs",
     pubDate: "2026-10-09",
     description:
-      "31 types of graphs and charts, with interactive examples and advice on picking the right one for your data.",
+      "An interactive example for each one, and how to pick the right chart for your data.",
   },
   {
     title: "The 15 best data visualization tools in 2026 (free and paid)",
@@ -85,8 +77,25 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/data-visualization-tools",
     pubDate: "2026-10-08",
+    description: "Fifteen tools compared on workflow, collaboration, AI support and pricing.",
+  },
+  {
+    title: "Histogram vs bar graph: differences, examples, and when to use each",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/histogram-vs-bar-graph",
+    pubDate: "2026-10-08",
     description:
-      "15 free and paid data visualization tools, compared by workflow, collaboration, AI support, and pricing.",
+      "The same dataset as a histogram and as a bar graph, and how grouping changes the question each one answers.",
+  },
+  {
+    title: "How to make a pie chart (in Excel and other tools)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-pie-chart",
+    pubDate: "2026-10-08",
+    description:
+      "Pie charts in Excel, Google Sheets, Python, PowerPoint and Deepnote, plus labeling percentages and picking a variant.",
   },
   {
     title: "Box plots explained: when to use one, examples, and how to make one",
@@ -103,8 +112,7 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/misleading-graphs",
     pubDate: "2026-10-02",
-    description:
-      "Eight misleading graphs, the choices that distort them, and how to check and fix bad charts in Deepnote.",
+    description: "Eight charts that mislead, and how to fix each one in Deepnote.",
   },
   {
     title: "Dot plots explained: when to use one, examples, and how to make one",
@@ -113,7 +121,17 @@ export const BYLINES: Byline[] = [
     href: "https://deepnote.com/blog/dot-plot",
     pubDate: "2026-10-02",
     description:
-      "Traditional and Cleveland dot plots, how to read them, and when to pick one over another chart.",
+      "Traditional and Cleveland dot plots, and when to reach for one over another chart.",
+  },
+  {
+    title: "IndiaFOSS 2026 | Community booth",
+    outlet: "SciPy India",
+    date: "2026",
+    href: "https://scipy.in/blog/2026-09-26-indiafoss-community-booth",
+    pubDate: "2026-09-26",
+    description:
+      "Two days behind the SciPy India booth, talking to anyone who stopped by about what we're building towards in December.",
+    related: "/posts/2026/indiafoss-2026-experience",
   },
   {
     title: "IndiaFOSS 2026: the docs devroom",
@@ -130,8 +148,7 @@ export const BYLINES: Byline[] = [
     date: "2026",
     href: "https://deepnote.com/blog/jupyterlab-vs-deepnote",
     pubDate: "2026-08-31",
-    description:
-      "Both give you an interactive notebook for code, data, and visualizations. This compares them side by side.",
+    description: "Where the two notebooks overlap and where they differ, side by side.",
   },
   {
     title: "Hex vs Deepnote: a side-by-side comparison",
@@ -154,7 +171,7 @@ export const BYLINES: Byline[] = [
 ];
 
 // Full Deepnote "alternatives" series I wrote, kept here for the record.
-// Surfaced on the homepage via the grouped byline above; marimo is coming soon.
+// Surfaced on the homepage via the grouped byline above.
 export const DEEPNOTE_ALTERNATIVES = [
   "https://deepnote.com/alternatives/sagemaker",
   "https://deepnote.com/alternatives/jupyter",
@@ -164,6 +181,8 @@ export const DEEPNOTE_ALTERNATIVES = [
   "https://deepnote.com/alternatives/kaggle",
   "https://deepnote.com/alternatives/mode",
   "https://deepnote.com/alternatives/vscode",
-  "https://deepnote.com/alternatives/julius",
-  // "https://deepnote.com/alternatives/marimo", // coming soon
+  "https://deepnote.com/alternatives/juliusai",
+  "https://deepnote.com/alternatives/jupyter-lab",
+  "https://deepnote.com/alternatives/streamlit",
+  "https://deepnote.com/compare/alternatives/marimo",
 ] as const;
