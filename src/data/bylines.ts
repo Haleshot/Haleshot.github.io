@@ -1,7 +1,8 @@
 // Writing published elsewhere (guest posts, company blog, community blog).
-// The homepage shows the first five, so keep the ones you want there at the top.
+// The homepage groups these by outlet and shows the newest from each.
 // The posts page sorts by pubDate and slots these into the timeline; entries
 // without a pubDate (ongoing series) get listed at the bottom of that page.
+// Set `related` to one of my post paths to show the piece under that post instead.
 export interface Byline {
   title: string;
   outlet: string; // e.g. "Deepnote blog"
@@ -9,6 +10,7 @@ export interface Byline {
   href: string;
   pubDate?: string; // ISO date, e.g. "2026-10-09"
   description?: string; // one line, shown on the posts page
+  related?: string; // e.g. "/posts/2026/indiafoss-2026-experience"
 }
 
 // "Deepnote blog" -> "deepnote", used as the posts page filter key
@@ -120,6 +122,7 @@ export const BYLINES: Byline[] = [
     href: "https://write-the-docs-india.github.io/blog/2026/indiafoss-2026-devroom/",
     pubDate: "2026-09-28",
     description: "Ten talks in one morning, and the chapter's restart.",
+    related: "/posts/2026/indiafoss-2026-experience",
   },
   {
     title: "JupyterLab vs Deepnote: a side-by-side comparison for 2026",

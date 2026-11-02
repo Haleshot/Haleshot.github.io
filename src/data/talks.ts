@@ -5,6 +5,7 @@ type TalkBase = {
   title: string;
   venue: string;
   date: string; // human-readable, e.g. "May 2026"
+  recording?: string; // video, with a timestamp if the talk sits inside a longer stream
 };
 
 type TalkWithSlides = TalkBase & {
@@ -20,6 +21,14 @@ type TalkWithPost = TalkBase & {
 export type Talk = TalkWithSlides | TalkWithPost;
 
 export const TALKS: Talk[] = [
+  {
+    title: "Refactoring documentation without breaking it",
+    venue: "IndiaFOSS 2026, Bengaluru",
+    date: "September 2026",
+    slides: "https://haleshot.github.io/talks/indiafoss-docs-refactoring-09-2026/",
+    post: "/posts/2026/indiafoss-2026-experience",
+    recording: "https://www.youtube.com/live/KNKAi9dfZxA?t=4718",
+  },
   {
     title: "Declare State, Not Messages",
     venue: "Apache Kafka Meetup, Chennai",
