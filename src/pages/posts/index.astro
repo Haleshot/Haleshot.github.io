@@ -5,7 +5,7 @@ import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { SITE } from "@/consts";
-import { BYLINES, type Byline, bylineSource } from "@/data/bylines";
+import { BYLINES, type Byline, bylineSource, outletIcon } from "@/data/bylines";
 import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 import { isRecap } from "@/utils/postKind";
@@ -29,19 +29,36 @@ const newestFirst = (a: Entry, b: Entry) => b.date.getTime() - a.date.getTime();
 
 const kindOf = (post: CollectionEntry<"blog">) => (isRecap(post) ? "recaps" : "other");
 
-// Filters: the two kinds of post here, then one per outlet, biggest first
+// The filter doubles as the key for the outlet marks further down: one row for
+// what's here, one for where else I write. Each row's label filters the whole row.
 const outlets = [...new Set(BYLINES.map(bylineSource))]
   .map((key) => {
     const matches = BYLINES.filter((b) => bylineSource(b) === key);
-    return { key, label: matches[0].outlet.replace(/ blog$/, ""), count: matches.length };
+    return {
+      key,
+      label: matches[0].outlet.replace(/ blog$/, ""),
+      count: matches.length,
+      icon: outletIcon(matches[0]),
+    };
   })
   .sort((a, b) => b.count - a.count);
-const filters = [
-  { key: "all", label: "All", count: posts.length + BYLINES.length },
-  { key: "recaps", label: "Recaps", count: posts.filter(isRecap).length },
-  { key: "other", label: "Other posts", count: posts.filter((p) => !isRecap(p)).length },
-  ...outlets,
+const filterRows = [
+  {
+    head: { key: "here", label: "On this site", count: posts.length },
+    items: [
+      { key: "recaps", label: "Recaps", count: posts.filter(isRecap).length, icon: undefined },
+      {
+        key: "other",
+        label: "Other posts",
+        count: posts.filter((p) => !isRecap(p)).length,
+        icon: undefined,
+      },
+    ],
+  },
+  { head: { key: "elsewhere", label: "Elsewhere", count: BYLINES.length }, items: outlets },
 ];
+const filterClass =
+  "inline-flex min-h-11 items-center gap-2 decoration-dashed underline-offset-4 transition-colors duration-150 ease-out hover:text-accent aria-pressed:text-accent aria-pressed:underline focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none";
 
 const months = [
   "January",
@@ -64,17 +81,23 @@ const months = [
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
     <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
     <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
-    <div role="group" aria-label="Filter posts" class="mb-6 flex flex-wrap gap-x-4" data-post-filters hidden>
-      {filters.map((f) => (
-        <button
-          type="button"
-          data-filter={f.key}
-          aria-pressed={f.key === "all" ? "true" : "false"}
-          class="min-h-11 text-sm opacity-70 decoration-dashed underline-offset-4 transition-opacity duration-150 ease-out hover:opacity-100 aria-pressed:text-accent aria-pressed:underline aria-pressed:opacity-100 focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none"
-        >
-          {f.label}
-          <sup class="ml-0.5">{f.count}</sup>
-        </button>
+    <div role="group" aria-label="Filter posts" class="mb-8 grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 text-sm" data-post-filters hidden>
+      {filterRows.map((row) => (
+        <>
+          <button type="button" data-filter={row.head.key} aria-pressed="false" class:list={[filterClass, "font-medium"]}>
+            {row.head.label}
+            <span class="tabular-nums opacity-60">{row.head.count}</span>
+          </button>
+          <div class="flex flex-wrap gap-x-5">
+            {row.items.map((f) => (
+              <button type="button" data-filter={f.key} aria-pressed="false" class={filterClass}>
+                {f.icon && <img src={f.icon} alt="" width="16" height="16" class="rounded-[3px]" />}
+                {f.label}
+                <span class="tabular-nums opacity-60">{f.count}</span>
+              </button>
+            ))}
+          </div>
+        </>
       ))}
     </div>
     {
@@ -153,11 +176,20 @@ const months = [
     const items = [...document.querySelectorAll<HTMLElement>("main [data-source]")];
     const groups = [...document.querySelectorAll<HTMLElement>("main [data-group]")];
 
+    const here = new Set(["recaps", "other"]);
+    const matches = (item: HTMLElement, key: string) => {
+      const source = item.dataset.source ?? "";
+      const also = (item.dataset.also ?? "").split(" ").filter(Boolean);
+      if (key === "all") return true;
+      if (key === "here") return here.has(source);
+      if (key === "elsewhere") return !here.has(source) || also.length > 0;
+      return source === key || also.includes(key);
+    };
+
     const apply = (key: string, animate: boolean) => {
       for (const b of buttons) b.setAttribute("aria-pressed", String(b.dataset.filter === key));
       for (const item of items) {
-        const show =
-          key === "all" || item.dataset.source === key || (item.dataset.also ?? "").split(" ").includes(key);
+        const show = matches(item, key);
         if (show && item.hidden && animate) {
           item.classList.remove("post-in");
           void item.offsetWidth;
@@ -179,7 +211,8 @@ const months = [
 
     for (const b of buttons) {
       b.addEventListener("click", () => {
-        const key = b.dataset.filter ?? "all";
+        // Pressing the active filter again goes back to everything
+        const key = b.getAttribute("aria-pressed") === "true" ? "all" : (b.dataset.filter ?? "all");
         apply(key, true);
         if (key === "all") url.searchParams.delete("from");
         else url.searchParams.set("from", key);
