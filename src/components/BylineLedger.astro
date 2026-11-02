@@ -11,12 +11,17 @@ export interface Props {
 // The description and domain show in a preview on hover or focus.
 const { bylines } = Astro.props;
 const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-48)}`;
+
+// The month is already the heading, so a row shows only its day, and only the
+// first row of each day does
+const dayOf = (b: Byline) => (b.pubDate ? dayjs(b.pubDate).format("D") : "");
+const showDay = (i: number) => i === 0 || dayOf(bylines[i]) !== dayOf(bylines[i - 1]);
 ---
 
 <li class="my-8" data-group>
-  <ul class="ledger border-l border-dashed border-accent/60 pl-6">
+  <ul class="ledger ml-3 border-l border-dashed border-accent/60 pl-5">
     {
-      bylines.map((byline) => (
+      bylines.map((byline, i) => (
         <li class="byline-row relative" data-source={bylineSource(byline)}>
           {outletIcon(byline) && (
             <img src={outletIcon(byline)} alt="" width="18" height="18" loading="lazy" class="outlet-mark" />
@@ -26,10 +31,10 @@ const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-4
             target="_blank"
             rel="noopener noreferrer"
             aria-describedby={id(byline)}
-            class="group grid min-h-11 grid-cols-[5.5rem_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 focus-visible:no-underline"
+            class="group grid min-h-11 grid-cols-[1.5rem_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 focus-visible:no-underline"
           >
-            <span class="text-sm tabular-nums opacity-70">
-              {byline.pubDate ? dayjs(byline.pubDate).format("D MMM") : byline.date}
+            <span class="text-right text-sm tabular-nums opacity-70">
+              {showDay(i) && dayOf(byline) && <time datetime={byline.pubDate}>{dayOf(byline)}</time>}
             </span>
             <span class="text-accent text-pretty decoration-dashed underline-offset-4 group-hover:underline">
               {byline.title}
@@ -54,8 +59,8 @@ const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-4
      so the dashes break around it */
   .outlet-mark {
     position: absolute;
-    top: 0.75rem;
-    left: calc(-1.5rem - 9.5px);
+    top: 0.6rem;
+    left: calc(-1.25rem - 9.5px);
     width: 18px;
     height: 18px;
     border-radius: 4px;
@@ -73,7 +78,7 @@ const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-4
     position: absolute;
     z-index: 10;
     top: 100%;
-    left: calc(5.5rem + 0.75rem);
+    left: calc(1.5rem + 0.75rem);
     right: 0;
     max-width: 32rem;
     padding: 0.625rem 0.875rem;
