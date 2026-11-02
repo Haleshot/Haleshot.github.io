@@ -1,44 +1,48 @@
 ---
 import dayjs from "dayjs";
-import { type Byline, bylineSource } from "@/data/bylines";
+import { type Byline, bylineSource, outletHost, outletIcon } from "@/data/bylines";
 
 export interface Props {
   bylines: Byline[];
 }
 
-// Writing published elsewhere. Own posts get full cards; these are a dated list,
-// with the description in a preview on hover or focus.
+// Writing published elsewhere. Own posts get full cards; these are a dated list
+// on a dashed rule, each row marked on the rule with its outlet's own icon.
+// The description and domain show in a preview on hover or focus.
 const { bylines } = Astro.props;
 const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-48)}`;
 ---
 
 <li class="my-8" data-group>
-  <ul class="border-l border-dashed border-accent/60 pl-4">
+  <ul class="ledger border-l border-dashed border-accent/60 pl-6">
     {
       bylines.map((byline) => (
         <li class="byline-row relative" data-source={bylineSource(byline)}>
+          {outletIcon(byline) && (
+            <img src={outletIcon(byline)} alt="" width="18" height="18" loading="lazy" class="outlet-mark" />
+          )}
           <a
             href={byline.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-describedby={byline.description ? id(byline) : undefined}
+            aria-describedby={id(byline)}
             class="group grid min-h-11 grid-cols-[5.5rem_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 focus-visible:no-underline"
           >
             <span class="text-sm tabular-nums opacity-70">
               {byline.pubDate ? dayjs(byline.pubDate).format("D MMM") : byline.date}
             </span>
-            <span class="text-pretty">
-              <span class="text-accent decoration-dashed underline-offset-4 group-hover:underline">
-                {byline.title}
-              </span>
-              <span class="ml-2 text-sm opacity-60">{byline.outlet.replace(/ blog$/, "")}</span>
+            <span class="text-accent text-pretty decoration-dashed underline-offset-4 group-hover:underline">
+              {byline.title}
+              <span class="sr-only">, on {byline.outlet}</span>
             </span>
           </a>
-          {byline.description && (
-            <p id={id(byline)} class="byline-preview" role="tooltip">
-              {byline.description}
+          <div id={id(byline)} class="byline-preview" role="tooltip">
+            <p class="flex items-center gap-1.5 text-xs opacity-70">
+              {outletIcon(byline) && <img src={outletIcon(byline)} alt="" width="14" height="14" class="rounded-[3px]" />}
+              {outletHost(byline)}
             </p>
-          )}
+            {byline.description && <p class="mt-1">{byline.description}</p>}
+          </div>
         </li>
       ))
     }
@@ -46,6 +50,24 @@ const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-4
 </li>
 
 <style>
+  /* The outlet's mark sits centred on the dashed rule, ringed in the page colour
+     so the dashes break around it */
+  .outlet-mark {
+    position: absolute;
+    top: 0.75rem;
+    left: calc(-1.5rem - 9.5px);
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: var(--background);
+    box-shadow: 0 0 0 3px var(--background);
+    transition: transform 150ms ease-out;
+  }
+  .byline-row:hover .outlet-mark,
+  .byline-row:focus-within .outlet-mark {
+    transform: scale(1.15);
+  }
+
   /* Link preview: sits under the title column, fades and settles in */
   .byline-preview {
     position: absolute;
@@ -88,9 +110,10 @@ const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-4
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .outlet-mark,
     .byline-preview {
       transition: none !important;
-      transform: none;
+      transform: none !important;
     }
   }
 </style>

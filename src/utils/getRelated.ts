@@ -1,10 +1,11 @@
-import { BYLINES, bylineSource } from "@/data/bylines";
+import { BYLINES, bylineSource, outletIcon } from "@/data/bylines";
 import { TALKS } from "@/data/talks";
 
 export type Related = {
   label: string;
   title: string;
   href: string;
+  icon?: string;
   source?: string; // byline outlet key, so the posts page filter can match the parent post
   recording?: string;
 };
@@ -24,6 +25,7 @@ export const getRelated = (postPath: string): Related[] => [
     label: b.outlet.replace(/ blog$/, ""),
     title: b.title,
     href: b.href,
+    icon: outletIcon(b),
     source: bylineSource(b),
   })),
 ];

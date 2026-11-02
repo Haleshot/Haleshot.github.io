@@ -11,7 +11,7 @@ import LinkButton from "@/components/LinkButton.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
 import { SITE, SOCIALS } from "@/config";
-import { BYLINES, bylineSource } from "@/data/bylines";
+import { BYLINES, bylineSource, outletIcon } from "@/data/bylines";
 import { TALKS } from "@/data/talks";
 import Layout from "@/layouts/Layout.astro";
 import { getPath } from "@/utils/getPath";
@@ -38,6 +38,7 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
     return {
       key,
       label: all[0].outlet.replace(/ blog$/, ""),
+      icon: outletIcon(all[0]),
       count: all.length,
       latest: (dated.length > 0 ? dated : all).slice(0, 2),
     };
@@ -128,7 +129,10 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
                   </a>
                   {getRelated(getPath(post.id, post.filePath)).map((r) => (
                     <div class="text-sm">
-                      <span class="opacity-70">{r.label}</span>{" "}
+                      <span class="inline-flex items-center gap-1.5 align-middle opacity-70">
+                        {r.icon && <img src={r.icon} alt="" width="14" height="14" class="rounded-[3px]" />}
+                        {r.label}
+                      </span>{" "}
                       <a
                         href={r.href}
                         target="_blank"
@@ -172,8 +176,11 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
             <h2 class="text-2xl font-semibold">Writing elsewhere</h2>
             <ul class="mt-4">
               {outlets.map((o) => (
-                <li class="grid gap-x-4 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-baseline">
-                  <span class="text-sm opacity-70">{o.label}</span>
+                <li class="grid gap-x-4 py-3 sm:grid-cols-[12.5rem_minmax(0,1fr)] sm:items-baseline">
+                  <span class="flex items-center gap-2 text-sm opacity-80">
+                    {o.icon && <img src={o.icon} alt="" width="16" height="16" class="rounded-[3px]" />}
+                    {o.label}
+                  </span>
                   <div>
                     {o.latest.map((byline) => (
                       <div class="py-0.5">
@@ -189,7 +196,7 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
                     ))}
                     {o.count > o.latest.length && (
                       <a href={`/posts/?from=${o.key}`} class="text-sm underline decoration-dashed underline-offset-4 opacity-80 hover:opacity-100">
-                        All {o.count} on {o.label}
+                        More on {o.label}
                       </a>
                     )}
                   </div>

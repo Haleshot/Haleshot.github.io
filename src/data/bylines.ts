@@ -20,6 +20,16 @@ export const bylineSource = (b: Byline) =>
     .toLowerCase()
     .replace(/\s+/g, "-");
 
+// Each outlet's own mark, from its site, in public/outlets
+export const OUTLET_ICONS: Record<string, string> = {
+  deepnote: "/outlets/deepnote.png",
+  "scipy-india": "/outlets/scipy-india.svg",
+  "write-the-docs-india": "/outlets/write-the-docs-india.svg",
+};
+
+export const outletIcon = (b: Byline) => OUTLET_ICONS[bylineSource(b)];
+export const outletHost = (b: Byline) => new URL(b.href).hostname.replace(/^www\./, "");
+
 export const BYLINES: Byline[] = [
   {
     title: "Community write-ups on the SciPy India blog",
@@ -55,12 +65,12 @@ export const BYLINES: Byline[] = [
       "An event study mapping adverse drug event signals to pharma stock moves, using price data and FAERS counts.",
   },
   {
-    title: "Deepnote alternatives series, 12 pages so far",
+    title: "Deepnote alternatives series",
     outlet: "Deepnote",
     date: "2026",
     href: "https://deepnote.com/alternatives/sagemaker",
     description:
-      "Deepnote next to the tools people come from: Jupyter, JupyterLab, Colab, Hex, Databricks, Kaggle, Mode, SageMaker, VS Code, Streamlit, Julius and marimo.",
+      "A page for each tool people switch to Deepnote from, like Jupyter, Colab, Hex and marimo.",
   },
   {
     title: "31 types of graphs and charts (and when to use each)",

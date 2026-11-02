@@ -70,7 +70,10 @@ const headerProps = {
       <ul class="mt-3 grid grid-cols-[max-content_minmax(0,1fr)] gap-x-4 gap-y-1 border-l border-dashed border-accent/60 pl-4 text-sm">
         {related.map((r) => (
           <li class="contents">
-            <span class="opacity-70">{r.label}</span>
+            <span class="flex items-center gap-1.5 opacity-70">
+              {r.icon && <img src={r.icon} alt="" width="14" height="14" class="rounded-[3px]" />}
+              {r.label}
+            </span>
             <span class="text-pretty">
               <a href={r.href} target="_blank" rel="noopener noreferrer" class={linkClass}>{r.title}</a>{r.recording && <>, <a href={r.recording} target="_blank" rel="noopener noreferrer" class={linkClass}>recording</a></>}
             </span>
