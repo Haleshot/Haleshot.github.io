@@ -5,7 +5,7 @@ import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { SITE } from "@/consts";
-import { BYLINES, type Byline } from "@/data/bylines";
+import { BYLINES, type Byline, bylineSource } from "@/data/bylines";
 import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
 
@@ -21,6 +21,19 @@ const entries: Entry[] = [
   })),
 ];
 const series = BYLINES.filter((b) => !b.pubDate);
+
+// Filter chips: "here" for posts on this site, then one per outlet, biggest first
+const outlets = [...new Set(BYLINES.map(bylineSource))]
+  .map((key) => {
+    const matches = BYLINES.filter((b) => bylineSource(b) === key);
+    return { key, label: matches[0].outlet.replace(/ blog$/, ""), count: matches.length };
+  })
+  .sort((a, b) => b.count - a.count);
+const filters = [
+  { key: "all", label: "All", count: posts.length + BYLINES.length },
+  { key: "here", label: "On this site", count: posts.length },
+  ...outlets,
+];
 
 const months = [
   "January",
@@ -43,31 +56,43 @@ const months = [
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
     <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
     <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
+    <div role="group" aria-label="Filter posts by where they were published" class="mb-8 flex flex-wrap gap-2" data-post-filters hidden>
+      {filters.map((f) => (
+        <button
+          type="button"
+          data-filter={f.key}
+          aria-pressed={f.key === "all" ? "true" : "false"}
+          class="rounded-full border border-accent/40 px-3 py-1 text-sm transition-[transform,background-color,color] duration-150 ease-out hover:border-accent active:scale-[0.97] aria-pressed:bg-accent aria-pressed:text-background aria-pressed:border-accent focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none motion-reduce:active:scale-100"
+        >
+          {f.label} <span class="opacity-70">{f.count}</span>
+        </button>
+      ))}
+    </div>
     {
       Object.entries(
         getPostsByGroupCondition(entries, (entry) => entry.date.getFullYear()),
       )
         .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
         .map(([year, yearGroup]) => (
-          <div class="mb-8">
+          <div class="mb-8" data-group>
             <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">
               {year}
-              <sup class="text-sm ml-1">{yearGroup.length}</sup>
+              <sup class="text-sm ml-1" data-count>{yearGroup.length}</sup>
             </h2>
             {Object.entries(
               getPostsByGroupCondition(yearGroup, (entry) => entry.date.getMonth() + 1),
             )
               .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
               .map(([month, monthGroup]) => (
-                <div class="mt-8">
+                <div class="mt-8" data-group>
                   <h3 class="text-xl font-bold mb-4">
                     {months[Number(month) - 1]}
-                    <sup class="text-sm ml-1">{monthGroup.length}</sup>
+                    <sup class="text-sm ml-1" data-count>{monthGroup.length}</sup>
                   </h3>
                   <ul>
                     {monthGroup
                       .sort((a, b) => b.date.getTime() - a.date.getTime())
-                      .map((entry) => ("post" in entry ? <Card {...entry.post} /> : <BylineCard byline={entry.byline} />))}
+                      .map((entry) => ("post" in entry ? <Card {...entry.post} source="here" /> : <BylineCard byline={entry.byline} />))}
                   </ul>
                 </div>
               ))}
@@ -76,7 +101,7 @@ const months = [
     }
     {
       series.length > 0 && (
-        <div class="mb-8">
+        <div class="mb-8" data-group>
           <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">Ongoing elsewhere</h2>
           <ul>
             {series.map((byline) => (
@@ -89,3 +114,66 @@ const months = [
   </main>
   <Footer />
 </Layout>
+
+<style>
+  @keyframes post-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+  }
+  :global([data-source].post-in) {
+    animation: post-in 180ms ease-out;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global([data-source].post-in) {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  function setupPostFilters() {
+    const bar = document.querySelector<HTMLElement>("[data-post-filters]");
+    if (!bar) return;
+    bar.hidden = false;
+    const buttons = [...bar.querySelectorAll<HTMLButtonElement>("[data-filter]")];
+    const items = [...document.querySelectorAll<HTMLElement>("main [data-source]")];
+    const groups = [...document.querySelectorAll<HTMLElement>("main [data-group]")];
+
+    const apply = (key: string, animate: boolean) => {
+      for (const b of buttons) b.setAttribute("aria-pressed", String(b.dataset.filter === key));
+      for (const item of items) {
+        const show = key === "all" || item.dataset.source === key;
+        if (show && item.hidden && animate) {
+          item.classList.remove("post-in");
+          void item.offsetWidth;
+          item.classList.add("post-in");
+        }
+        item.hidden = !show;
+      }
+      for (const group of groups) {
+        const visible = group.querySelectorAll("[data-source]:not([hidden])").length;
+        group.hidden = visible === 0;
+        const count = group.querySelector("[data-count]");
+        if (count) count.textContent = String(visible);
+      }
+    };
+
+    const url = new URL(location.href);
+    const initial = url.searchParams.get("from");
+    if (initial && buttons.some((b) => b.dataset.filter === initial)) apply(initial, false);
+
+    for (const b of buttons) {
+      b.addEventListener("click", () => {
+        const key = b.dataset.filter ?? "all";
+        apply(key, true);
+        if (key === "all") url.searchParams.delete("from");
+        else url.searchParams.set("from", key);
+        history.replaceState(history.state, "", url);
+      });
+    }
+  }
+
+  document.addEventListener("astro:page-load", setupPostFilters);
+</script>
