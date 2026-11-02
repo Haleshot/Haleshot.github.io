@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import BylineCard from "@/components/BylineCard.astro";
+import BylineLedger from "@/components/BylineLedger.astro";
 import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
@@ -21,6 +21,12 @@ const entries: Entry[] = [
   })),
 ];
 const series = BYLINES.filter((b) => !b.pubDate);
+
+const newestFirst = (a: Entry, b: Entry) => b.date.getTime() - a.date.getTime();
+
+// Bylines in a group, split into one ledger per outlet
+const ledgersOf = (bylines: Byline[]) =>
+  Object.values(getPostsByGroupCondition(bylines, bylineSource));
 
 // Filter chips: "here" for posts on this site, then one per outlet, biggest first
 const outlets = [...new Set(BYLINES.map(bylineSource))]
@@ -91,8 +97,13 @@ const months = [
                   </h3>
                   <ul>
                     {monthGroup
-                      .sort((a, b) => b.date.getTime() - a.date.getTime())
-                      .map((entry) => ("post" in entry ? <Card {...entry.post} source="here" /> : <BylineCard byline={entry.byline} />))}
+                      .sort(newestFirst)
+                      .flatMap((entry) => ("post" in entry ? [<Card {...entry.post} source="here" />] : []))}
+                    {ledgersOf(
+                      monthGroup.sort(newestFirst).flatMap((entry) => ("byline" in entry ? [entry.byline] : [])),
+                    ).map((bylines) => (
+                      <BylineLedger bylines={bylines} />
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -104,8 +115,8 @@ const months = [
         <div class="mb-8" data-group>
           <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">Ongoing elsewhere</h2>
           <ul>
-            {series.map((byline) => (
-              <BylineCard byline={byline} />
+            {ledgersOf(series).map((bylines) => (
+              <BylineLedger bylines={bylines} />
             ))}
           </ul>
         </div>

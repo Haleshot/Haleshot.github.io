@@ -1,0 +1,114 @@
+---
+import dayjs from "dayjs";
+import { type Byline, bylineSource } from "@/data/bylines";
+
+export interface Props {
+  bylines: Byline[];
+}
+
+// Writing published elsewhere, one block per outlet. Own posts get full cards;
+// these are a dated list, with the description in a preview on hover or focus.
+const { bylines } = Astro.props;
+const outlet = bylines[0].outlet.replace(/ blog$/, "");
+const source = bylineSource(bylines[0]);
+const id = (b: Byline) => `byline-${source}-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-40)}`;
+---
+
+<li class="my-8" data-group>
+  <p class="mb-2 text-sm opacity-80">
+    Filed on {outlet} <span class="opacity-70" data-count>{bylines.length}</span>
+  </p>
+  <ul class="border-l border-dashed border-accent/60 pl-4">
+    {
+      bylines.map((byline) => (
+        <li class="byline-row relative" data-source={source}>
+          <a
+            href={byline.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-describedby={byline.description ? id(byline) : undefined}
+            class="group grid min-h-11 grid-cols-[5.5rem_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 focus-visible:no-underline"
+          >
+            <span class="text-sm tabular-nums opacity-70">
+              {byline.pubDate ? dayjs(byline.pubDate).format("D MMM") : byline.date}
+            </span>
+            <span class="text-accent text-pretty decoration-dashed underline-offset-4 group-hover:underline">
+              {byline.title}{" "}<span
+                aria-hidden="true"
+                class="byline-arrow inline-block opacity-60"
+              >↗</span>
+            </span>
+          </a>
+          {byline.description && (
+            <p id={id(byline)} class="byline-preview" role="tooltip">
+              {byline.description}
+            </p>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</li>
+
+<style>
+  .byline-arrow {
+    transition: transform 150ms ease-out;
+  }
+  .byline-row:hover .byline-arrow,
+  .byline-row:focus-within .byline-arrow {
+    transform: translate(2px, -2px);
+  }
+
+  /* Link preview: sits under the title column, fades and settles in */
+  .byline-preview {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: calc(5.5rem + 0.75rem);
+    right: 0;
+    max-width: 32rem;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    background: var(--background);
+    color: var(--foreground);
+    font-size: 0.875rem;
+    box-shadow: 0 6px 20px -8px color-mix(in srgb, var(--foreground) 35%, transparent);
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+    transition:
+      opacity 120ms ease-in,
+      transform 120ms ease-in;
+  }
+  .byline-row:hover .byline-preview,
+  .byline-row:focus-within .byline-preview {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 180ms ease-out 250ms,
+      transform 180ms ease-out 250ms;
+  }
+  .byline-row:focus-within .byline-preview {
+    transition-delay: 0ms;
+  }
+
+  /* Touch screens have no hover, so the preview stays out of the way */
+  @media (hover: none) {
+    .byline-preview {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .byline-arrow,
+    .byline-preview {
+      transition: none !important;
+    }
+    .byline-row:hover .byline-arrow,
+    .byline-row:focus-within .byline-arrow,
+    .byline-preview {
+      transform: none;
+    }
+  }
+</style>
