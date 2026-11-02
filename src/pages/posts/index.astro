@@ -8,14 +8,16 @@ import { SITE } from "@/consts";
 import { BYLINES, type Byline, bylineSource } from "@/data/bylines";
 import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
+import { isRecap } from "@/utils/postKind";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-// Own posts and writing elsewhere share one timeline
+// Own posts and writing elsewhere share one timeline. A byline with `related`
+// shows under that post's card instead of on its own.
 type Entry = { date: Date; post: CollectionEntry<"blog"> } | { date: Date; byline: Byline };
 const entries: Entry[] = [
   ...posts.map((post) => ({ date: new Date(post.data.pubDatetime || new Date()), post })),
-  ...BYLINES.filter((b) => b.pubDate).map((byline) => ({
+  ...BYLINES.filter((b) => b.pubDate && !b.related).map((byline) => ({
     date: new Date(byline.pubDate as string),
     byline,
   })),
@@ -24,11 +26,9 @@ const series = BYLINES.filter((b) => !b.pubDate);
 
 const newestFirst = (a: Entry, b: Entry) => b.date.getTime() - a.date.getTime();
 
-// Bylines in a group, split into one ledger per outlet
-const ledgersOf = (bylines: Byline[]) =>
-  Object.values(getPostsByGroupCondition(bylines, bylineSource));
+const kindOf = (post: CollectionEntry<"blog">) => (isRecap(post) ? "recaps" : "other");
 
-// Filter chips: "here" for posts on this site, then one per outlet, biggest first
+// Filters: the two kinds of post here, then one per outlet, biggest first
 const outlets = [...new Set(BYLINES.map(bylineSource))]
   .map((key) => {
     const matches = BYLINES.filter((b) => bylineSource(b) === key);
@@ -37,7 +37,8 @@ const outlets = [...new Set(BYLINES.map(bylineSource))]
   .sort((a, b) => b.count - a.count);
 const filters = [
   { key: "all", label: "All", count: posts.length + BYLINES.length },
-  { key: "here", label: "On this site", count: posts.length },
+  { key: "recaps", label: "Recaps", count: posts.filter(isRecap).length },
+  { key: "other", label: "Other posts", count: posts.filter((p) => !isRecap(p)).length },
   ...outlets,
 ];
 
@@ -62,15 +63,16 @@ const months = [
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
     <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
     <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
-    <div role="group" aria-label="Filter posts by where they were published" class="mb-8 flex flex-wrap gap-2" data-post-filters hidden>
+    <div role="group" aria-label="Filter posts" class="mb-6 flex flex-wrap gap-x-4" data-post-filters hidden>
       {filters.map((f) => (
         <button
           type="button"
           data-filter={f.key}
           aria-pressed={f.key === "all" ? "true" : "false"}
-          class="rounded-full border border-accent/40 px-3 py-1 text-sm transition-[transform,background-color,color] duration-150 ease-out hover:border-accent active:scale-[0.97] aria-pressed:bg-accent aria-pressed:text-background aria-pressed:border-accent focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none motion-reduce:active:scale-100"
+          class="min-h-11 text-sm opacity-70 decoration-dashed underline-offset-4 transition-opacity duration-150 ease-out hover:opacity-100 aria-pressed:text-accent aria-pressed:underline aria-pressed:opacity-100 focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transition-none"
         >
-          {f.label} <span class="opacity-70">{f.count}</span>
+          {f.label}
+          <sup class="ml-0.5">{f.count}</sup>
         </button>
       ))}
     </div>
@@ -98,12 +100,12 @@ const months = [
                   <ul>
                     {monthGroup
                       .sort(newestFirst)
-                      .flatMap((entry) => ("post" in entry ? [<Card {...entry.post} source="here" />] : []))}
-                    {ledgersOf(
-                      monthGroup.sort(newestFirst).flatMap((entry) => ("byline" in entry ? [entry.byline] : [])),
-                    ).map((bylines) => (
-                      <BylineLedger bylines={bylines} />
-                    ))}
+                      .flatMap((entry) => ("post" in entry ? [<Card {...entry.post} source={kindOf(entry.post)} />] : []))}
+                    {monthGroup.some((entry) => "byline" in entry) && (
+                      <BylineLedger
+                        bylines={monthGroup.sort(newestFirst).flatMap((entry) => ("byline" in entry ? [entry.byline] : []))}
+                      />
+                    )}
                   </ul>
                 </div>
               ))}
@@ -115,9 +117,7 @@ const months = [
         <div class="mb-8" data-group>
           <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">Ongoing elsewhere</h2>
           <ul>
-            {ledgersOf(series).map((bylines) => (
-              <BylineLedger bylines={bylines} />
-            ))}
+            <BylineLedger bylines={series} />
           </ul>
         </div>
       )
@@ -155,7 +155,8 @@ const months = [
     const apply = (key: string, animate: boolean) => {
       for (const b of buttons) b.setAttribute("aria-pressed", String(b.dataset.filter === key));
       for (const item of items) {
-        const show = key === "all" || item.dataset.source === key;
+        const show =
+          key === "all" || item.dataset.source === key || (item.dataset.also ?? "").split(" ").includes(key);
         if (show && item.hidden && animate) {
           item.classList.remove("post-in");
           void item.offsetWidth;

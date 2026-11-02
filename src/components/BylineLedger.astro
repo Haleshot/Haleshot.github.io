@@ -6,22 +6,17 @@ export interface Props {
   bylines: Byline[];
 }
 
-// Writing published elsewhere, one block per outlet. Own posts get full cards;
-// these are a dated list, with the description in a preview on hover or focus.
+// Writing published elsewhere. Own posts get full cards; these are a dated list,
+// with the description in a preview on hover or focus.
 const { bylines } = Astro.props;
-const outlet = bylines[0].outlet.replace(/ blog$/, "");
-const source = bylineSource(bylines[0]);
-const id = (b: Byline) => `byline-${source}-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-40)}`;
+const id = (b: Byline) => `byline-${b.href.replace(/[^a-z0-9]+/gi, "-").slice(-48)}`;
 ---
 
 <li class="my-8" data-group>
-  <p class="mb-2 text-sm opacity-80">
-    Filed on {outlet} <span class="opacity-70" data-count>{bylines.length}</span>
-  </p>
   <ul class="border-l border-dashed border-accent/60 pl-4">
     {
       bylines.map((byline) => (
-        <li class="byline-row relative" data-source={source}>
+        <li class="byline-row relative" data-source={bylineSource(byline)}>
           <a
             href={byline.href}
             target="_blank"
@@ -32,11 +27,11 @@ const id = (b: Byline) => `byline-${source}-${b.href.replace(/[^a-z0-9]+/gi, "-"
             <span class="text-sm tabular-nums opacity-70">
               {byline.pubDate ? dayjs(byline.pubDate).format("D MMM") : byline.date}
             </span>
-            <span class="text-accent text-pretty decoration-dashed underline-offset-4 group-hover:underline">
-              {byline.title}{" "}<span
-                aria-hidden="true"
-                class="byline-arrow inline-block opacity-60"
-              >↗</span>
+            <span class="text-pretty">
+              <span class="text-accent decoration-dashed underline-offset-4 group-hover:underline">
+                {byline.title}
+              </span>
+              <span class="ml-2 text-sm opacity-60">{byline.outlet.replace(/ blog$/, "")}</span>
             </span>
           </a>
           {byline.description && (
@@ -51,14 +46,6 @@ const id = (b: Byline) => `byline-${source}-${b.href.replace(/[^a-z0-9]+/gi, "-"
 </li>
 
 <style>
-  .byline-arrow {
-    transition: transform 150ms ease-out;
-  }
-  .byline-row:hover .byline-arrow,
-  .byline-row:focus-within .byline-arrow {
-    transform: translate(2px, -2px);
-  }
-
   /* Link preview: sits under the title column, fades and settles in */
   .byline-preview {
     position: absolute;
@@ -101,13 +88,8 @@ const id = (b: Byline) => `byline-${source}-${b.href.replace(/[^a-z0-9]+/gi, "-"
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .byline-arrow,
     .byline-preview {
       transition: none !important;
-    }
-    .byline-row:hover .byline-arrow,
-    .byline-row:focus-within .byline-arrow,
-    .byline-preview {
       transform: none;
     }
   }
