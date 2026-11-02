@@ -18,7 +18,8 @@ type Entry = { date: Date; post: CollectionEntry<"blog"> } | { date: Date; bylin
 const entries: Entry[] = [
   ...posts.map((post) => ({ date: new Date(post.data.pubDatetime || new Date()), post })),
   ...BYLINES.filter((b) => b.pubDate && !b.related).map((byline) => ({
-    date: new Date(byline.pubDate as string),
+    // Noon, so a date-only string lands on the same day in any build timezone
+    date: new Date(`${byline.pubDate}T12:00:00`),
     byline,
   })),
 ];

@@ -11,6 +11,7 @@ export interface Byline {
   pubDate?: string; // ISO date, e.g. "2026-10-09"
   description?: string; // one line, shown on the posts page
   related?: string; // e.g. "/posts/2026/indiafoss-2026-experience"
+  unpublished?: boolean; // scheduled but not live; delete this line once it's out
 }
 
 // "Deepnote blog" -> "deepnote", used as the posts page filter key
@@ -30,7 +31,7 @@ export const OUTLET_ICONS: Record<string, string> = {
 export const outletIcon = (b: Byline) => OUTLET_ICONS[bylineSource(b)];
 export const outletHost = (b: Byline) => new URL(b.href).hostname.replace(/^www\./, "");
 
-export const BYLINES: Byline[] = [
+const ALL_BYLINES: Byline[] = [
   {
     title: "Community write-ups on the SciPy India blog",
     outlet: "SciPy India",
@@ -77,7 +78,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/types-of-graphs",
-    pubDate: "2026-10-09",
+    pubDate: "2026-08-18",
     description:
       "An interactive example for each one, and how to pick the right chart for your data.",
   },
@@ -86,7 +87,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/data-visualization-tools",
-    pubDate: "2026-10-08",
+    pubDate: "2026-09-15",
     description: "Fifteen tools compared on workflow, collaboration, AI support and pricing.",
   },
   {
@@ -94,7 +95,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/histogram-vs-bar-graph",
-    pubDate: "2026-10-08",
+    pubDate: "2026-08-25",
     description:
       "The same dataset as a histogram and as a bar graph, and how grouping changes the question each one answers.",
   },
@@ -103,7 +104,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/how-to-make-a-pie-chart",
-    pubDate: "2026-10-08",
+    pubDate: "2026-09-22",
     description:
       "Pie charts in Excel, Google Sheets, Python, PowerPoint and Deepnote, plus labeling percentages and picking a variant.",
   },
@@ -112,7 +113,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/box-plot",
-    pubDate: "2026-10-08",
+    pubDate: "2026-09-01",
     description:
       "How to read a box plot's median, quartiles, and outliers, and compare distributions with worked examples.",
   },
@@ -121,7 +122,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/misleading-graphs",
-    pubDate: "2026-10-02",
+    pubDate: "2026-09-29",
     description: "Eight charts that mislead, and how to fix each one in Deepnote.",
   },
   {
@@ -129,7 +130,7 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/dot-plot",
-    pubDate: "2026-10-02",
+    pubDate: "2026-09-08",
     description:
       "Traditional and Cleveland dot plots, and when to reach for one over another chart.",
   },
@@ -178,7 +179,130 @@ export const BYLINES: Byline[] = [
     description:
       "JupyterLab is the interface you work in. JupyterHub manages access for multiple users.",
   },
+  // Chart series, waves 2 and 3, on their assigned dates. Hidden until published.
+  {
+    title: "Bubble charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/bubble-chart",
+    pubDate: "2026-10-01",
+    unpublished: true,
+  },
+  {
+    title: "Radar charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/radar-chart",
+    pubDate: "2026-10-03",
+    unpublished: true,
+  },
+  {
+    title: "How to make a bar graph in Excel",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-bar-graph-in-excel",
+    pubDate: "2026-10-05",
+    unpublished: true,
+  },
+  {
+    title: "How to make a line graph in Excel",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-line-graph-in-excel",
+    pubDate: "2026-10-08",
+    unpublished: true,
+  },
+  {
+    title: "How to make a Sankey diagram in Excel (spoiler: there's no built-in chart)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/sankey-diagram-excel",
+    pubDate: "2026-10-10",
+    unpublished: true,
+  },
+  {
+    title: "KPI dashboards: 8 examples and how to build one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/kpi-dashboard",
+    pubDate: "2026-10-12",
+    unpublished: true,
+  },
+  {
+    title: "How to make a graph in Excel, step by step",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-graph-in-excel",
+    pubDate: "2026-10-15",
+    unpublished: true,
+  },
+  {
+    title: "How to make a graph in Google Sheets (2026 guide)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-graph-in-google-sheets",
+    pubDate: "2026-10-17",
+    unpublished: true,
+  },
+  {
+    title: "Bar graphs explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/bar-graph",
+    pubDate: "2026-10-19",
+    unpublished: true,
+  },
+  {
+    title: "Line graphs explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/line-graph",
+    pubDate: "2026-10-22",
+    unpublished: true,
+  },
+  {
+    title: "Venn diagrams explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/venn-diagram",
+    pubDate: "2026-10-24",
+    unpublished: true,
+  },
+  {
+    title: "Pie charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/pie-chart",
+    pubDate: "2026-10-26",
+    unpublished: true,
+  },
+  {
+    title: "Histograms explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/histogram",
+    pubDate: "2026-10-29",
+    unpublished: true,
+  },
+  {
+    title: "Sankey diagrams explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/sankey-diagram",
+    pubDate: "2026-10-31",
+    unpublished: true,
+  },
+  {
+    title: "Scatter plots explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/scatter-plot",
+    pubDate: "2026-11-02",
+    unpublished: true,
+  },
 ];
+
+export const BYLINES = ALL_BYLINES.filter((b) => !b.unpublished);
 
 // Full Deepnote "alternatives" series I wrote, kept here for the record.
 // Surfaced on the homepage via the grouped byline above.
