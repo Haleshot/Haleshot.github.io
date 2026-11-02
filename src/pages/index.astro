@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import dayjs from "dayjs";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import IconRss from "@/assets/icons/IconRss.svg";
 import Card from "@/components/Card.astro";
@@ -10,10 +11,13 @@ import LinkButton from "@/components/LinkButton.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
 import { SITE, SOCIALS } from "@/config";
-import { BYLINES } from "@/data/bylines";
+import { BYLINES, bylineSource } from "@/data/bylines";
 import { TALKS } from "@/data/talks";
 import Layout from "@/layouts/Layout.astro";
+import { getPath } from "@/utils/getPath";
+import { getRelated } from "@/utils/getRelated";
 import getSortedPosts from "@/utils/getSortedPosts";
+import { isRecap } from "@/utils/postKind";
 
 const posts = await getCollection("blog");
 
@@ -21,9 +25,27 @@ const sortedPosts = getSortedPosts(posts);
 const posts2025AndLater = sortedPosts.filter(({ data }) => data.pubDatetime.getFullYear() >= 2025);
 const featuredPosts = posts2025AndLater.filter(({ data }) => data.featured);
 const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
+const recentRecaps = recentPosts.filter(isRecap).slice(0, SITE.postPerIndex);
+const recentOther = recentPosts.filter((post) => !isRecap(post)).slice(0, SITE.postPerIndex);
+
+// One row per outlet, newest pieces first, linking to that outlet's view of /posts
+const outlets = [...new Set(BYLINES.map(bylineSource))]
+  .map((key) => {
+    const all = BYLINES.filter((b) => bylineSource(b) === key);
+    const dated = all
+      .filter((b) => b.pubDate)
+      .sort((a, b) => (b.pubDate as string).localeCompare(a.pubDate as string));
+    return {
+      key,
+      label: all[0].outlet.replace(/ blog$/, ""),
+      count: all.length,
+      latest: (dated.length > 0 ? dated : all).slice(0, 2),
+    };
+  })
+  .sort((a, b) => b.count - a.count);
 ---
 
-<Layout description="Srihari Thyagarajan: Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content — especially notebooks and open-source communities.">
+<Layout description="Srihari Thyagarajan: Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content, especially notebooks and open-source communities.">
   <StructuredData type="WebSite" data={{}} />
   <StructuredData type="Person" data={{}} />
   <Header />
@@ -34,7 +56,7 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
           <img 
             src="/srihari-avatar.png" 
             alt="Srihari Thyagarajan" 
-            class="w-40 h-40 rounded-full object-cover flex-shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+            class="w-40 h-40 rounded-full object-cover flex-shrink-0 transition-transform duration-200 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
         </a>
         <div class="flex-1 text-center sm:text-left">
@@ -58,8 +80,8 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
             </a>
           </div>
           <p>
-            Technical Writer at <a href="https://deepnote.com/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Deepnote</a>. Prev at <a href="https://marimo.io/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">marimo</a>. Co-organizer at <a href="https://github.com/scipy-india/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">SciPy India</a>.<br />
-            I write about developer tools, documentation, and technical content — especially notebooks and open-source communities.
+            Technical Writer at <a href="https://deepnote.com/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Deepnote</a>. Prev at <a href="https://marimo.io/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">marimo</a>. Co-organizer at <a href="https://github.com/scipy-india/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">SciPy India</a> and <a href="https://write-the-docs-india.github.io/" target="_blank" rel="noopener noreferrer" class="text-accent underline underline-offset-2 hover:text-accent-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors duration-200">Write the Docs India</a>.<br />
+            I write about developer tools, documentation, and technical content, especially notebooks and open-source communities.
           </p>
           {
             // only display if at least one social link is enabled
@@ -92,12 +114,45 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <ul>
-            {recentPosts.map(
-              (data, index) =>
-                index < SITE.postPerIndex && <Card variant="h3" {...data} showImage={false} />,
-            )}
+          <h2 class="text-2xl font-semibold">Event recaps</h2>
+          <ul class="mt-4">
+            {recentRecaps.map((post) => (
+              <li class="grid grid-cols-[6rem_minmax(0,1fr)] items-baseline gap-x-4 py-2">
+                <span class="text-sm tabular-nums opacity-70">{dayjs(post.data.pubDatetime).format("MMM YYYY")}</span>
+                <div>
+                  <a
+                    href={getPath(post.id, post.filePath)}
+                    class="font-medium text-accent text-pretty decoration-dashed underline-offset-4 hover:underline"
+                  >
+                    {post.data.title}
+                  </a>
+                  {getRelated(getPath(post.id, post.filePath)).map((r) => (
+                    <div class="text-sm">
+                      <span class="opacity-70">{r.label}</span>{" "}
+                      <a
+                        href={r.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-accent decoration-dashed underline-offset-4 hover:underline"
+                      >
+                        {r.title}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </li>
+            ))}
           </ul>
+          {recentOther.length > 0 && (
+            <>
+              <h3 class="mt-8 text-xl font-semibold">More posts</h3>
+              <ul class="mt-4">
+                {recentOther.map((data) => (
+                  <Card variant="h3" {...data} showImage={false} />
+                ))}
+              </ul>
+            </>
+          )}
         </section>
       )
     }
@@ -114,19 +169,30 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
         <>
           <Hr />
           <section id="writing-elsewhere" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Writing elsewhere</h2>
-            <ul class="mt-4 space-y-4">
-              {BYLINES.slice(0, 5).map((byline) => (
-                <li>
-                  <a
-                    href={byline.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
-                  >
-                    {byline.title}
-                  </a>
-                  <div class="text-sm opacity-70">{byline.outlet} · {byline.date}</div>
+            <h2 class="text-2xl font-semibold">Writing elsewhere</h2>
+            <ul class="mt-4">
+              {outlets.map((o) => (
+                <li class="grid gap-x-4 py-3 sm:grid-cols-[11rem_minmax(0,1fr)] sm:items-baseline">
+                  <span class="text-sm opacity-70">{o.label}</span>
+                  <div>
+                    {o.latest.map((byline) => (
+                      <div class="py-0.5">
+                        <a
+                          href={byline.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="font-medium text-accent text-pretty decoration-dashed underline-offset-4 hover:underline"
+                        >
+                          {byline.title}
+                        </a>
+                      </div>
+                    ))}
+                    {o.count > o.latest.length && (
+                      <a href={`/posts/?from=${o.key}`} class="text-sm underline decoration-dashed underline-offset-4 opacity-80 hover:opacity-100">
+                        All {o.count} on {o.label}
+                      </a>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -141,21 +207,39 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
           <Hr />
           <section id="talks" class="pt-12 pb-6">
             <div class="flex items-baseline justify-between">
-              <h2 class="text-2xl font-semibold tracking-wide">Talks</h2>
-              <a href="/talks" class="text-sm text-accent underline underline-offset-2 hover:text-accent-dark">all →</a>
+              <h2 class="text-2xl font-semibold">Talks</h2>
+              <a href="/talks" class="text-sm text-accent underline decoration-dashed underline-offset-4 hover:text-accent-dark">All talks</a>
             </div>
-            <ul class="mt-4 space-y-4">
+            <ul class="mt-4">
               {TALKS.slice(0, 4).map((talk) => (
-                <li>
-                  <a
-                    href={talk.slides ?? talk.post}
-                    target={talk.slides ? "_blank" : undefined}
-                    rel={talk.slides ? "noopener noreferrer" : undefined}
-                    class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
-                  >
-                    {talk.title}
-                  </a>
-                  <div class="text-sm opacity-70">{talk.venue} · {talk.date}</div>
+                <li class="grid grid-cols-[6rem_minmax(0,1fr)] items-baseline gap-x-4 py-2">
+                  <span class="text-sm tabular-nums opacity-70">{talk.date.replace(/^(\w{3})\w*/, "$1")}</span>
+                  <div>
+                    <a
+                      href={talk.slides ?? talk.post}
+                      target={talk.slides ? "_blank" : undefined}
+                      rel={talk.slides ? "noopener noreferrer" : undefined}
+                      class="font-medium text-accent text-pretty decoration-dashed underline-offset-4 hover:underline"
+                    >
+                      {talk.title}
+                    </a>
+                    <div class="text-sm">
+                      <span class="opacity-70">{talk.venue}</span>
+                      {talk.recording && (
+                        <>
+                          {" "}
+                          <a
+                            href={talk.recording}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-accent decoration-dashed underline-offset-4 hover:underline"
+                          >
+                            recording
+                          </a>
+                        </>
+                      )}
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
