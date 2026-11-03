@@ -1,13 +1,37 @@
-// Writing published elsewhere (guest posts, company blog, community blog). Newest first.
-// The homepage shows the first few; the rest live here as the full record.
+// Writing published elsewhere (guest posts, company blog, community blog).
+// The homepage groups these by outlet and shows the newest from each.
+// The posts page sorts by pubDate and slots these into the timeline; entries
+// without a pubDate (ongoing series) get listed at the bottom of that page.
+// Set `related` to one of my post paths to show the piece under that post instead.
 export interface Byline {
   title: string;
   outlet: string; // e.g. "Deepnote blog"
   date: string; // human-readable, e.g. "2026"
   href: string;
+  pubDate?: string; // ISO date, e.g. "2026-10-09"
+  description?: string; // one line, shown on the posts page
+  related?: string; // e.g. "/posts/2026/indiafoss-2026-experience"
+  unpublished?: boolean; // scheduled but not live; delete this line once it's out
 }
 
-export const BYLINES: Byline[] = [
+// "Deepnote blog" -> "deepnote", used as the posts page filter key
+export const bylineSource = (b: Byline) =>
+  b.outlet
+    .replace(/ blog$/, "")
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+
+// Each outlet's own mark, from its site, in public/outlets
+export const OUTLET_ICONS: Record<string, string> = {
+  deepnote: "/outlets/deepnote.png",
+  "scipy-india": "/outlets/scipy-india.svg",
+  "write-the-docs-india": "/outlets/write-the-docs-india.svg",
+};
+
+export const outletIcon = (b: Byline) => OUTLET_ICONS[bylineSource(b)];
+export const outletHost = (b: Byline) => new URL(b.href).hostname.replace(/^www\./, "");
+
+const ALL_BYLINES: Byline[] = [
   {
     title: "Community write-ups on the SciPy India blog",
     outlet: "SciPy India",
@@ -19,29 +43,269 @@ export const BYLINES: Byline[] = [
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/jupyter-ai-guide",
+    pubDate: "2026-04-29",
+    description:
+      "Trying the chat UI and the %%ai magic in a real notebook, to see where Jupyter AI helps and where it stalls.",
   },
   {
     title: "Top AI data visualization tools in 2026",
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/ai-data-visualization-tools",
+    pubDate: "2026-04-16",
+    description:
+      "The same small churn benchmark run across AI data visualization tools, to see how hard each one makes it to ship a wrong answer.",
   },
   {
     title: "Tracking the ripple effect: how adverse drug events move pharma markets",
     outlet: "Deepnote blog",
     date: "2026",
     href: "https://deepnote.com/blog/tracking-the-ripple-effect-how-adverse-drug-events-move-pharma-markets",
+    pubDate: "2026-03-11",
+    description:
+      "An event study mapping adverse drug event signals to pharma stock moves, using price data and FAERS counts.",
   },
   {
     title: "Deepnote alternatives series",
     outlet: "Deepnote",
     date: "2026",
-    href: "https://deepnote.com/alternatives/sagemaker",
+    href: "https://deepnote.com/compare",
+    description:
+      "A page for each tool people switch to Deepnote from, like Jupyter, Colab, Hex and marimo.",
+  },
+  {
+    title: "31 types of graphs and charts (and when to use each)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/types-of-graphs",
+    pubDate: "2026-08-18",
+    description:
+      "An interactive example for each one, and how to pick the right chart for your data.",
+  },
+  {
+    title: "The 15 best data visualization tools in 2026 (free and paid)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/data-visualization-tools",
+    pubDate: "2026-09-15",
+    description: "Fifteen tools compared on workflow, collaboration, AI support and pricing.",
+  },
+  {
+    title: "Histogram vs bar graph: differences, examples, and when to use each",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/histogram-vs-bar-graph",
+    pubDate: "2026-08-25",
+    description:
+      "The same dataset as a histogram and as a bar graph, and how grouping changes the question each one answers.",
+  },
+  {
+    title: "How to make a pie chart (in Excel and other tools)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-pie-chart",
+    pubDate: "2026-09-22",
+    description:
+      "Pie charts in Excel, Google Sheets, Python, PowerPoint and Deepnote, plus labeling percentages and picking a variant.",
+  },
+  {
+    title: "Box plots explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/box-plot",
+    pubDate: "2026-09-01",
+    description:
+      "How to read a box plot's median, quartiles, and outliers, and compare distributions with worked examples.",
+  },
+  {
+    title: "8 misleading graph examples: how to spot bad charts and fix them",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/misleading-graphs",
+    pubDate: "2026-09-29",
+    description: "Eight charts that mislead, and how to fix each one in Deepnote.",
+  },
+  {
+    title: "Dot plots explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/dot-plot",
+    pubDate: "2026-09-08",
+    description:
+      "Traditional and Cleveland dot plots, and when to reach for one over another chart.",
+  },
+  {
+    title: "IndiaFOSS 2026 | Community booth",
+    outlet: "SciPy India",
+    date: "2026",
+    href: "https://scipy.in/blog/2026-09-26-indiafoss-community-booth",
+    pubDate: "2026-09-26",
+    description:
+      "Two days behind the SciPy India booth, talking to anyone who stopped by about what we're building towards in December.",
+    related: "/posts/2026/indiafoss-2026-experience",
+  },
+  {
+    title: "IndiaFOSS 2026: the docs devroom",
+    outlet: "Write the Docs India blog",
+    date: "2026",
+    href: "https://write-the-docs-india.github.io/blog/2026/indiafoss-2026-devroom/",
+    pubDate: "2026-09-28",
+    description: "Ten talks in one morning, and the chapter's restart.",
+    related: "/posts/2026/indiafoss-2026-experience",
+  },
+  {
+    title: "JupyterLab vs Deepnote: a side-by-side comparison for 2026",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/jupyterlab-vs-deepnote",
+    pubDate: "2026-08-31",
+    description: "Where the two notebooks overlap and where they differ, side by side.",
+  },
+  {
+    title: "Hex vs Deepnote: a side-by-side comparison",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/hex-vs-deepnote",
+    pubDate: "2026-08-31",
+    description:
+      "Hex and Deepnote both combine code, data, AI, and outputs in a browser-based workspace, but they're built for different kinds of work.",
+  },
+  {
+    title: "JupyterHub vs JupyterLab: they solve different problems",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/jupyterhub-vs-jupyterlab",
+    pubDate: "2026-03-02",
+    description:
+      "JupyterLab is the interface you work in. JupyterHub manages access for multiple users.",
+  },
+  // Chart series, waves 2 and 3, on their assigned dates. Hidden until published.
+  {
+    title: "Bubble charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/bubble-chart",
+    pubDate: "2026-10-01",
+    unpublished: true,
+  },
+  {
+    title: "Radar charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/radar-chart",
+    pubDate: "2026-10-03",
+    unpublished: true,
+  },
+  {
+    title: "How to make a bar graph in Excel",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-bar-graph-in-excel",
+    pubDate: "2026-10-05",
+    unpublished: true,
+  },
+  {
+    title: "How to make a line graph in Excel",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-line-graph-in-excel",
+    pubDate: "2026-10-08",
+    unpublished: true,
+  },
+  {
+    title: "How to make a Sankey diagram in Excel (spoiler: there's no built-in chart)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/sankey-diagram-excel",
+    pubDate: "2026-10-10",
+    unpublished: true,
+  },
+  {
+    title: "KPI dashboards: 8 examples and how to build one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/kpi-dashboard",
+    pubDate: "2026-10-12",
+    unpublished: true,
+  },
+  {
+    title: "How to make a graph in Excel, step by step",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-graph-in-excel",
+    pubDate: "2026-10-15",
+    unpublished: true,
+  },
+  {
+    title: "How to make a graph in Google Sheets (2026 guide)",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/how-to-make-a-graph-in-google-sheets",
+    pubDate: "2026-10-17",
+    unpublished: true,
+  },
+  {
+    title: "Bar graphs explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/bar-graph",
+    pubDate: "2026-10-19",
+    unpublished: true,
+  },
+  {
+    title: "Line graphs explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/line-graph",
+    pubDate: "2026-10-22",
+    unpublished: true,
+  },
+  {
+    title: "Venn diagrams explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/venn-diagram",
+    pubDate: "2026-10-24",
+    unpublished: true,
+  },
+  {
+    title: "Pie charts explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/pie-chart",
+    pubDate: "2026-10-26",
+    unpublished: true,
+  },
+  {
+    title: "Histograms explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/histogram",
+    pubDate: "2026-10-29",
+    unpublished: true,
+  },
+  {
+    title: "Sankey diagrams explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/sankey-diagram",
+    pubDate: "2026-10-31",
+    unpublished: true,
+  },
+  {
+    title: "Scatter plots explained: when to use one, examples, and how to make one",
+    outlet: "Deepnote blog",
+    date: "2026",
+    href: "https://deepnote.com/blog/scatter-plot",
+    pubDate: "2026-11-02",
+    unpublished: true,
   },
 ];
 
+export const BYLINES = ALL_BYLINES.filter((b) => !b.unpublished);
+
 // Full Deepnote "alternatives" series I wrote, kept here for the record.
-// Surfaced on the homepage via the grouped byline above; marimo is coming soon.
+// Surfaced on the homepage via the grouped byline above.
 export const DEEPNOTE_ALTERNATIVES = [
   "https://deepnote.com/alternatives/sagemaker",
   "https://deepnote.com/alternatives/jupyter",
@@ -51,6 +315,8 @@ export const DEEPNOTE_ALTERNATIVES = [
   "https://deepnote.com/alternatives/kaggle",
   "https://deepnote.com/alternatives/mode",
   "https://deepnote.com/alternatives/vscode",
-  "https://deepnote.com/alternatives/julius",
-  // "https://deepnote.com/alternatives/marimo", // coming soon
+  "https://deepnote.com/alternatives/juliusai",
+  "https://deepnote.com/alternatives/jupyter-lab",
+  "https://deepnote.com/alternatives/streamlit",
+  "https://deepnote.com/compare/alternatives/marimo",
 ] as const;

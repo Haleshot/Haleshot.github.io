@@ -1,13 +1,74 @@
 ---
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
+import BylineLedger from "@/components/BylineLedger.astro";
 import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import { SITE } from "@/consts";
+import { BYLINES, type Byline, bylineSource, outletIcon } from "@/data/bylines";
 import Layout from "@/layouts/Layout.astro";
 import getPostsByGroupCondition from "@/utils/getPostsByGroupCondition";
+import { isRecap } from "@/utils/postKind";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+// Own posts and writing elsewhere share one timeline. A byline with `related`
+// shows under that post's card instead of on its own.
+type Entry = { date: Date; post: CollectionEntry<"blog"> } | { date: Date; byline: Byline };
+const entries: Entry[] = [
+  ...posts.map((post) => ({ date: new Date(post.data.pubDatetime || new Date()), post })),
+  ...BYLINES.filter((b) => b.pubDate && !b.related).map((byline) => ({
+    // Noon, so a date-only string lands on the same day in any build timezone
+    date: new Date(`${byline.pubDate}T12:00:00`),
+    byline,
+  })),
+];
+const series = BYLINES.filter((b) => !b.pubDate);
+
+const newestFirst = (a: Entry, b: Entry) => b.date.getTime() - a.date.getTime();
+
+const kindOf = (post: CollectionEntry<"blog">) => (isRecap(post) ? "recaps" : "other");
+
+// The filter doubles as the key for the outlet marks further down: one row for
+// what's here, one for where else I write. Each row's label filters the whole row.
+const outlets = [...new Set(BYLINES.map(bylineSource))]
+  .map((key) => {
+    const matches = BYLINES.filter((b) => bylineSource(b) === key);
+    return {
+      key,
+      label: matches[0].outlet.replace(/ blog$/, ""),
+      count: matches.length,
+      icon: outletIcon(matches[0]),
+    };
+  })
+  .sort((a, b) => b.count - a.count);
+// One list of options for both the sidebar (wide screens) and the select (phones)
+const options = [
+  {
+    key: "all",
+    label: "Everything",
+    count: posts.length + BYLINES.length,
+    depth: 0,
+    icon: undefined,
+  },
+  { key: "here", label: "On this site", count: posts.length, depth: 0, icon: undefined },
+  {
+    key: "recaps",
+    label: "Recaps",
+    count: posts.filter(isRecap).length,
+    depth: 1,
+    icon: undefined,
+  },
+  {
+    key: "other",
+    label: "Other posts",
+    count: posts.filter((p) => !isRecap(p)).length,
+    depth: 1,
+    icon: undefined,
+  },
+  { key: "elsewhere", label: "Elsewhere", count: BYLINES.length, depth: 0, icon: undefined },
+  ...outlets.map((o) => ({ ...o, depth: 1 })),
+];
 
 const months = [
   "January",
@@ -23,59 +84,270 @@ const months = [
   "November",
   "December",
 ];
+
+const timeline = Object.entries(
+  getPostsByGroupCondition(entries, (entry) => entry.date.getFullYear())
+)
+  .sort(([a], [b]) => Number(b) - Number(a))
+  .map(([year, yearGroup]) => ({
+    year,
+    count: yearGroup.length,
+    months: Object.entries(
+      getPostsByGroupCondition(yearGroup, (entry) => entry.date.getMonth() + 1)
+    )
+      .sort(([a], [b]) => Number(b) - Number(a))
+      .map(([month, monthGroup]) => ({
+        id: `${year}-${months[Number(month) - 1].toLowerCase()}`,
+        name: months[Number(month) - 1],
+        entries: monthGroup.sort(newestFirst),
+      })),
+  }));
 ---
 
 <Layout title={`Posts | ${SITE.title}`} description="Archive of all blog posts by Srihari Thyagarajan. iOS, Swift, web development, and open source insights.">
   <Header />
-  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-4">
-    <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
-    <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
-    {
-      Object.entries(
-        getPostsByGroupCondition(posts, (post) => {
-          const pubDate = post.data.pubDatetime || new Date();
-          return new Date(pubDate).getFullYear();
-        }),
-      )
-        .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
-        .map(([year, yearGroup]) => (
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">
-              {year}
-              <sup class="text-sm ml-1">{yearGroup.length}</sup>
-            </h2>
-            {Object.entries(
-              getPostsByGroupCondition(yearGroup, (post) => {
-                const pubDate = post.data.pubDatetime || new Date();
-                return new Date(pubDate).getMonth() + 1;
-              }),
-            )
-              .sort(([monthA], [monthB]) => Number(monthB) - Number(monthA))
-              .map(([month, monthGroup]) => (
-                <div class="mt-8">
-                  <h3 class="text-xl font-bold mb-4">
-                    {months[Number(month) - 1]}
-                    <sup class="text-sm ml-1">{monthGroup.length}</sup>
-                  </h3>
-                  <ul>
-                    {monthGroup
-                      .sort((a, b) => {
-                        const aDate = a.data.pubDatetime || new Date();
-                        const bDate = b.data.pubDatetime || new Date();
-                        return (
-                          Math.floor(new Date(bDate).getTime() / 1000) -
-                          Math.floor(new Date(aDate).getTime() / 1000)
-                        );
-                      })
-                      .map((data) => (
-                        <Card {...data} />
-                      ))}
-                  </ul>
-                </div>
-              ))}
+  <main
+    id="main-content"
+    class="mx-auto w-full max-w-3xl px-4 pb-4 xl:grid xl:max-w-7xl xl:grid-cols-[minmax(0,1fr)_46rem_minmax(0,1fr)] xl:gap-x-12"
+  >
+    <aside class="hidden xl:col-start-1 xl:row-start-1 xl:block xl:justify-self-end" aria-label="Browse posts">
+      <div class="sticky top-8 mt-24 w-60 text-sm" data-post-sidebar>
+        <nav aria-label="Months">
+          {timeline.map((y) => (
+            <div class="mb-4" data-toc-year>
+              <p class="mb-1 font-semibold tabular-nums">{y.year}</p>
+              <ul class="border-l border-border">
+                {y.months.map((m) => (
+                  <li>
+                    <a href={`#${m.id}`} data-toc-target={m.id} class="toc-link">
+                      {m.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {series.length > 0 && (
+            <ul class="border-l border-border">
+              <li>
+                <a href="#ongoing" data-toc-target="ongoing" class="toc-link">
+                  Ongoing
+                </a>
+              </li>
+            </ul>
+          )}
+        </nav>
+        <div class="mt-8" data-post-filters hidden>
+          <p class="mb-1 font-semibold">Show</p>
+          <ul class="border-l border-border" role="list">
+            {options.map((o) => (
+              <li>
+                <button
+                  type="button"
+                  data-filter={o.key}
+                  aria-pressed={o.key === "all" ? "true" : "false"}
+                  class:list={["toc-link w-full justify-between", { "is-nested": o.depth === 1 }]}
+                >
+                  <span class="flex items-center gap-2">
+                    {o.icon && <img src={o.icon} alt="" width="14" height="14" class="rounded-[3px]" />}
+                    {o.label}
+                  </span>
+                  <span class="tabular-nums opacity-60">{o.count}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <div class="xl:col-start-2 xl:row-start-1">
+      <h1 class="text-2xl font-semibold sm:text-3xl mt-8">All Posts</h1>
+      <p class="mt-2 mb-6 italic">Browse all blog posts by year and month</p>
+      <label class="mb-8 flex items-center gap-3 text-sm xl:hidden" data-post-select-wrap hidden>
+        Show
+        <select
+          data-post-select
+          class="min-h-11 rounded border border-border bg-background px-2 text-foreground focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-accent"
+        >
+          {options.map((o) => (
+            <option value={o.key}>{`${o.depth ? "\u00a0\u00a0\u00a0" : ""}${o.label} (${o.count})`}</option>
+          ))}
+        </select>
+      </label>
+      {timeline.map((y) => (
+        <div class="mb-8" data-group>
+          <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">
+            {y.year}
+            <sup class="text-sm ml-1" data-count>{y.count}</sup>
+          </h2>
+          {y.months.map((m) => (
+            <div class="mt-8 scroll-mt-8" id={m.id} data-group data-month>
+              <h3 class="text-xl font-bold mb-4">
+                {m.name}
+                <sup class="text-sm ml-1" data-count>{m.entries.length}</sup>
+              </h3>
+              <ul>
+                {m.entries.flatMap((entry) => ("post" in entry ? [<Card {...entry.post} source={kindOf(entry.post)} />] : []))}
+                {m.entries.some((entry) => "byline" in entry) && (
+                  <BylineLedger bylines={m.entries.flatMap((entry) => ("byline" in entry ? [entry.byline] : []))} />
+                )}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ))}
+      {
+        series.length > 0 && (
+          <div class="mb-8 scroll-mt-8" id="ongoing" data-group data-month>
+            <h2 class="text-2xl font-bold mb-6 border-b border-accent pb-2">Ongoing elsewhere</h2>
+            <ul>
+              <BylineLedger bylines={series} />
+            </ul>
           </div>
-        ))
-    }
+        )
+      }
+    </div>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  /* Sidebar rows: the active one gets the accent and a bar on the rule */
+  .toc-link {
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+    margin-left: -1px;
+    padding-left: 0.875rem;
+    border-left: 2px solid transparent;
+    text-align: left;
+    opacity: 0.75;
+    transition:
+      color 150ms ease-out,
+      opacity 150ms ease-out,
+      border-color 150ms ease-out;
+  }
+  .toc-link.is-nested {
+    padding-left: 1.75rem;
+  }
+  .toc-link:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+  .toc-link[aria-current="true"],
+  .toc-link[aria-pressed="true"] {
+    opacity: 1;
+    color: var(--accent);
+    border-left-color: var(--accent);
+  }
+  .toc-link:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .toc-link {
+      transition: none;
+    }
+  }
+
+  @keyframes post-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+  }
+  :global([data-source].post-in) {
+    animation: post-in 180ms ease-out;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global([data-source].post-in) {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  function setupPostFilters() {
+    const bar = document.querySelector<HTMLElement>("[data-post-filters]");
+    const selectWrap = document.querySelector<HTMLElement>("[data-post-select-wrap]");
+    const select = document.querySelector<HTMLSelectElement>("[data-post-select]");
+    if (!bar || !select || !selectWrap) return;
+    bar.hidden = false;
+    selectWrap.hidden = false;
+    const buttons = [...bar.querySelectorAll<HTMLButtonElement>("[data-filter]")];
+    const items = [...document.querySelectorAll<HTMLElement>("main [data-source]")];
+    const groups = [...document.querySelectorAll<HTMLElement>("main [data-group]")];
+    const tocLinks = [...document.querySelectorAll<HTMLAnchorElement>("[data-toc-target]")];
+
+    const here = new Set(["recaps", "other"]);
+    const matches = (item: HTMLElement, key: string) => {
+      const source = item.dataset.source ?? "";
+      const also = (item.dataset.also ?? "").split(" ").filter(Boolean);
+      if (key === "all") return true;
+      if (key === "here") return here.has(source);
+      if (key === "elsewhere") return !here.has(source) || also.length > 0;
+      return source === key || also.includes(key);
+    };
+
+    const apply = (key: string, animate: boolean) => {
+      for (const b of buttons) b.setAttribute("aria-pressed", String(b.dataset.filter === key));
+      select.value = key;
+      for (const item of items) {
+        const show = matches(item, key);
+        if (show && item.hidden && animate) {
+          item.classList.remove("post-in");
+          void item.offsetWidth;
+          item.classList.add("post-in");
+        }
+        item.hidden = !show;
+      }
+      for (const group of groups) {
+        const visible = group.querySelectorAll("[data-source]:not([hidden])").length;
+        group.hidden = visible === 0;
+        const count = group.querySelector("[data-count]");
+        if (count) count.textContent = String(visible);
+      }
+      // Months emptied by the filter drop out of the sidebar too
+      for (const link of tocLinks) {
+        const target = document.getElementById(link.dataset.tocTarget ?? "");
+        link.parentElement?.toggleAttribute("hidden", !target || target.hidden);
+      }
+      for (const year of document.querySelectorAll<HTMLElement>("[data-toc-year]")) {
+        year.hidden = !year.querySelector("li:not([hidden])");
+      }
+    };
+
+    const url = new URL(location.href);
+    const choose = (key: string) => {
+      apply(key, true);
+      if (key === "all") url.searchParams.delete("from");
+      else url.searchParams.set("from", key);
+      history.replaceState(history.state, "", url);
+    };
+
+    const initial = url.searchParams.get("from");
+    if (initial && buttons.some((b) => b.dataset.filter === initial)) apply(initial, false);
+
+    for (const b of buttons) b.addEventListener("click", () => choose(b.dataset.filter ?? "all"));
+    select.addEventListener("change", () => choose(select.value));
+
+    // Highlight the month you're reading
+    const months = [...document.querySelectorAll<HTMLElement>("[data-month]")];
+    const spy = new IntersectionObserver(
+      (records) => {
+        for (const record of records) {
+          if (!record.isIntersecting) continue;
+          for (const link of tocLinks) {
+            link.setAttribute("aria-current", String(link.dataset.tocTarget === record.target.id));
+          }
+        }
+      },
+      { rootMargin: "0px 0px -70% 0px" },
+    );
+    for (const month of months) spy.observe(month);
+    document.addEventListener("astro:before-swap", () => spy.disconnect(), { once: true });
+  }
+
+  document.addEventListener("astro:page-load", setupPostFilters);
+</script>

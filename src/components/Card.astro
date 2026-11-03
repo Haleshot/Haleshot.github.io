@@ -2,19 +2,25 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
+import { getRelated } from "@/utils/getRelated";
 import { calculateReadingTime } from "@/utils/readingTime";
 import { slugifyStr } from "@/utils/slugify";
 import Datetime from "./Datetime.astro";
+import RelatedMark from "./RelatedMark.astro";
 
 export interface Props extends CollectionEntry<"blog"> {
   variant?: "h2" | "h3";
   showImage?: boolean;
+  source?: string; // used by the posts page filter
 }
 
-const { variant = "h2", data, id, filePath, body, showImage = true } = Astro.props;
+const { variant = "h2", data, id, filePath, body, showImage = true, source } = Astro.props;
 
 const { title, description, pubDatetime, modDatetime, timezone, heroImage } = data;
 const readingTime = calculateReadingTime(body ?? "");
+const related = getRelated(getPath(id, filePath));
+const linkClass = "text-accent decoration-dashed underline-offset-4 hover:underline";
+const alsoSources = related.flatMap((r) => (r.source ? [r.source] : [])).join(" ");
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
@@ -22,7 +28,7 @@ const headerProps = {
 };
 ---
 
-<li class="my-8">
+<li class="my-8" data-source={source} data-also={alsoSources || undefined}>
   <div>
     <a
       href={getPath(id, filePath)}
@@ -38,7 +44,7 @@ const headerProps = {
     </a>
     <div class="flex items-center gap-3 mb-3">
       <Datetime {pubDatetime} {modDatetime} {timezone} />
-      <span class="text-sm italic opacity-80">• {readingTime}</span>
+      <span class="text-sm italic opacity-80">{readingTime}</span>
     </div>
     <div class="flex gap-4 items-start">
       {showImage && heroImage && (
@@ -51,7 +57,7 @@ const headerProps = {
             alt={title}
             width={140}
             height={79}
-            class="rounded shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:scale-105 object-cover"
+            class="rounded shadow-sm transition-[transform,box-shadow] duration-200 ease-out group-hover:shadow-md group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 object-cover"
             format="webp"
             quality={80}
             loading="lazy"
@@ -61,5 +67,26 @@ const headerProps = {
       )}
       <p class="opacity-80 flex-1">{description}</p>
     </div>
+    {related.length > 0 && (
+      <ul class="ml-8 mt-3 border-l border-dashed border-accent/60 pl-4 text-sm" aria-label="Related">
+        {related.map((r) => (
+          <li class="related-row relative py-1.5">
+            <RelatedMark icon={r.icon} class="related-mark" />
+            <a href={r.href} target="_blank" rel="noopener noreferrer" class={linkClass}>{r.title}<span class="sr-only">{r.kind === "talk" ? ", my talk" : `, on ${r.label}`}</span></a>{r.recording && <>, <a href={r.recording} target="_blank" rel="noopener noreferrer" class={linkClass}>recording</a></>}
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 </li>
+
+<style>
+  /* Same idea as the outside-posts list: each related piece is marked on the rule */
+  .related-row :global(.related-mark) {
+    position: absolute;
+    top: 0.55rem;
+    left: calc(-1rem - 8.5px);
+    background: var(--background);
+    box-shadow: 0 0 0 3px var(--background);
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import IconPresentation from "@/assets/icons/IconPresentation.svg";
+
+export interface Props {
+  icon?: string; // an outlet's mark; without one, it's a talk
+  size?: number;
+  class?: string;
+}
+
+const { icon, size = 16, class: className = "" } = Astro.props;
+---
+
+{
+  icon ? (
+    <img src={icon} alt="" width={size} height={size} class:list={["rounded-[3px]", className]} />
+  ) : (
+    <IconPresentation width={size} height={size} aria-hidden="true" class:list={["text-accent", className]} />
+  )
+}
