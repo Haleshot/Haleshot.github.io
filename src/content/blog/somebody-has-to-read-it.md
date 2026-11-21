@@ -1,24 +1,24 @@
 ---
 title: "Somebody has to read it"
 description: "I draft with a model, and a post about unreadable AI writing still got to me. Notes on what I owe whoever reads the result."
-pubDatetime: 2026-11-16T00:00:00Z
+pubDatetime: 2026-11-21T00:00:00Z
 author: "Srihari Thyagarajan"
 tags: ["writing", "ai", "technical-writing", "opinion"]
 featured: false
 draft: false
 ---
 
-In my [first post of this year](https://haleshot.github.io/posts/recompute-only-whats-necessary) I said I'd write more, "if not for engagement or feedback, then at least as an archive for myself." I've mostly kept to that, if event recaps count (I'm counting them).
+In my [first post of this year](/posts/recompute-only-whats-necessary/) I said I'd write more, "if not for engagement or feedback, then at least as an archive for myself." I've mostly kept to that, if event recaps count (I'm counting them).
 
 This one's about something that's been bugging me for a few weeks.
 
-In March I ran a workshop called "Technical Writing in the Age of AI" at the [Wikimedia DSDP event in Delhi](https://haleshot.github.io/posts/wikimedia-dsdp-experience) (the [slides are here](https://haleshot.github.io/talks/technical-writing-wikimedia-03-2026/)). One section was on what writing as a practice involves, and two posts I like came up a fair bit there: Shreya Shankar's [Writing in the age of LLMs](https://www.sh-reya.com/blog/ai-writing/) and Prashanth Rao's [framework for technical writing](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/). Both of them use a model when they write, and both are careful about how.
+In March I ran a workshop called "Technical Writing in the Age of AI" at the [Wikimedia DSDP event in Delhi](/posts/wikimedia-dsdp-experience/) (the [slides are here](https://haleshot.github.io/talks/technical-writing-wikimedia-03-2026/)). One section was on what writing as a practice involves, and two posts I like came up a fair bit there: Shreya Shankar's [Writing in the age of LLMs](https://www.sh-reya.com/blog/ai-writing/) and Prashanth Rao's [framework for technical writing](https://thedataquarry.com/blog/a-framework-for-reading-and-writing/). Both of them use a model when they write, and both are careful about how.
 
-So I'm in the "use the tools" camp; I even have [a page about it](https://haleshot.github.io/ai/), and this post was put together the same way. Then I read Colin Breck's [I don't want to read what you didn't write](https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/), which is a long way from that camp, and caught myself nodding at paragraph after paragraph.
+So I'm in the "use the tools" camp; I even have [a page about it](/ai/), and this post was put together the same way. Then I read Colin Breck's [I don't want to read what you didn't write](https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/), which is a long way from that camp, and caught myself nodding at paragraph after paragraph.
 
 ## The reading hasn't gotten any faster
 
-Ask any senior engineer how their week went and there's a good chance the answer involves a [review queue that won't stop growing](https://blog.pragmaticengineer.com/the-pulse-new-trend-concern-about-massive-increase-in-code-review-load/) (agents opening PRs faster than anyone can look at them). Kailash Nadh wrote about this in January, in [Code is cheap. Show me the talk.](https://nadh.in/blog/code-is-cheap/) (I used the title on one of my workshop slides): "reading and critically evaluating code have become more important than learning syntax and typing it out line by line."
+Ask any senior engineer how their week went and there's a good chance the answer involves a [review queue that won't stop growing](https://blog.pragmaticengineer.com/the-pulse-new-trend-concern-about-massive-increase-in-code-review-load/) (agents opening PRs faster than anyone can look at them). Kailash Nadh's [Code is cheap. Show me the talk.](https://nadh.in/blog/code-is-cheap/) from January (I liked the title enough to put it on one of my workshop slides) has the line I keep coming back to: "reading and critically evaluating code have become more important than learning syntax and typing it out line by line."
 
 Docs aren't very different. Putting together a design doc or a PRD is a lot quicker now; sitting with one and understanding what it's asking of you is a whole different story.
 
@@ -29,7 +29,7 @@ Docs aren't very different. Putting together a design doc or a PRD is a lot quic
 
 The part of [Colin Breck's post](https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/) I agree with most is about context. When I'm the one prompting, I know what I asked for, what I threw away, and which files the model looked at; the output reads fine *to me*. Whoever opens it next has none of that. He describes that reader as "forced to read exhaustively and consider every line, peering into the internals of a machine", which is how it feels from the receiving end.
 
-<!-- Srihari: I couldn't fill this from your site. If you have a real instance (a doc, PRD or proposal that reached you and was plainly generated, and what you did with it), give me two lines and I'll write it in. Otherwise delete this comment. -->
+I've been on the receiving end of this plenty. Plans and PR descriptions the sender hadn't read through, blog drafts sent over for review that the author never checked, and slide decks that still had the model's notes to whoever was drafting them, sent along for review anyway.
 
 ## I still draft with help
 
@@ -37,7 +37,7 @@ Murat Demirbas's [Writing as a thinking tool](https://muratbuffalo.blogspot.com/
 
 > If you think without writing, you only think you're thinking.
 
-(That same slide says "Writing is thinking". Lamport's version is better.)
+(I had "Writing is thinking" on a workshop slide. Lamport's version is better.)
 
 I'm with Murat on all of that, and I still open a chat window earlier than he'd like. Shreya's [post](https://www.sh-reya.com/blog/ai-writing/) (the one from the workshop) has a version of this I like; she says she's "usually sharper at critiquing than generating", so she writes each paragraph herself first, "even if it’s ugly", and brings a model in when she's stuck on how to say something she already knows she wants to say. That's close to how I work!! I'd rather get a rough version down fast and spend my energy on the edit, where I'm more useful anyway.
 
@@ -64,7 +64,7 @@ Going back to [Kailash Nadh's post](https://nadh.in/blog/code-is-cheap/) from ea
 
 > the ability to hold someone accountable at least emotionally and morally, and sometimes legally, for an artefact
 
-No model can take that off my hands. It can draft a sentence; it can't be the person who gets the "wait, is this right?" reply. And if rerunning the model is all I add, [there isn't much left for me to answer for](https://danluu.com/brain-off/). The rule on my AI page says it shorter: "if I can’t explain it in my own words, I don’t write about it."
+No model can take that off my hands. It can draft a sentence for me, but the "wait, is this right?" reply comes to me. And if rerunning the model is all I add, [there isn't much left for me to answer for](https://danluu.com/brain-off/). The rule on my AI page says it shorter: "if I can't explain it in my own words, I don't write about it."
 
 <figure>
   <img src="/images/somebody-has-to-read-it/who-answers-for-it.png" alt="Hand-drawn sketch on dotted paper: my pile, my outline, a first pass, my edit, then a published and signed page; the reader's question comes back to me" loading="lazy" />
