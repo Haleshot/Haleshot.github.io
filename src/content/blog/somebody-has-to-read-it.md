@@ -5,7 +5,7 @@ pubDatetime: 2026-11-16T00:00:00Z
 author: "Srihari Thyagarajan"
 tags: ["writing", "ai", "technical-writing", "opinion"]
 featured: false
-draft: true
+draft: false
 ---
 
 In my [first post of this year](https://haleshot.github.io/posts/recompute-only-whats-necessary) I said I'd write more, "if not for engagement or feedback, then at least as an archive for myself." I've mostly kept to that, if event recaps count (I'm counting them).
