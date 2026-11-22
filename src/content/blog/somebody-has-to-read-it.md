@@ -64,6 +64,8 @@ Going back to [Kailash Nadh's post](https://nadh.in/blog/code-is-cheap/) from ea
 
 > the ability to hold someone accountable at least emotionally and morally, and sometimes legally, for an artefact
 
+David Bryant Copeland's [The Answer to Slop is Accountability](https://naildrivin5.com/blog/2026/11/18/the-answer-to-slop-is-accountability.html) came out the week I was finishing this, and it makes the same case from the product side. He walks through an AI recipe-swap feature for NYT Cooking and asks who's on the hook when it suggests something wrong. A "may contain mistakes" label doesn't get anyone off it: "It's not Sam Altman's fault, it's the NYT's fault!" Swap the recipe app for a blog post and you get the same answer.
+
 No model can take that off my hands. It can draft a sentence for me, but the "wait, is this right?" reply comes to me. And if rerunning the model is all I add, [there isn't much left for me to answer for](https://danluu.com/brain-off/). The rule on my AI page says it shorter: "if I can't explain it in my own words, I don't write about it."
 
 <figure>
