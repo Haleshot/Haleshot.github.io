@@ -4,7 +4,7 @@ This is the source code for my personal website, built with [Astro](https://astr
 
 ## About
 
-I'm Srihari Thyagarajan (Haleshot), a Technical Writer at Deepnote passionate about developer tools, documentation, and open-source communities. This website hosts my blog and information about my work in technical writing, developer advocacy, and community building.
+I'm Srihari Thyagarajan (Haleshot), a Technical Writer at Deepnote, ex-marimo. I build with and write about notebooks and developer tools, and help run SciPy India. This repo holds my blog and the rest of the site.
 
 ## Project Structure
 

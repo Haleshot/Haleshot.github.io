@@ -111,7 +111,7 @@ export default defineConfig({
       manifest: {
         name: "Srihari Thyagarajan",
         short_name: "Haleshot",
-        description: "Technical Writer at Deepnote, passionate about developer tools, documentation, and open-source communities.",
+        description: "Technical Writer at Deepnote, ex-marimo. I build with and write about notebooks and developer tools, and help run SciPy India.",
         theme_color: "#006cac",
         background_color: "#fdfdfd",
         display: "standalone",

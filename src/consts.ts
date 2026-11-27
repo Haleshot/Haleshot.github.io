@@ -34,7 +34,7 @@ export const SITE: Site = {
   website: "https://haleshot.github.io/",
   author: "Srihari Thyagarajan",
   profile: "https://haleshot.github.io/about",
-  desc: "Technical Writer at Deepnote. Writing about developer tools, documentation, and technical content — especially notebooks and open-source communities.",
+  desc: "Technical Writer at Deepnote, ex-marimo. I build with and write about notebooks and developer tools, and help run SciPy India.",
   title: "Haleshot",
   ogImage: "srihari-avatar.png",
   lightAndDarkMode: true,
